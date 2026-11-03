@@ -11,7 +11,7 @@
 
   let nextDropTimer = null;
   const activeDrops = new Set();
-  let rainEnabled = false;
+  let rainEnabled = rainConfiguration.enabledByDefault;
 
   function getRandomInteger(minimumValue, maximumValue) {
     return Math.floor(Math.random() * (maximumValue - minimumValue + 1)) + minimumValue;

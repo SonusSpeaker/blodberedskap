@@ -1,16 +1,17 @@
 :root {
   color-scheme: light;
   --page-background: #650b1a;
-  --banner-background: #ffffff;
-  --panel-background: #ffffff;
-  --panel-raised-background: #ffffff;
+  --banner-background: #4d0000;
   --primary-text-color: #2a171c;
+  --card-background: #ffffff;
   --secondary-text-color: #765e63;
-  --light-text-color: #eb0023;
+  --light-text-color: #ff8799;
+  --kpi-note-color: #4c5551;
+  --chart-accent-text-color: #640000;
   --muted-on-dark-background: #e7c1c8;
   --accent-color: #a81731;
   --accent-hover-color: #7f1025;
-  --accent-soft-background: #fae9ed;
+  --accent-soft-background: #ff97af;
   --border-color: #e6cdd2;
   --stable-status-color: #287b5b;
   --stable-status-background: #e7f3ec;
@@ -21,12 +22,12 @@
   --surface-shadow: 0 12px 40px rgba(25, 0, 5, 0.12);
   --surface-radius: 20px;
   --map-marker-flash-duration: 20000ms;
-  --blood-rain-enabled-background: #b51f38;
+  --blood-rain-enabled-background: #bc0000;
   --blood-rain-disabled-background: #7b7f83;
   --banner-divider-color: #5b1c27;
   --banner-shadow: 0 5px 22px rgba(20, 0, 4, 0.22);
-  --banner-muted-text-color: #54101d;
-  --banner-hover-background: #dca7b1;
+  --banner-muted-text-color: #ff0000;
+  --banner-hover-background: #6f0000;
   --search-field-background: #fffafa;
   --search-field-border-color: #ff0000;
   --hero-highlight-color: #ff0000;
@@ -158,7 +159,7 @@ button {
   left:0;
   width:250px;
   padding:9px;
-  background:var(--panel-raised-background);
+  background:var(--card-background);
   border:1px solid var(--border-color);
   border-radius:14px;
   box-shadow:var(--surface-shadow);
@@ -222,7 +223,7 @@ button {
   top:calc(100% + 7px);
   left:0;
   right:0;
-  background:var(--panel-raised-background);
+  background:var(--card-background);
   border:1px solid var(--border-color);
   border-radius:13px;
   box-shadow:0 14px 38px rgba(20,43,42,.13);
@@ -361,7 +362,7 @@ button {
   margin:0 0 30px
 }
 .kpi-card {
-  background:var(--panel-raised-background);
+  background:var(--card-background);
   border:1px solid var(--border-color);
   border-radius:15px;
   padding:17px 19px;
@@ -381,7 +382,7 @@ button {
 }
 .kpi-note {
   font-size:10px;
-  color:#9aa49f;
+  color: var(--kpi-note-color);
   margin-top:2px
 }
 .content-grid {
@@ -413,7 +414,7 @@ button {
   text-align:right
 }
 .chart-card {
-  background:var(--panel-raised-background);
+  background:var(--card-background);
   border:1px solid var(--border-color);
   border-radius:17px;
   padding:20px 22px 17px;
@@ -441,7 +442,7 @@ button {
 .chart-unit {
   font:500 9px ui-monospace,SFMono-Regular,Menlo,monospace;
   letter-spacing:.1em;
-  color:#83928b;
+  color: var(--chart-accent-text-color);
   background:#f3f6f3;
   padding:7px 9px;
   border-radius:7px;
@@ -498,7 +499,7 @@ button {
   min-width:0
 }
 .map-card {
-  background:var(--panel-raised-background);
+  background:var(--card-background);
   border:1px solid var(--border-color);
   border-radius:18px;
   padding:18px;
@@ -532,7 +533,7 @@ button {
 }
 .hospital-count small {
   font-size:9px;
-  color:#82948a
+  color: var(--chart-accent-text-color)
 }
 .map-search-wrap {
   position:relative;
@@ -839,7 +840,7 @@ button {
   padding:19px 20px;
   border-radius:15px;
   border:1px solid var(--border-color);
-  background:#fff
+  background:var(--card-background)
 }
 .context-card h3 {
   font-size:18px;
@@ -1037,7 +1038,7 @@ button {
   gap:11px
 }
 .source-card {
-  background:var(--panel-raised-background);
+  background:var(--card-background);
   border:1px solid var(--border-color);
   border-radius:14px;
   padding:15px;

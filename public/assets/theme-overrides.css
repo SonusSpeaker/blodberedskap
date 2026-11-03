@@ -24,7 +24,7 @@ body {
 }
 .nav-menu,
 .suggestions {
-  background: var(--panel-raised-background);
+  background: var(--card-background);
   border-color: var(--border-color);
 }
 .nav-menu a,
@@ -79,7 +79,7 @@ body {
 .context-card,
 .national-risk-summary,
 .source-card {
-  background: var(--panel-background);
+  background: var(--card-background);
   color: var(--primary-text-color);
   border-color: var(--border-color);
 }
@@ -115,7 +115,7 @@ body {
 }
 .national-risk-summary {
   border-left: 4px solid var(--accent-color);
-  background: linear-gradient(100deg, var(--status-summary-start-background) 0%, var(--panel-raised-background) 75%);
+  background: linear-gradient(100deg, var(--status-summary-start-background) 0%, var(--card-background) 75%);
 }
 .context-card {
   border-radius: 15px;

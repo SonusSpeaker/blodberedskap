@@ -73,15 +73,16 @@
       })
     }),
     bloodRain: Object.freeze({
+      enabledByDefault: false,
       storageKey: 'blodberedskap.bloodRain.enabled',
       imageUrl: '/assets/blood.png',
-      minimumSpawnIntervalMilliseconds: 4000,
-      maximumSpawnIntervalMilliseconds: 10000,
-      fallDurationMilliseconds: 6500,
-      minimumDropSizePixels: 26,
+      minimumSpawnIntervalMilliseconds: 100,
+      maximumSpawnIntervalMilliseconds: 1000,
+      fallDurationMilliseconds: 3000,
+      minimumDropSizePixels: 32,
       maximumDropSizePixels: 64,
-      minimumDropRotationDegrees: -24,
-      maximumDropRotationDegrees: 24,
+      minimumDropRotationDegrees: -1,
+      maximumDropRotationDegrees: 1,
       horizontalPositionPercent: 100
     }),
     externalDependencies: Object.freeze({
