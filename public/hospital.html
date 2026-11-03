@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#31030a">
+  <title>Sykehusprofil – Blodberedskap Norge</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/theme-overrides.css">
+</head>
+<body data-page="hospital">
+  <header id="site-header"></header>
+  <main class="page-shell hospital-shell">
+    <div class="breadcrumbs"><a href="/">Oversikt</a><span>/</span><span id="hospital-breadcrumb">Sykehus</span></div>
+    <section class="hospital-hero">
+      <div><div class="eyebrow">LOKAL BLODBEREDSKAP</div><h1 id="hospital-title">Laster statistikkprofil …</h1><p id="hospital-subtitle" class="hero-copy"></p><p id="profile-type-label" class="profile-type-label">Statistikkprofil</p></div>
+      <div class="hospital-hero-controls">
+        <div id="hospital-risk" class="risk-pill risk-unknown"><span>⚪</span><span>Ukjent</span></div>
+        <div class="blood-rain-control">
+          <span class="blood-rain-control-label">Visuell effekt</span>
+          <button id="blood-rain-toggle" class="blood-rain-toggle" type="button" aria-pressed="false" aria-label="Slå blodregn på eller av">
+            <span class="blood-rain-switch-track"><span class="blood-rain-switch-thumb"></span></span>
+            <span>Blodregn</span><span data-blood-rain-state>Av</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="kpi-grid hospital-kpis">
+      <article class="kpi-card"><div class="kpi-label">Aktive blodgivere</div><div class="kpi-value" id="h-kpi-active">–</div><div class="kpi-note" id="h-kpi-active-note">Siste tilgjengelige år</div></article>
+      <article class="kpi-card"><div class="kpi-label">Nyrekruttering</div><div class="kpi-value" id="h-kpi-new">–</div><div class="kpi-note" id="h-kpi-new-note">Siste tilgjengelige år</div></article>
+      <article class="kpi-card"><div class="kpi-label">Tappingsvolum</div><div class="kpi-value" id="h-kpi-units">–</div><div class="kpi-note" id="h-kpi-litres">Blodenheter / liter</div></article>
+      <article class="kpi-card"><div class="kpi-label">Pasientforbruk</div><div class="kpi-value" id="h-kpi-consumption">–</div><div class="kpi-note" id="h-kpi-consumption-note">Siste tilgjengelige år</div></article>
+      <article class="kpi-card"><div class="kpi-label">Frafallte rekrutter</div><div class="kpi-value" id="h-kpi-recruitment-loss">–</div><div class="kpi-note" id="h-kpi-recruitment-loss-note">2015 minus 2025</div></article>
+    </section>
+    <section class="hospital-context-grid">
+      <article class="context-card beredskaps-card"><div class="chart-kicker">BEREDSKAPSSTATUS</div><h3 id="beredskap-value">⚪ Ukjent</h3><p id="beredskap-rule">Beregnes fra nyrekruttering i 2015 og 2025.</p></article>
+      <article class="context-card"><div class="chart-kicker">ENDRING I NYREKRUTTERING · 2015–2025</div><h3 id="recruitment-summary">–</h3><p id="recruitment-detail">Sammenligning av 2015 og 2025.</p></article>
+      <article class="context-card"><div class="chart-kicker">BEREDSKAPSNOTAT</div><h3 id="beredskapsnotat-value">Ikke oppgitt</h3><p>Opplysning fra statistikkgrunnlaget.</p></article>
+      <article class="context-card"><div class="chart-kicker">FORSYNINGSLINJE</div><h3 id="supply-line">Ikke oppgitt</h3><p id="supply-detail">Oppgitt forsyningslinje</p></article>
+    </section>
+    <div class="section-heading hospital-stat-heading"><div><div class="eyebrow">HISTORISK UTVIKLING</div><h2>Sykehusets statistikk</h2></div><p class="section-note" id="data-period">Alle tilgjengelige år vises.</p></div>
+    <section class="chart-card" id="active-donors"><div class="chart-heading"><div><div class="chart-kicker">BLODIVERBASEN</div><h3>Aktive blodgivere</h3><p>Utvikling i antall aktive givere over tid.</p></div><span class="chart-unit">PERSONER</span></div><div class="chart-wrap"><canvas id="hActiveChart"></canvas><div class="chart-empty" data-empty="hActiveChart">Ingen historiske data.</div></div></section>
+    <section class="chart-card" id="new-donors"><div class="chart-heading"><div><div class="chart-kicker">REKRUTTERING</div><h3>Nyrekruttering</h3><p>Antall nye blodgivere per år.</p></div><span class="chart-unit">PERSONER</span></div><div class="chart-wrap"><canvas id="hNewChart"></canvas><div class="chart-empty" data-empty="hNewChart">Ingen historiske data.</div></div></section>
+    <section class="chart-card" id="collections"><div class="chart-heading"><div><div class="chart-kicker">BLODBANKPRODUKSJON</div><h3>Tappingsvolum</h3><p>Årlige tappinger vist som blodenheter og beregnet liter (0,45 liter per enhet).</p></div><span class="chart-unit">BLODENHETER / LITER</span></div><div class="chart-wrap"><canvas id="hCollectionChart"></canvas><div class="chart-empty" data-empty="hCollectionChart">Ingen historiske data.</div></div><div class="chart-footnote">Kildetallene er blodenheter. Liter beregnes dynamisk som blodenheter × 0,45. Grafens akse viser blodenheter; pek på et punkt for å se blodenheter / liter og år.</div></section>
+    <section class="chart-card" id="consumption"><div class="chart-heading"><div><div class="chart-kicker">TRANSFUSJON</div><h3>Pasientforbruk</h3><p>Årlig pasientforbruk vist som blodenheter og beregnet liter (0,45 liter per enhet).</p></div><span class="chart-unit">BLODENHETER / LITER</span></div><div class="chart-wrap"><canvas id="hConsumptionChart"></canvas><div class="chart-empty" data-empty="hConsumptionChart">Ingen historiske data.</div></div><div class="chart-footnote">Kildetallene er blodenheter. Liter beregnes dynamisk som blodenheter × 0,45. Grafens akse viser blodenheter; pek på et punkt for å se blodenheter / liter og år.</div></section>
+    <section class="chart-card" id="net-balance"><div class="chart-heading"><div><div class="chart-kicker">ÅRLIG FORSYNINGSROM</div><h3>Nettbalanse blod per år</h3><p>Tappingsvolum minus pasientforbruk for dette traumesykehuset.</p></div><span class="chart-unit">BLODENHETER / LITER</span></div><div class="chart-wrap"><canvas id="hNetBalanceChart"></canvas><div class="chart-empty" data-empty="hNetBalanceChart">Mangler overlappende tall for tapping og forbruk.</div></div><div class="chart-footnote">Nettbalansen er årsproduksjon minus årsforbruk, ikke lagerbeholdning. Liter beregnes dynamisk som blodenheter × 0,45.</div></section>
+    <footer class="site-footer"><a href="/">← Tilbake til nasjonal oversikt</a><span>Blodberedskap Norge</span></footer>
+  </main>
+  <script src="/assets/app-config.js"></script>
+  <script src="/assets/external-dependencies.js"></script>
+  <script src="/assets/common.js"></script>
+  <script src="/assets/shared-data.js"></script>
+  <script src="/assets/blood-rain.js"></script>
+  <script src="/assets/hospital.js"></script>
+</body></html>

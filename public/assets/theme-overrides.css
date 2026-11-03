@@ -1,0 +1,351 @@
+html,
+body {
+  background: var(--page-background);
+  color: var(--light-text-color);
+}
+.site-header {
+  background: var(--banner-background);
+  border-bottom: 1px solid var(--banner-divider-color);
+  box-shadow: var(--banner-shadow);
+}
+.brand-name,
+.nav-link,
+.nav-button {
+  color: var(--light-text-color);
+}
+.brand-sub {
+  color: var(--banner-muted-text-color);
+}
+.nav-link:hover,
+.nav-button:hover,
+.nav-link.active {
+  background: var(--banner-hover-background);
+  color: var(--light-text-color);
+}
+.nav-menu,
+.suggestions {
+  background: var(--panel-raised-background);
+  border-color: var(--border-color);
+}
+.nav-menu a,
+.suggestion-item {
+  color: var(--primary-text-color);
+}
+.nav-menu a:hover,
+.suggestion-item:hover,
+.suggestion-item:focus {
+  background: var(--accent-soft-background);
+}
+.suggestion-icon {
+  background: var(--accent-soft-background);
+  color: var(--accent-color);
+}
+.nav-search {
+  background: var(--search-field-background);
+  color: var(--primary-text-color);
+  border-color: var(--search-field-border-color);
+}
+.hero-row h1,
+.section-heading h2,
+.map-head h2,
+.hospital-hero h1,
+.breadcrumbs,
+.site-footer {
+  color: var(--light-text-color);
+}
+.hero-row h1 em,
+.eyebrow,
+.chart-kicker {
+  color: var(--hero-highlight-color);
+}
+.eyebrow-dot {
+  background: var(--hero-marker-color);
+  box-shadow: var(--hero-marker-shadow);
+}
+.hero-copy,
+.section-note,
+.breadcrumbs span {
+  color: var(--muted-on-dark-background);
+}
+.hero-meta {
+  border-left-color: var(--hero-divider-color);
+}
+.meta-label {
+  color: var(--hero-highlight-color);
+}
+.kpi-card,
+.chart-card,
+.map-card,
+.context-card,
+.national-risk-summary,
+.source-card {
+  background: var(--panel-background);
+  color: var(--primary-text-color);
+  border-color: var(--border-color);
+}
+.kpi-label,
+.chart-heading p,
+.chart-footnote,
+.context-card p,
+.national-risk-summary p,
+.popup-sub,
+.popup-stat span,
+.popup-status {
+  color: var(--secondary-text-color);
+}
+.kpi-value,
+.context-card h3,
+.national-risk-summary strong,
+.chart-heading h3,
+.map-head h2 {
+  color: var(--primary-text-color);
+}
+.kpi-value {
+  overflow-wrap: anywhere;
+}
+.chart-unit,
+.hospital-count,
+.map-help,
+.recruitment-explainer {
+  background: var(--accent-soft-background);
+  color: var(--accent-color);
+}
+.chart-unit {
+  border: 1px solid var(--border-color);
+}
+.national-risk-summary {
+  border-left: 4px solid var(--accent-color);
+  background: linear-gradient(100deg, var(--status-summary-start-background) 0%, var(--panel-raised-background) 75%);
+}
+.context-card {
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(25, 0, 5, 0.10);
+}
+.context-card h3 {
+  overflow-wrap: anywhere;
+}
+.status-chip {
+  border-color: var(--status-ready-border-color);
+  background: var(--status-summary-start-background);
+  color: var(--accent-color);
+}
+.status-chip.ready {
+  border-color: var(--status-ready-border-color);
+  background: var(--status-ready-background);
+  color: var(--status-ready-text-color);
+}
+.data-note {
+  background: var(--data-note-background);
+  border: 1px solid var(--data-note-border-color);
+  color: var(--data-note-text-color);
+}
+.data-note strong {
+  color: var(--data-note-emphasis-color);
+}
+.site-footer {
+  border-top-color: var(--hero-divider-color);
+}
+.site-footer a,
+.site-footer span:first-child {
+  color: var(--footer-link-color);
+}
+.breadcrumbs a {
+  color: var(--footer-link-color);
+}
+.hero-meta .blood-rain-control,
+.hospital-hero-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+.blood-rain-control-label {
+  color: var(--hero-highlight-color);
+  font: 600 10px 'DM Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.blood-rain-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 6px 12px 6px 7px;
+  border: 1px solid var(--rain-toggle-border-color);
+  border-radius: 999px;
+  background: var(--blood-rain-disabled-background);
+  color: var(--rain-toggle-text-color);
+  font-size: 12px;
+  font-weight: 800;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+.blood-rain-toggle.is-enabled {
+  border-color: var(--rain-toggle-active-border-color);
+  background: var(--blood-rain-enabled-background);
+}
+.blood-rain-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.blood-rain-switch-track {
+  display: inline-flex;
+  align-items: center;
+  width: 34px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 999px;
+  background: var(--rain-switch-track-background);
+}
+.blood-rain-switch-thumb {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--rain-toggle-text-color);
+  transform: translateX(0);
+  transition: transform 160ms ease;
+}
+.blood-rain-toggle.is-enabled .blood-rain-switch-thumb {
+  transform: translateX(14px);
+}
+.blood-rain-layer {
+  position: fixed;
+  z-index: 900;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.blood-rain-drop {
+  position: absolute;
+  top: 0;
+  height: auto;
+  max-height: 130px;
+  object-fit: contain;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  filter: var(--rain-drop-shadow);
+  animation: blood-drop-fall var(--drop-fall-duration) linear forwards;
+}
+@keyframes blood-drop-fall {
+  0% {
+    transform: translate3d(0, -125%, 0) rotate(var(--drop-rotation));
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.88;
+  }
+  90% {
+    opacity: 0.88;
+  }
+  100% {
+    transform: translate3d(0, calc(100vh + 130%), 0) rotate(var(--drop-rotation));
+    opacity: 0;
+  }
+}
+.map-dot.is-flashing {
+  animation: independent-marker-flash var(--map-marker-flash-duration) ease-in-out 1;
+}
+@keyframes independent-marker-flash {
+  0%, 100% { opacity: 1; transform: scale(1); filter: brightness(1); }
+  12% { opacity: 0.24; transform: scale(1.7); filter: brightness(1.35); }
+  24% { opacity: 1; transform: scale(1); filter: brightness(1); }
+  36% { opacity: 0.30; transform: scale(1.55); filter: brightness(1.3); }
+  48% { opacity: 1; transform: scale(1); filter: brightness(1); }
+  60% { opacity: 0.35; transform: scale(1.45); filter: brightness(1.25); }
+  72% { opacity: 1; transform: scale(1); filter: brightness(1); }
+  84% { opacity: 0.42; transform: scale(1.3); filter: brightness(1.15); }
+}
+@media (max-width: 620px) {
+  .hero-meta {
+    border-left: 0;
+    border-top: 1px solid var(--hero-divider-color);
+    padding: 14px 0 0;
+  }
+  .hospital-hero-controls {
+    margin-top: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blood-rain-drop,
+  .map-dot.is-flashing {
+    animation: none !important;
+  }
+  .blood-rain-toggle,
+  .blood-rain-switch-thumb {
+    transition: none;
+  }
+}
+
+.kpi-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.national-context-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 28px;
+}
+.national-context-grid .context-card h3 {
+  font-size: 17px;
+  line-height: 1.45;
+}
+.hospital-context-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.hospital-context-grid .context-card h3 {
+  font-size: 17px;
+  line-height: 1.45;
+}
+.profile-type-label {
+  margin: 0;
+  color: var(--muted-on-dark-background);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.hospital-hero-controls {
+  align-items: flex-end;
+  min-width: 190px;
+}
+@media (max-width: 1100px) {
+  .kpi-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 850px) {
+  .hospital-hero-controls {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 620px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .national-context-grid,
+  .hospital-context-grid {
+    grid-template-columns: 1fr;
+  }
+  .hospital-hero-controls {
+    align-items: flex-start;
+  }
+}
+
+.brand-logo {
+  width: 106px;
+  height: 58px;
+  object-fit: contain;
+  display: block;
+  flex: none;
+  border-radius: 7px;
+}
+.recruitment-chart-wrap {
+  height: 468px;
+}
+@media (max-width: 620px) {
+  .brand-logo {
+    width: 90px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#31030a">
+  <meta name="description" content="Oversikt over blodgiverrekruttering, tapping og transfusjonsberedskap ved norske traumesykehus.">
+  <title>Blodberedskap Norge – oversikt og statistikk</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/theme-overrides.css">
+</head>
+<body data-page="home">
+  <header id="site-header"></header>
+  <main class="page-shell">
+    <section class="hero-row">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> NASJONAL OVERSIKT · TRAUMEBEREDSKAP</div>
+        <h1>Blodberedskap<br><em>i Norge</em></h1>
+        <p class="hero-copy">Følg blodgiverrekruttering, tapping og pasientforbruk ved landets 38 traumesykehus. Tallene viser hvor sårbar blodberedskapen kan bli når tilgangen på givere svekkes.</p>
+      </div>
+      <div class="hero-meta">
+        <div class="blood-rain-control">
+          <span class="blood-rain-control-label">Visuell effekt</span>
+          <button id="blood-rain-toggle" class="blood-rain-toggle" type="button" aria-pressed="false" aria-label="Slå blodregn på eller av">
+            <span class="blood-rain-switch-track"><span class="blood-rain-switch-thumb"></span></span>
+            <span>Blodregn</span><span data-blood-rain-state>Av</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-grid" aria-label="Nøkkeltall for Norge">
+      <article class="kpi-card"><div class="kpi-label">Aktive blodgivere</div><div class="kpi-value" id="kpi-active">–</div><div class="kpi-note" id="kpi-active-note">Siste tilgjengelige år</div></article>
+      <article class="kpi-card"><div class="kpi-label">Nye blodgivere</div><div class="kpi-value" id="kpi-new">–</div><div class="kpi-note" id="kpi-new-note">Siste tilgjengelige år</div></article>
+      <article class="kpi-card"><div class="kpi-label">Tappingsvolum</div><div class="kpi-value" id="kpi-units">–</div><div class="kpi-note" id="kpi-litres">Blodenheter / liter</div></article>
+      <article class="kpi-card"><div class="kpi-label">Pasientforbruk</div><div class="kpi-value" id="kpi-consumption">–</div><div class="kpi-note" id="kpi-consumption-note">Siste tilgjengelige år</div></article>
+      <article class="kpi-card"><div class="kpi-label">Frafallte rekrutter</div><div class="kpi-value" id="kpi-recruitment-loss">–</div><div class="kpi-note" id="kpi-recruitment-loss-note">2015 minus 2025</div></article>
+    </section>
+
+    <section class="national-risk-summary" aria-label="Nasjonal rekrutteringsstatus">
+      <div><div class="chart-kicker">NASJONAL ENDRING I NYREKRUTTERING</div><strong id="national-risk">–</strong></div>
+      <p id="national-risk-detail">Status beregnes fra nasjonale rekrutteringstall.</p>
+    </section>
+    <section class="national-context-grid" aria-label="Nasjonale beredskapsopplysninger">
+      <article class="context-card"><div class="chart-kicker">BEREDSKAPSNOTAT</div><h3 id="national-beredskapsnotat">–</h3><p>Opplysning fra det nasjonale datagrunnlaget.</p></article>
+      <article class="context-card"><div class="chart-kicker">FORSYNINGSLINJE</div><h3 id="national-forsyningslinje">–</h3><p>Hovedlinje for nasjonal blodforsyning.</p></article>
+    </section>
+
+    <div class="content-grid">
+      <section class="dashboard-content" aria-label="Nasjonal statistikk">
+        <div class="section-heading">
+          <div><div class="eyebrow">NASJONALE TRENDER</div><h2>Statistikken, år for år</h2></div>
+          <div class="section-note">Grafene viser tilgjengelige årstall. Nye registrerte år kommer automatisk med.</div>
+        </div>
+
+        <section class="chart-card" id="active-donors">
+          <div class="chart-heading"><div><div class="chart-kicker">BLODGIVERBASEN</div><h3>Aktive blodgivere</h3><p>Antall aktive blodgivere per år i Norge.</p></div><span class="chart-unit">PERSONER</span></div>
+          <div class="chart-wrap"><canvas id="activeChart" aria-label="Graf over aktive blodgivere i Norge"></canvas><div class="chart-empty" data-empty="activeChart">Ingen nasjonale data tilgjengelig.</div></div>
+        </section>
+
+        <section class="chart-card" id="new-donors">
+          <div class="chart-heading"><div><div class="chart-kicker">REKRUTTERING</div><h3>Nyrekruttering</h3><p>Antall nye blodgivere per år i Norge.</p></div><span class="chart-unit">PERSONER</span></div>
+          <div class="chart-wrap"><canvas id="newChart" aria-label="Graf over nye blodgivere i Norge"></canvas><div class="chart-empty" data-empty="newChart">Ingen nasjonale data tilgjengelig.</div></div>
+        </section>
+
+        <section class="chart-card" id="collections">
+          <div class="chart-heading"><div><div class="chart-kicker">BLODBANKPRODUKSJON</div><h3>Tappingsvolum</h3><p>Årlige tappinger vist som blodenheter og beregnet liter (0,45 liter per enhet).</p></div><span class="chart-unit">BLODENHETER / LITER</span></div>
+          <div class="chart-wrap"><canvas id="collectionChart" aria-label="Graf over nasjonalt tappingsvolum"></canvas><div class="chart-empty" data-empty="collectionChart">Ingen nasjonale data tilgjengelig.</div></div>
+          <div class="chart-footnote">Kildetallene er blodenheter. Liter beregnes dynamisk som blodenheter × 0,45. Grafens akse viser blodenheter; pek på et punkt for å se blodenheter / liter og år.</div>
+        </section>
+
+        <section class="chart-card" id="consumption">
+          <div class="chart-heading"><div><div class="chart-kicker">TRANSFUSJON</div><h3>Pasientforbruk</h3><p>Årlig pasientforbruk vist som blodenheter og beregnet liter (0,45 liter per enhet).</p></div><span class="chart-unit">BLODENHETER / LITER</span></div>
+          <div class="chart-wrap"><canvas id="consumptionChart" aria-label="Graf over nasjonalt pasientforbruk"></canvas><div class="chart-empty" data-empty="consumptionChart">Ingen nasjonale data tilgjengelig.</div></div>
+          <div class="chart-footnote">Kildetallene er blodenheter. Liter beregnes dynamisk som blodenheter × 0,45. Grafens akse viser blodenheter; pek på et punkt for å se blodenheter / liter og år.</div>
+        </section>
+
+        <section class="chart-card" id="net-balance">
+          <div class="chart-heading"><div><div class="chart-kicker">ÅRLIG FORSYNINGSROM</div><h3>Nettbalanse blod per år</h3><p>Tappingsvolum minus pasientforbruk. Positiv verdi viser at årsproduksjonen overstiger forbruket.</p></div><span class="chart-unit">BLODENHETER / LITER</span></div>
+          <div class="chart-wrap"><canvas id="netBalanceChart" aria-label="Graf over nasjonal nettbalanse i blod per år"></canvas><div class="chart-empty" data-empty="netBalanceChart">Mangler overlappende tall for tapping og forbruk.</div></div>
+          <div class="chart-footnote">Nettbalansen er en beregnet års-differanse, ikke et mål på lagerbeholdning. Liter beregnes dynamisk som blodenheter × 0,45.</div>
+        </section>
+
+        <section class="chart-card" id="recruitment">
+          <div class="chart-heading"><div><div class="chart-kicker">BEREDSKAPSINDIKATOR</div><h3>Endringer i nyrekruttering</h3><p>Prosentvis endring fra 2015 til 2025. Negative verdier betyr færre nye givere.</p></div><span class="chart-unit">PROSENT</span></div>
+          <div class="chart-wrap recruitment-chart-wrap"><canvas id="recruitmentChart" aria-label="Graf over prosentvis endring i nyrekruttering ved traumesykehus"></canvas><div class="chart-empty" data-empty="recruitmentChart">Krever tall for både 2015 og 2025.</div></div>
+        </section>
+
+        <section class="chart-card" id="recruitment-loss">
+          <div class="chart-heading"><div><div class="chart-kicker">REKRUTTERINGSTAP</div><h3>Frafallte rekrutter</h3><p>Forskjellen mellom antall nyrekrutterte i 2015 og 2025 ved hvert traumesykehus.</p></div><span class="chart-unit">PERSONER</span></div>
+          <div class="chart-wrap recruitment-chart-wrap"><canvas id="recruitmentLossChart" aria-label="Graf over antall færre eller flere rekrutter ved hvert traumesykehus"></canvas><div class="chart-empty" data-empty="recruitmentLossChart">Krever tall for både 2015 og 2025.</div></div>
+          <div class="chart-footnote">Beregnes dynamisk som rekruttering 2015 minus rekruttering 2025. Negative tall betyr at sykehuset rekrutterte flere i 2025 enn i 2015.</div>
+        </section>
+
+        <div class="data-note"><strong>Datagrunnlag:</strong> Statistikken kommer fra et lokalt datasett, og nettstedet bruker ikke et statistikk-API. Endringer i nyrekruttering, frafallte rekrutter, beredskapsstatus og nettbalanse beregnes fra kildetallene. Manglende år behandles som manglende data, ikke som null. Liter beregnes som blodenheter × 0,45.</div>
+      </section>
+
+      <aside class="map-sidebar" aria-label="Interaktivt kart over traumesykehus">
+        <div class="map-card">
+          <div class="map-head">
+            <div><div class="eyebrow">KARTOVERSIKT</div><h2>Traumesykehus</h2><p>Markørene blinker uavhengig av hverandre.</p></div>
+            <span class="hospital-count"><strong id="hospital-count">38</strong><small>traumesykehus</small></span>
+          </div>
+          <div class="map-search-wrap">
+            <label class="sr-only" for="map-search">Søk etter traumesykehus</label>
+            <div class="search-input-shell"><span class="search-icon">⌕</span><input id="map-search" type="search" autocomplete="off" placeholder="Søk etter traumesykehus …"><kbd>↵</kbd></div>
+            <div id="map-search-results" class="suggestions map-suggestions" hidden></div>
+          </div>
+          <div id="norway-map" class="norway-map" role="application" aria-label="Kart med markører for traumesykehus"></div>
+          <div class="map-legend">
+            <span><i class="legend-dot green"></i> 🟢 Grønn · under 30 % fall</span>
+            <span><i class="legend-dot yellow"></i> 🟡 Gul · 30–59,9 % fall</span>
+            <span><i class="legend-dot red"></i> 🔴 Rød · 60 % eller mer fall</span>
+            <span><i class="legend-dot grey"></i> Mangler 2015/2025-data</span>
+          </div>
+          <div class="map-foot">Kartgrunnlag © OpenStreetMap-bidragsytere.</div>
+        </div>
+        <div class="map-help"><span class="help-icon">i</span><p>Statusfargen beregnes kun fra nyrekruttering i 2015 og 2025. Klikk på en markør for å se tallene og åpne sykehusets historikk.</p></div>
+      </aside>
+    </div>
+    <footer class="site-footer"><span>Blodberedskap Norge</span><span>Nasjonal oversikt for traumesykehus</span></footer>
+  </main>
+  <script src="/assets/app-config.js"></script>
+  <script src="/assets/external-dependencies.js"></script>
+  <script src="/assets/common.js"></script>
+  <script src="/assets/shared-data.js"></script>
+  <script src="/assets/blood-rain.js"></script>
+  <script src="/assets/dashboard.js"></script>
+</body>
+</html>
