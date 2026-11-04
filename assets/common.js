@@ -40,7 +40,7 @@
         title: profile.name,
         subtitle: profile.subtitle,
         icon: '⌖',
-        destination: `/hospital.html?id=${encodeURIComponent(profile.id)}`
+        destination: `./hospital.html?id=${encodeURIComponent(profile.id)}`
       }));
 
     const hospitalResults = getHospitalSearchItems()
@@ -50,7 +50,7 @@
         title: hospital.name,
         subtitle: `${hospital.region} · Sykehusprofil`,
         icon: '⌖',
-        destination: `/hospital.html?id=${encodeURIComponent(hospital.id)}`
+        destination: `./hospital.html?id=${encodeURIComponent(hospital.id)}`
       }));
 
     const statisticResults = statisticsNavigationItems

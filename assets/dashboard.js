@@ -360,7 +360,7 @@
       <button class="popup-view" type="button">Vis mer om sykehuset ↗</button>`;
 
     popupElement.querySelector('.popup-view').addEventListener('click', () => {
-      window.location.href = `/hospital.html?id=${encodeURIComponent(hospital.id)}`;
+      window.location.href = `./hospital.html?id=${encodeURIComponent(hospital.id)}`;
     });
     return popupElement;
   }
@@ -438,7 +438,7 @@
     function navigateToMapResult(result) {
       if (!result) return;
       if (result.type === 'aggregate-profile') {
-        window.location.href = `/hospital.html?id=${encodeURIComponent(result.id)}`;
+        window.location.href = `./hospital.html?id=${encodeURIComponent(result.id)}`;
         return;
       }
 
