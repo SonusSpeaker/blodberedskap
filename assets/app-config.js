@@ -73,7 +73,7 @@
       })
     }),
     bloodRain: Object.freeze({
-      enabledByDefault: false,
+      enabledByDefault: true,
       storageKey: 'blodberedskap.bloodRain.enabled',
       imageUrl: './assets/blood.png',
       minimumSpawnIntervalMilliseconds: 100,
