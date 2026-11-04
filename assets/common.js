@@ -93,7 +93,7 @@
     headerElement.innerHTML = `
       <div class="nav-inner">
         <a class="brand" href="/" aria-label="Blodberedskap Norge – hjem">
-          <img class="brand-logo" src="/assets/logo.png" alt="Logo" onerror="this.hidden=true">
+          <img class="brand-logo" src="./assets/logo.png" alt="Logo" onerror="this.hidden=true">
           <span class="brand-name">BLODBEREDSKAP<span class="brand-sub">NORGE · TRAUMESYKEHUS</span></span>
         </a>
         <nav class="nav-links" aria-label="Hovedmeny">

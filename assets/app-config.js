@@ -3,7 +3,7 @@
 
   const APP_CONFIG = Object.freeze({
     data: Object.freeze({
-      statisticsDatasetUrl: '/data/hospital_statistics.json',
+      statisticsDatasetUrl: './data/hospital_statistics.json',
       nationalRecordName: 'Norge Totalt'
     }),
     formatting: Object.freeze({
@@ -75,7 +75,7 @@
     bloodRain: Object.freeze({
       enabledByDefault: false,
       storageKey: 'blodberedskap.bloodRain.enabled',
-      imageUrl: '/assets/blood.png',
+      imageUrl: './assets/blood.png',
       minimumSpawnIntervalMilliseconds: 100,
       maximumSpawnIntervalMilliseconds: 1000,
       fallDurationMilliseconds: 3000,
