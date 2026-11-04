@@ -14,7 +14,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-PUBLIC = ROOT / "public"
+PUBLIC = ROOT
 DATA = ROOT / "data"
 
 
