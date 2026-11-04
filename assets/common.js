@@ -63,7 +63,7 @@
       }));
 
     const aboutResults = 'om oss'.includes(normalizedQuery)
-      ? [{ title: 'Om oss', subtitle: 'Informasjonsside', icon: 'i', destination: '/about.html' }]
+      ? [{ title: 'Om oss', subtitle: 'Informasjonsside', icon: 'i', destination: './about.html' }]
       : [];
     const allResults = [...profileResults, ...hospitalResults, ...statisticResults, ...aboutResults].slice(0, searchLimits.globalSuggestionLimit);
 
@@ -92,17 +92,17 @@
     headerElement.className = 'site-header';
     headerElement.innerHTML = `
       <div class="nav-inner">
-        <a class="brand" href="/" aria-label="Blodberedskap Norge – hjem">
+        <a class="brand" href="./" aria-label="Blodberedskap Norge – hjem">
           <img class="brand-logo" src="./assets/logo.png" alt="Logo" onerror="this.hidden=true">
           <span class="brand-name">BLODBEREDSKAP<span class="brand-sub">NORGE · TRAUMESYKEHUS</span></span>
         </a>
         <nav class="nav-links" aria-label="Hovedmeny">
-          <a class="nav-link ${pageName === 'home' ? 'active' : ''}" href="/">Hjem</a>
+          <a class="nav-link ${pageName === 'home' ? 'active' : ''}" href="./">Hjem</a>
           <div class="nav-dropdown">
             <button class="nav-button" id="stats-menu-button" type="button" aria-expanded="false">Statistikker <span aria-hidden="true">⌄</span></button>
             <div class="nav-menu" id="stats-menu" hidden>${statisticsNavigationItems.map(statistic => `<a href="${pageName === 'about' ? `/#${statistic.id}` : `#${statistic.id}`}">${statistic.title}</a>`).join('')}</div>
           </div>
-          <a class="nav-link ${pageName === 'about' ? 'active' : ''}" href="/about.html">Om oss</a>
+          <a class="nav-link ${pageName === 'about' ? 'active' : ''}" href="./about.html">Om oss</a>
         </nav>
         <div class="nav-search-wrap">
           <span class="nav-search-icon" aria-hidden="true">⌕</span>
