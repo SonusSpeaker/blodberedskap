@@ -21,7 +21,7 @@
 
   function formatBloodVolume(bloodUnits) {
     const litreVolume = bloodUnits * configuration.formatting.bloodUnitLitres;
-    return `${formatNumber(bloodUnits)} enheter / ~${formatLitres(Math.round(litreVolume))} liter`;
+    return `${formatNumber(bloodUnits)} enheter / ${formatLitres(Math.round(litreVolume))} liter`;
   }
 
   function formatPercentage(value) {
@@ -86,12 +86,12 @@
       return { key: 'unknown', icon: '⚪', label: 'Ukjent', explanation: 'Mangler 2015- eller 2025-tall' };
     }
     if (recruitmentChange <= -recruitmentThresholds.severeDeclinePercent) {
-      return { key: 'red', icon: '🔴', label: 'Rød', explanation: `${recruitmentThresholds.severeDeclinePercent} % eller mer fall` };
+      return { key: 'red', icon: '🔴', label: 'Rød', explanation: `${recruitmentThresholds.severeDeclinePercent} %  eller mer fall` };
     }
     if (recruitmentChange <= -recruitmentThresholds.moderateDeclinePercent) {
-      return { key: 'yellow', icon: '🟡', label: 'Gul', explanation: `${recruitmentThresholds.moderateDeclinePercent}–${(recruitmentThresholds.severeDeclinePercent - 0.1).toFixed(1).replace('.', ',')} % fall` };
+      return { key: 'yellow', icon: '🟡', label: 'Gul', explanation: `${recruitmentThresholds.moderateDeclinePercent}–${(recruitmentThresholds.severeDeclinePercent - 0.1).toFixed(1).replace('.', ',')} %  fall` };
     }
-    return { key: 'green', icon: '🟢', label: 'Grønn', explanation: `Under ${recruitmentThresholds.moderateDeclinePercent} % fall` };
+    return { key: 'green', icon: '🟢', label: 'Grønn', explanation: `Under ${recruitmentThresholds.moderateDeclinePercent} %  fall` };
   }
 
   function createRecruitmentThresholdDescription(statisticsRecord) {
