@@ -43,8 +43,8 @@
   --unknown-status-background: #edf1ee;
   --data-note-background: #fff2f4;
   --data-note-border-color: #e8cbd1;
-  --data-note-text-color: #76535b;
   --data-note-emphasis-color: #7f1025;
+  --minor-info-text-color: #76535b;
   --footer-link-color: #ffdce2;
   --rain-toggle-border-color: #a8a2a4;
   --rain-toggle-active-border-color: #e85b75;
@@ -356,17 +356,22 @@ button {
   color:#93a099
 }
 .kpi-grid {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:13px;
-  margin:0 0 30px
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  grid-auto-rows: minmax(min-content, max-content); 
+  row-gap: 15px;
+  column-gap: 15px;
+  margin: 0 0 30px
 }
 .kpi-card {
+  display: flex;
+  flex-direction: column;
   background:var(--card-background);
   border:1px solid var(--border-color);
   border-radius:15px;
   padding:17px 19px;
-  min-height:112px;
+  min-height: max-content;
+  height: auto;
   box-shadow:0 3px 16px rgba(31,65,52,.025)
 }
 .kpi-label {
@@ -378,12 +383,13 @@ button {
   font:800 28px/1.3 Manrope,sans-serif;
   letter-spacing:-.04em;
   margin-top:6px;
+  white-space: pre-wrap;
   color:var(--primary-text-color)
 }
 .kpi-note {
   font-size:10px;
   color: var(--kpi-note-color);
-  margin-top:2px
+  margin-top: auto;
 }
 .content-grid {
   display:grid;
@@ -700,8 +706,8 @@ button {
 }
 .map-help p {
   margin:0;
-  color:#75857c;
-  font-size:10px;
+  color: var(--minor-info-text-color);
+  font-size:12px;
   line-height:1.5
 }
 .help-icon {

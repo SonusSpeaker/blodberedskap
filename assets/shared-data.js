@@ -81,6 +81,17 @@
     return recruitmentIn2015 - recruitmentIn2025;
   }
 
+  function calculateDonorLoss(statisticsRecord) {
+    const donorsIn2025 = getYearValue(statisticsRecord, 'Aktive blodgivere', comparisonYears.baselineYear);
+    const donorsIn2015 = getYearValue(statisticsRecord, 'Aktive blodgivere', comparisonYears.comparisonYear);
+
+    if (donorsIn2025 === null || donorsIn2015 === null) {
+      return null;
+    }
+
+    return donorsIn2015 - donorsIn2025;
+  }
+
   function getRecruitmentRisk(recruitmentChange) {
     if (recruitmentChange === null || !Number.isFinite(recruitmentChange)) {
       return { key: 'unknown', icon: '⚪', label: 'Ukjent', explanation: 'Mangler 2015- eller 2025-tall' };
@@ -147,6 +158,7 @@
     getLatestValue,
     calculateRecruitmentChange,
     calculateRecruitmentLoss,
+    calculateDonorLoss,
     getRecruitmentRisk,
     createRecruitmentThresholdDescription,
     createAverageStatistics,

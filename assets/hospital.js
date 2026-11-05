@@ -88,6 +88,7 @@
     const recruitmentLoss = utilities.calculateRecruitmentLoss(profileStatistics);
     const recruitmentIn2025 = utilities.getYearValue(profileStatistics, 'Nyrekruttering', configuration.comparisonYears.baselineYear);
     const recruitmentIn2015 = utilities.getYearValue(profileStatistics, 'Nyrekruttering', configuration.comparisonYears.comparisonYear);
+    const donorLoss = utilities.calculateDonorLoss(profileStatistics);
 
     const riskBadge = getElement('hospital-risk');
     riskBadge.className = `risk-pill risk-${recruitmentRisk.key}`;
@@ -111,14 +112,18 @@
     getElement('h-kpi-active-note').textContent = activeDonors ? `År ${activeDonors.year} · personer` : 'Ingen data';
     getElement('h-kpi-new').textContent = newDonors ? utilities.formatNumber(newDonors.value) : '–';
     getElement('h-kpi-new-note').textContent = newDonors ? `År ${newDonors.year} · personer` : 'Ingen data';
+    getElement('h-kpi-recruitment-loss-label').textContent = recruitmentLoss > 0 ? 'Nedgang i nyrekruttering' : 'Oppgang i nyrekruttering';
+    getElement('h-kpi-recruitment-loss').textContent = recruitmentLoss === null ? '–' : utilities.formatNumber(Math.abs(recruitmentLoss));
+    getElement('h-kpi-recruitment-loss-note').textContent = '2025 sammenliknet med 2015';
+    getElement('h-kpi-donor-loss-label').textContent = donorLoss > 0 ? 'Nedgang i aktive blodgivere' : 'Oppgang i aktive blodgivere';
+    getElement('h-kpi-donor-loss').textContent = donorLoss === null ? '–' : utilities.formatNumber(Math.abs(donorLoss));
+    getElement('h-kpi-donor-loss-note').textContent = '2025 sammenliknet med 2015';
     getElement('h-kpi-units').textContent = collectedBlood ? utilities.formatBloodVolume(collectedBlood.value) : '–';
     getElement('h-kpi-units').classList.add('kpi-blood-value');
     getElement('h-kpi-litres').textContent = collectedBlood ? `Tapping · ${collectedBlood.year}` : 'Ingen data';
     getElement('h-kpi-consumption').textContent = patientConsumption ? utilities.formatBloodVolume(patientConsumption.value) : '–';
     getElement('h-kpi-consumption').classList.add('kpi-blood-value');
     getElement('h-kpi-consumption-note').textContent = patientConsumption ? `Pasientforbruk · ${patientConsumption.year}` : 'Ingen data';
-    getElement('h-kpi-recruitment-loss').textContent = recruitmentLoss === null ? '–' : utilities.formatNumber(recruitmentLoss);
-    getElement('h-kpi-recruitment-loss-note').textContent = '2015 minus 2025';
 
     function createLineChart(canvasId, metricName, metricLabel, lineColor) {
       const canvas = getElement(canvasId);

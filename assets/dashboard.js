@@ -72,20 +72,24 @@
     const patientConsumption = utilities.getLatestValue(nationalStatistics, 'Pasientforbruk');
     const recruitmentChange = utilities.calculateRecruitmentChange(nationalStatistics);
     const recruitmentLoss = utilities.calculateRecruitmentLoss(nationalStatistics);
+    const donorLoss = utilities.calculateDonorLoss(nationalStatistics);
     const recruitmentRisk = utilities.getRecruitmentRisk(recruitmentChange);
 
     getElement('kpi-active').textContent = activeDonors ? utilities.formatNumber(activeDonors.value) : '–';
     getElement('kpi-active-note').textContent = activeDonors ? `År ${activeDonors.year} · personer` : 'Ingen data';
     getElement('kpi-new').textContent = newDonors ? utilities.formatNumber(newDonors.value) : '–';
     getElement('kpi-new-note').textContent = newDonors ? `År ${newDonors.year} · personer` : 'Ingen data';
+    getElement('kpi-recruitment-loss-label').textContent = recruitmentLoss > 0 ? 'Nedgang i nyrekruttering' : 'Oppgang i nyrekruttering';
+    getElement('kpi-recruitment-loss').textContent = recruitmentLoss === null ? '–' : utilities.formatNumber(Math.abs(recruitmentLoss));
+    getElement('kpi-recruitment-loss-note').textContent = '2025 sammenliknet med 2015';
+    getElement('kpi-donor-loss-label').textContent = recruitmentLoss > 0 ? 'Nedgang i aktive blodgivere' : 'Oppgang i aktive blodgivere';
+    getElement('kpi-donor-loss').textContent = donorLoss === null ? '–' : utilities.formatNumber(Math.abs(donorLoss));
     getElement('kpi-units').textContent = collectedBlood ? utilities.formatBloodVolume(collectedBlood.value) : '–';
     getElement('kpi-units').classList.add('kpi-blood-value');
     getElement('kpi-litres').textContent = collectedBlood ? `Tapping · ${collectedBlood.year}` : 'Ingen data';
     getElement('kpi-consumption').textContent = patientConsumption ? utilities.formatBloodVolume(patientConsumption.value) : '–';
     getElement('kpi-consumption').classList.add('kpi-blood-value');
     getElement('kpi-consumption-note').textContent = patientConsumption ? `Pasientforbruk · ${patientConsumption.year}` : 'Ingen data';
-    getElement('kpi-recruitment-loss').textContent = recruitmentLoss === null ? '–' : utilities.formatNumber(recruitmentLoss);
-    getElement('kpi-recruitment-loss-note').textContent = '2015 minus 2025';
 
     getElement('national-risk').textContent = recruitmentChange === null
       ? '⚪ Ukjent'

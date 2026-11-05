@@ -30,10 +30,10 @@
     </section>
 
     <section class="kpi-grid" aria-label="Nøkkeltall for Norge">
-      <article class="kpi-card"><div class="kpi-label">Aktive blodgivere</div><div class="kpi-value" id="kpi-active">–</div><div class="kpi-note" id="kpi-active-note">Siste tilgjengelige år</div></article>
-      <article class="kpi-card"><div class="kpi-label">Nye blodgivere</div><div class="kpi-value" id="kpi-new">–</div><div class="kpi-note" id="kpi-new-note">Siste tilgjengelige år</div></article>
-      <article class="kpi-card"><div class="kpi-label">Nedgang i nyrekruttering</div><div class="kpi-value" id="kpi-recruitment-loss">–</div><div class="kpi-note" id="kpi-recruitment-loss-note">2025 sammenliknet med 2015</div></article>
-      <article class="kpi-card"><div class="kpi-label">Nedgang i aktive blodgivere</div><div class="kpi-value" id="kpi-active-loss">–</div><div class="kpi-note" id="kpi-active-loss-note">2025 sammenliknet med 2015</div></article>
+      <article class="kpi-card"><div class="kpi-label">Aktive blodgiverei 2025</div><div class="kpi-value" id="kpi-active">–</div><div class="kpi-note" id="kpi-active-note">Siste tilgjengelige år</div></article>
+      <article class="kpi-card"><div class="kpi-label">Nye blodgivere i 2025</div><div class="kpi-value" id="kpi-new">–</div><div class="kpi-note" id="kpi-new-note">Siste tilgjengelige år</div></article>
+      <article class="kpi-card"><div class="kpi-label" id="kpi-recruitment-loss-label">Nedgang i nye blodgivere</div><div class="kpi-value" id="kpi-recruitment-loss">–</div><div class="kpi-note" id="kpi-recruitment-loss-note">2025 sammenliknet med 2015</div></article>
+      <article class="kpi-card"><div class="kpi-label" id="kpi-donor-loss-label">Nedgang i aktive blodgivere</div><div class="kpi-value" id="kpi-donor-loss">–</div><div class="kpi-note" id="kpi-donor-loss-note">2025 sammenliknet med 2015</div></article>
       <article class="kpi-card"><div class="kpi-label">Tappingsvolum</div><div class="kpi-value" id="kpi-units">–</div><div class="kpi-note" id="kpi-litres">Blodenheter / liter</div></article>
       <article class="kpi-card"><div class="kpi-label">Pasientforbruk</div><div class="kpi-value" id="kpi-consumption">–</div><div class="kpi-note" id="kpi-consumption-note">Siste tilgjengelige år</div></article>
     </section>
@@ -77,8 +77,8 @@
         </section>
 
         <section class="chart-card" id="net-balance">
-          <div class="chart-heading"><div><div class="chart-kicker">ÅRLIG FORSYNINGSROM</div><h3>Nettbalanse blod per år</h3><p>Tappingsvolum minus pasientforbruk. Positiv verdi viser at årsproduksjonen overstiger forbruket.</p></div><span class="chart-unit">BLODENHETER / LITER</span></div>
-          <div class="chart-wrap"><canvas id="netBalanceChart" aria-label="Graf over nasjonal nettbalanse i blod per år"></canvas><div class="chart-empty" data-empty="netBalanceChart">Mangler overlappende tall for tapping og forbruk.</div></div>
+          <div class="chart-heading"><div><div class="chart-kicker">ÅRLIG FORSYNINGSROM</div><h3>Tappingsvolum minus pasientforbruk</h3><p>Årlig blodnettbalanse. Positiv verdi viser at årsproduksjonen overstiger forbruket.</p></div><span class="chart-unit">BLODENHETER / LITER</span></div>
+          <div class="chart-wrap"><canvas id="netBalanceChart" aria-label="Graf over nasjonal bruksrom per år"></canvas><div class="chart-empty" data-empty="netBalanceChart">Mangler overlappende tall for tapping og forbruk.</div></div>
           <div class="chart-footnote">Nettbalansen er en beregnet års-differanse, ikke et mål på lagerbeholdning. Liter beregnes dynamisk som blodenheter × 0,45.</div>
         </section>
 
@@ -90,7 +90,7 @@
         <section class="chart-card" id="recruitment-loss">
           <div class="chart-heading"><div><div class="chart-kicker">REKRUTTERINGSTAP</div><h3>Nedgang i nyrekruttering</h3><p>Forskjellen mellom antall nyrekrutterte i 2015 og 2025 ved hvert traumesykehus.</p></div><span class="chart-unit">PERSONER</span></div>
           <div class="chart-wrap recruitment-chart-wrap"><canvas id="recruitmentLossChart" aria-label="Graf over antall færre eller flere rekrutter ved hvert traumesykehus"></canvas><div class="chart-empty" data-empty="recruitmentLossChart">Krever tall for både 2015 og 2025.</div></div>
-          <div class="chart-footnote">Beregnes dynamisk som rekruttering 2015 minus rekruttering 2025. Negative tall betyr at sykehuset rekrutterte flere i 2025 enn i 2015.</div>
+          <div class="chart-footnote">Beregnes dynamisk som rekruttering i 2025 sammenliknet med i 2015. Negative tall betyr at sykehuset rekrutterte flere i 2025 enn i 2015.</div>
         </section>
 
         <div class="data-note"><strong>Datagrunnlag:</strong> Statistikken kommer fra et lokalt datasett, og nettstedet bruker ikke et statistikk-API. Endringer i nyrekruttering, nedgang i nyrekruttering, beredskapsstatus og nettbalanse beregnes fra kildetallene. Manglende år behandles som manglende data, ikke som null. Liter beregnes som blodenheter × 0,45.</div>
