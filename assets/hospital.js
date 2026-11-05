@@ -86,8 +86,8 @@
     const recruitmentChange = utilities.calculateRecruitmentChange(profileStatistics);
     const recruitmentRisk = utilities.getRecruitmentRisk(recruitmentChange);
     const recruitmentLoss = utilities.calculateRecruitmentLoss(profileStatistics);
-    const recruitmentIn2015 = utilities.getYearValue(profileStatistics, 'Nyrekruttering', configuration.comparisonYears.baselineYear);
-    const recruitmentIn2025 = utilities.getYearValue(profileStatistics, 'Nyrekruttering', configuration.comparisonYears.comparisonYear);
+    const recruitmentIn2025 = utilities.getYearValue(profileStatistics, 'Nyrekruttering', configuration.comparisonYears.baselineYear);
+    const recruitmentIn2015 = utilities.getYearValue(profileStatistics, 'Nyrekruttering', configuration.comparisonYears.comparisonYear);
 
     const riskBadge = getElement('hospital-risk');
     riskBadge.className = `risk-pill risk-${recruitmentRisk.key}`;
@@ -96,7 +96,7 @@
     getElement('beredskap-rule').textContent = utilities.createRecruitmentThresholdDescription(profileStatistics);
     getElement('recruitment-summary').textContent = recruitmentChange === null ? 'Kan ikke beregnes' : utilities.formatPercentage(recruitmentChange);
     getElement('recruitment-detail').textContent = recruitmentIn2015 !== null && recruitmentIn2025 !== null && recruitmentLoss !== null
-      ? `${utilities.formatNumber(recruitmentIn2015)} i ${configuration.comparisonYears.baselineYear} → ${utilities.formatNumber(recruitmentIn2025)} i ${configuration.comparisonYears.comparisonYear} · Frafallte rekrutter: ${utilities.formatNumber(recruitmentLoss)}`
+      ? `${utilities.formatNumber(recruitmentIn2015)} i ${configuration.comparisonYears.baselineYear} → ${utilities.formatNumber(recruitmentIn2025)} i ${configuration.comparisonYears.comparisonYear} · Nedgang i nyrekruttering: ${utilities.formatNumber(recruitmentLoss)}`
       : 'Mangler sammenlignbare 2015- og 2025-tall.';
     getElement('beredskapsnotat-value').textContent = profileStatistics['Beredskapsnotat'] || 'Ikke oppgitt';
     getElement('supply-line').textContent = profileStatistics['Forsyningslinje'] || 'Ikke oppgitt';

@@ -12,20 +12,16 @@
   });
 
   function formatNumber(value) {
-    return numberFormatter.format(value);
-  }
-
-  function formatLitres(value) {
-    return litreFormatter.format(value);
+    return numberFormatter.format(value).replace(" ", ".").replace("+", "+ ").replace("−", "− ");
   }
 
   function formatBloodVolume(bloodUnits) {
     const litreVolume = bloodUnits * configuration.formatting.bloodUnitLitres;
-    return `${formatNumber(bloodUnits)} enheter / ${formatLitres(Math.round(litreVolume))} liter`;
+    return `${formatNumber(bloodUnits)} enheter\n${formatNumber(Math.round(litreVolume))} liter`;
   }
 
   function formatPercentage(value) {
-    const sign = value < 0 ? '−' : value > 0 ? '+' : '';
+    const sign = value < 0 ? '− ' : value > 0 ? '+ ' : '';
     return `${sign}${Math.abs(value).toFixed(1).replace('.', ',')} %`;
   }
 
@@ -60,8 +56,8 @@
   }
 
   function calculateRecruitmentChange(statisticsRecord) {
-    const recruitmentIn2015 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.baselineYear);
-    const recruitmentIn2025 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.comparisonYear);
+    const recruitmentIn2025 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.baselineYear);
+    const recruitmentIn2015 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.comparisonYear);
 
     if (recruitmentIn2015 === null || recruitmentIn2025 === null || recruitmentIn2015 === 0) {
       return null;
@@ -71,8 +67,8 @@
   }
 
   function calculateRecruitmentLoss(statisticsRecord) {
-    const recruitmentIn2015 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.baselineYear);
-    const recruitmentIn2025 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.comparisonYear);
+    const recruitmentIn2025 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.baselineYear);
+    const recruitmentIn2015 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.comparisonYear);
 
     if (recruitmentIn2015 === null || recruitmentIn2025 === null) {
       return null;
@@ -95,8 +91,8 @@
   }
 
   function createRecruitmentThresholdDescription(statisticsRecord) {
-    const recruitmentIn2015 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.baselineYear);
-    const recruitmentIn2025 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.comparisonYear);
+    const recruitmentIn2025 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.baselineYear);
+    const recruitmentIn2015 = getYearValue(statisticsRecord, 'Nyrekruttering', comparisonYears.comparisonYear);
     const hasComparableYears = recruitmentIn2015 !== null && recruitmentIn2025 !== null;
     const yearSummary = hasComparableYears
       ? `Status beregnet fra nyrekruttering i ${comparisonYears.baselineYear} (${formatNumber(recruitmentIn2015)}) og ${comparisonYears.comparisonYear} (${formatNumber(recruitmentIn2025)}).`
@@ -133,7 +129,7 @@
   function formatMeasurement(value, measurementType) {
     if (measurementType === 'blood') return formatBloodVolume(value);
     if (measurementType === 'percentage') return `${formatPercentage(value)}`;
-    return `${formatNumber(value)} personer`;
+    return `${formatNumber(value)}`;
   }
 
   window.APP_UTILS = Object.freeze({

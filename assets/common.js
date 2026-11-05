@@ -10,7 +10,7 @@
     { id: 'consumption', title: 'Pasientforbruk', keywords: 'forbruk transfusjon pasient blodkomponenter blodenheter liter blodposer' },
     { id: 'net-balance', title: 'Nettbalanse blod per år', keywords: 'nettobalanse årsbalanse overskudd tapping forbruk blodenheter liter' },
     { id: 'recruitment', title: 'Endringer i nyrekruttering', keywords: 'rekrutteringsfall prosent beredskap risiko utvikling status' },
-    { id: 'recruitment-loss', title: 'Frafallte rekrutter', keywords: 'frafall tap færre nye givere personer rekruttering' }
+    { id: 'recruitment-loss', title: 'Nedgang i nyrekruttering', keywords: 'frafall tap færre nye givere personer rekruttering' }
   ];
 
   function escapeHtml(value) {

@@ -13,8 +13,8 @@
       maximumLitresFractionDigits: 2
     }),
     comparisonYears: Object.freeze({
-      baselineYear: 2015,
-      comparisonYear: 2025
+      baselineYear: 2025,
+      comparisonYear: 2015
     }),
     recruitmentThresholds: Object.freeze({
       moderateDeclinePercent: 30,

@@ -356,7 +356,7 @@
         <div class="popup-stat"><b>${patientConsumption ? utilities.formatBloodVolume(patientConsumption.value) : '–'}</b><span>Pasientforbruk${patientConsumption ? ` · ${patientConsumption.year}` : ''}</span></div>
       </div>
       <div class="popup-beredskap"><span>Beredskapsstatus</span><strong>${recruitmentRisk.icon} ${recruitmentRisk.label}</strong></div>
-      <div class="popup-status">Frafallte rekrutter 2015–2025: ${utilities.calculateRecruitmentLoss(statistics) === null ? 'ikke beregnet' : utilities.formatNumber(utilities.calculateRecruitmentLoss(statistics))}</div>
+      <div class="popup-status">Nedgang i nyrekruttering 2015–2025: ${utilities.calculateRecruitmentLoss(statistics) === null ? 'ikke beregnet' : utilities.formatNumber(utilities.calculateRecruitmentLoss(statistics))}</div>
       <button class="popup-view" type="button">Vis mer om sykehuset ↗</button>`;
 
     popupElement.querySelector('.popup-view').addEventListener('click', () => {
