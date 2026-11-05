@@ -12,7 +12,11 @@
   });
 
   function formatNumber(value) {
-    return numberFormatter.format(value).replace(" ", ".").replace("+", "+ ").replace("−", "− ");
+    return numberFormatter.format(value).replace(" ", ".").replace("−", "− ");
+  }
+
+  function formatLitres(value) {
+    return litreFormatter.format(value);
   }
 
   function formatBloodVolume(bloodUnits) {
@@ -21,8 +25,8 @@
   }
 
   function formatPercentage(value) {
-    const sign = value < 0 ? '− ' : value > 0 ? '+ ' : '';
-    return `${sign}${Math.abs(value).toFixed(1).replace('.', ',')} %`;
+    const sign = value < 0 ? '−' : value > 0 ? '+' : '';
+    return `${sign} ${Math.abs(value).toFixed(1).replace('.', ',')} %`;
   }
 
   function createSlug(value) {
