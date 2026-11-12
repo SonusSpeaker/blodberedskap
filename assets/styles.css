@@ -874,7 +874,7 @@ button {
 .about-shell {
   min-height:calc(100vh - 150px)
 }
-.about-blank {
+.about-body {
   min-height:65vh;
   background:transparent
 }
