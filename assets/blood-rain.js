@@ -97,7 +97,7 @@
     rainButton.addEventListener('click', () => setRainEnabled(!rainEnabled));
   }
 
-  let savedRainPreference = false;
+  let savedRainPreference = rainConfiguration.enabledByDefault;
   try {
     savedRainPreference = window.localStorage.getItem(rainConfiguration.storageKey) === 'true';
   } catch (storageError) {

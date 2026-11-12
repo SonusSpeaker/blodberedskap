@@ -3,3 +3,7 @@ certs/*
 !certs/.gitkeep
 __pycache__/
 *.pyc
+test.*
+data/updater.py
+data/data.txt
+data/new.json
