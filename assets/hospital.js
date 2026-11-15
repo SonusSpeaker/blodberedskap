@@ -92,7 +92,7 @@
       : `${recruitmentChangeLabel}: ${utilities.formatNumber(Math.abs(recruitmentLoss))} personer · ${configuration.comparisonYears.baselineYear} sammenliknet med ${configuration.comparisonYears.comparisonYear}.`;
     getElement('beredskapsnotat-value').textContent = profileStatistics.Beredskapsnotat || selectedProfile.role || 'Ikke oppgitt';
     getElement('supply-line').textContent = profileStatistics.Forsyningslinje || 'Ikke oppgitt';
-    getElement('supply-detail').textContent = 'Oppgitt forsyningslinje';
+    getElement('supply-detail').textContent = 'Oppgitt forsyningslinje fra Direktoratet for medisinske produkter (DMP).';
 
     const activeDonors = utilities.getLatestValue(profileStatistics, 'Aktive blodgivere');
     const newDonors = utilities.getLatestValue(profileStatistics, 'Nyrekruttering');
