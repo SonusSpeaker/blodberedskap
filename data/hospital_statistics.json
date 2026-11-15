@@ -4,21 +4,9 @@
     "Helseregion": "Norge",
     "Breddegrad": null,
     "Lengdegrad": null,
+    "Beredskapsnotat": "Kildeangivelse i arbeidsboken: Direktoratet for medisinske produkter (DMP) og nasjonal transfusjonsstatistikk.",
+    "Forsyningslinje": "Nasjonal transfusjonstjeneste",
     "Aktive blodgivere": {
-      "2001": 98450,
-      "2002": 98900,
-      "2003": 99200,
-      "2004": 99500,
-      "2005": 100100,
-      "2006": 100800,
-      "2007": 101200,
-      "2008": 101500,
-      "2009": 98000,
-      "2010": 101000,
-      "2011": 102312,
-      "2012": 101100,
-      "2013": 99800,
-      "2014": 98200,
       "2015": 99263,
       "2016": 99166,
       "2017": 98255,
@@ -55,12 +43,25 @@
       "2019": 18625,
       "2020": 13822,
       "2021": 13323,
-      "2022": 16381,
+      "2022": 17219,
       "2023": 15231,
       "2024": 13705,
       "2025": 12452
     },
     "Tappingsvolum": {
+      "2015": 188335,
+      "2016": 185512,
+      "2017": 177719,
+      "2018": 174454,
+      "2019": 171837,
+      "2020": 165765,
+      "2021": 167112,
+      "2022": 163100,
+      "2023": 164902,
+      "2024": 158050,
+      "2025": 154939
+    },
+    "Totale tappinger": {
       "2000": 195424,
       "2001": 199730,
       "2002": 201607,
@@ -83,1055 +84,3613 @@
       "2019": 188814,
       "2020": 184477,
       "2021": 184515,
-      "2022": 180265,
+      "2022": 185238,
       "2023": 182022,
       "2024": 175625,
       "2025": 175428
     },
-    "Pasientforbruk": {
-      "2001": 182100,
-      "2002": 184300,
-      "2003": 186500,
-      "2004": 188900,
-      "2005": 190200,
-      "2006": 191500,
-      "2007": 192800,
-      "2008": 194100,
-      "2009": 195000,
-      "2010": 193400,
-      "2011": 189200,
-      "2012": 182300,
-      "2013": 176800,
-      "2014": 171500,
-      "2015": 168639,
-      "2016": 173688,
-      "2017": 163542,
-      "2018": 158922,
-      "2019": 154176,
-      "2020": 145667,
-      "2021": 150005,
-      "2022": 149786,
-      "2023": 145470,
-      "2024": 141789,
-      "2025": 138987
-    },
-    "Beredskapsnotat": "Kildeangivelse i arbeidsboken: Direktoratet for medisinske produkter (DMP) og nasjonal transfusjonsstatistikk.",
-    "Forsyningslinje": "Nasjonal transfusjonstjeneste"
+    "Historiske datamerknader": [
+      "Nyrekruttering: nasjonale tall fra 1999. Tallet for 2022 er den reviderte verdien 17 219 i senere årsrapporter.",
+      "Totale tappinger: nasjonale tall fra 2000; omfatter fullblod og aferese og er derfor ikke det samme som Tappingsvolum.",
+      "Tappingsvolum er fortsatt fullblodtappinger alene. Det er ikke fylt inn eldre tall fra figurer som ikke oppgir eksakte verdier.",
+      "Aktive blodgivere før 2015 er vist som figurhistorikk i 2015-rapporten, men uten eksakte tall i de nasjonale tabellene; derfor er de ikke anslått her."
+    ]
   },
-  "UNN Tromsø": {
-    "Beredskapsfunksjon": "Regionalt traumesenter (TC)",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 69.682958,
-    "Lengdegrad": 18.982509,
-    "Aktive blodgivere": {
-      "2015": 3275,
-      "2016": 3630,
-      "2017": 3325,
-      "2018": 3271,
-      "2019": 3471,
-      "2020": 3553,
-      "2021": 3413,
-      "2022": 3673,
-      "2023": 3411,
-      "2024": 3360,
-      "2025": 3163
+  "sykehus": {
+    "unn-tromso": {
+      "Beredskapsfunksjon": "Regionalt traumesenter (TC)",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 69.682958,
+      "Lengdegrad": 18.982509,
+      "Beredskapsnotat": "Regionalt traumesenter for Nord-Norge. Krevende rekruttering, avhengig av distriktsforsyning",
+      "Forsyningslinje": "Egen Blodbank / Hovedsentral (TC Nord)",
+      "Navn": "UNN Tromsø",
+      "Helseforetak": "Universitetssykehuset Nord-Norge HF",
+      "Helseforetak-ID": "universitetssykehuset-nord-norge-hf",
+      "Statistikk-ID": "Universitetssykehuset Nord-Norge Tromsø",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 3275,
+        "2016": 3630,
+        "2017": 3325,
+        "2018": 3271,
+        "2019": 3471,
+        "2020": 3553,
+        "2021": 3413,
+        "2022": 3673,
+        "2023": 3411,
+        "2024": 3360,
+        "2025": 3163
+      },
+      "Nyrekruttering": {
+        "2015": 800,
+        "2016": 844,
+        "2017": 868,
+        "2018": 1105,
+        "2019": 500,
+        "2020": 689,
+        "2021": 418,
+        "2022": 596,
+        "2023": 418,
+        "2024": 535,
+        "2025": 342
+      },
+      "Tappingsvolum": {
+        "2015": 7045,
+        "2016": 7002,
+        "2017": 6737,
+        "2018": 6568,
+        "2019": 6691,
+        "2020": 6799,
+        "2021": 6628,
+        "2022": 6816,
+        "2023": 6456,
+        "2024": 6100,
+        "2025": 6293
+      },
+      "ID": "unn-tromso"
     },
-    "Nyrekruttering": {
-      "2015": 800,
-      "2016": 844,
-      "2017": 868,
-      "2018": 1105,
-      "2019": 500,
-      "2020": 689,
-      "2021": 418,
-      "2022": 596,
-      "2023": 418,
-      "2024": 535,
-      "2025": 342
+    "unn-narvik": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 68.4385,
+      "Lengdegrad": 17.4273,
+      "Beredskapsnotat": "Lokal selvforsyning urolig. Forventet underskudd innen 3-6 år.",
+      "Forsyningslinje": "UNN Tromsø (Traumesenter)",
+      "Navn": "UNN Narvik",
+      "Helseforetak": "Universitetssykehuset Nord-Norge HF",
+      "Helseforetak-ID": "universitetssykehuset-nord-norge-hf",
+      "Statistikk-ID": "Universitetssykehuset Nord-Norge Narvik",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 474,
+        "2016": 509,
+        "2017": 473,
+        "2018": 464,
+        "2019": 454,
+        "2020": null,
+        "2021": 383,
+        "2022": 514,
+        "2023": 479,
+        "2024": 428,
+        "2025": 392
+      },
+      "Nyrekruttering": {
+        "2015": 196,
+        "2016": 162,
+        "2017": 168,
+        "2018": 158,
+        "2019": 78,
+        "2020": null,
+        "2021": 51,
+        "2022": 116,
+        "2023": 75,
+        "2024": 48,
+        "2025": 35
+      },
+      "Tappingsvolum": {
+        "2015": 907,
+        "2016": 962,
+        "2017": 876,
+        "2018": 818,
+        "2019": 761,
+        "2020": null,
+        "2021": 451,
+        "2022": 590,
+        "2023": 783,
+        "2024": 696,
+        "2025": 642
+      },
+      "ID": "unn-narvik"
     },
-    "Tappingsvolum": {
-      "2015": 7264,
-      "2016": 7364,
-      "2017": 7205,
-      "2018": 6913,
-      "2019": 7073,
-      "2020": 7232,
-      "2021": 6972,
-      "2022": 7254,
-      "2023": 6925,
-      "2024": 6562,
-      "2025": 7151
+    "unn-harstad": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 68.7986,
+      "Lengdegrad": 16.5415,
+      "Beredskapsnotat": "Stabil drift, men fallende rekrutteringstilstrømning",
+      "Forsyningslinje": "UNN Tromsø (Traumesenter)",
+      "Navn": "UNN Harstad",
+      "Helseforetak": "Universitetssykehuset Nord-Norge HF",
+      "Helseforetak-ID": "universitetssykehuset-nord-norge-hf",
+      "Statistikk-ID": "Universitetssykehuset Nord-Norge Harstad",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 866,
+        "2016": 852,
+        "2017": 810,
+        "2018": 785,
+        "2019": 701,
+        "2020": 720,
+        "2021": 677,
+        "2022": 768,
+        "2023": 714,
+        "2024": 658,
+        "2025": 802
+      },
+      "Nyrekruttering": {
+        "2015": 196,
+        "2016": 215,
+        "2017": 203,
+        "2018": 198,
+        "2019": 123,
+        "2020": 81,
+        "2021": 64,
+        "2022": 91,
+        "2023": 56,
+        "2024": 78,
+        "2025": 94
+      },
+      "Tappingsvolum": {
+        "2015": 1313,
+        "2016": 1196,
+        "2017": 1141,
+        "2018": 1201,
+        "2019": 962,
+        "2020": 980,
+        "2021": 946,
+        "2022": 1027,
+        "2023": 903,
+        "2024": 1008,
+        "2025": 1060
+      },
+      "ID": "unn-harstad"
     },
-    "Pasientforbruk": {
-      "2015": 6985,
-      "2016": 7026,
-      "2017": 6483,
-      "2018": 6346,
-      "2019": 6080,
-      "2020": 6369,
-      "2021": 5950,
-      "2022": 6168,
-      "2023": 4218,
-      "2024": 6047,
-      "2025": 5810
+    "nordlandssykehuset-bodo": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 67.2828,
+      "Lengdegrad": 14.3832,
+      "Beredskapsnotat": "Sentralblodbank for Nordland. Støtteakse for Lofoten og Vesterålen",
+      "Forsyningslinje": "Egen Blodbank / UNN Tromsø",
+      "Navn": "Nordlandssykehuset Bodø",
+      "Helseforetak": "Nordlandssykehuset HF",
+      "Helseforetak-ID": "nordlandssykehuset-hf",
+      "Statistikk-ID": "Nordlandssykehuset Bodø",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 2256,
+        "2016": 2092,
+        "2017": 2092,
+        "2018": 1846,
+        "2019": 2187,
+        "2020": 1963,
+        "2021": 1946,
+        "2022": 2383,
+        "2023": 2224,
+        "2024": 2265,
+        "2025": 2069
+      },
+      "Nyrekruttering": {
+        "2015": 622,
+        "2016": 543,
+        "2017": 618,
+        "2018": 642,
+        "2019": 599,
+        "2020": 61,
+        "2021": 200,
+        "2022": 434,
+        "2023": 385,
+        "2024": 321,
+        "2025": 206
+      },
+      "Tappingsvolum": {
+        "2015": 4263,
+        "2016": 4425,
+        "2017": 3932,
+        "2018": 3601,
+        "2019": 3961,
+        "2020": 4020,
+        "2021": 3755,
+        "2022": 4475,
+        "2023": 4343,
+        "2024": 3905,
+        "2025": 3388
+      },
+      "ID": "nordlandssykehuset-bodo"
     },
-    "Beredskapsnotat": "Regionalt traumesenter for Nord-Norge. Krevende rekruttering, avhengig av distriktsforsyning",
-    "Forsyningslinje": "Egen Blodbank / Hovedsentral (TC Nord)"
+    "nordlandssykehuset-lofoten-gravdal": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 68.1209,
+      "Lengdegrad": 13.5032,
+      "Beredskapsnotat": "Gravdal. Kystnær øysårbarhet ved dårlig vær og flyforbud",
+      "Forsyningslinje": "Nordlandssykehuset Bodø / UNN Tromsø",
+      "Navn": "Nordlandssykehuset Lofoten (Gravdal)",
+      "Helseforetak": "Nordlandssykehuset HF",
+      "Helseforetak-ID": "nordlandssykehuset-hf",
+      "Statistikk-ID": "Nordlandssykehuset Lofoten",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 735,
+        "2016": 387,
+        "2017": 368,
+        "2018": 361,
+        "2019": 375,
+        "2020": 415,
+        "2021": 407,
+        "2022": 381,
+        "2023": 399,
+        "2024": 335,
+        "2025": 341
+      },
+      "Nyrekruttering": {
+        "2015": 79,
+        "2016": 37,
+        "2017": 12,
+        "2018": 36,
+        "2019": 28,
+        "2020": 38,
+        "2021": 46,
+        "2022": 11,
+        "2023": 29,
+        "2024": 17,
+        "2025": 21
+      },
+      "Tappingsvolum": {
+        "2015": 1144,
+        "2016": 613,
+        "2017": 642,
+        "2018": 659,
+        "2019": 658,
+        "2020": 647,
+        "2021": 605,
+        "2022": 610,
+        "2023": 626,
+        "2024": 540,
+        "2025": 542
+      },
+      "ID": "nordlandssykehuset-lofoten-gravdal"
+    },
+    "nordlandssykehuset-vesteralen-stokmarknes": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 68.5646,
+      "Lengdegrad": 14.9108,
+      "Beredskapsnotat": "Stokmarknes. Svært lite giverkorps, avhengig av ekstern forsyning fra Bodø",
+      "Forsyningslinje": "Nordlandssykehuset Bodø / UNN Tromsø",
+      "Navn": "Nordlandssykehuset Vesterålen (Stokmarknes)",
+      "Helseforetak": "Nordlandssykehuset HF",
+      "Helseforetak-ID": "nordlandssykehuset-hf",
+      "Statistikk-ID": "Nordlandssykehuset Vesterålen",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 332,
+        "2016": 338,
+        "2017": 363,
+        "2018": 347,
+        "2019": 340,
+        "2020": 341,
+        "2021": 261,
+        "2022": null,
+        "2023": null,
+        "2024": 117,
+        "2025": 197
+      },
+      "Nyrekruttering": {
+        "2015": 30,
+        "2016": 39,
+        "2017": 55,
+        "2018": 57,
+        "2019": 71,
+        "2020": 36,
+        "2021": 6,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": 10
+      },
+      "Tappingsvolum": {
+        "2015": 646,
+        "2016": 661,
+        "2017": 686,
+        "2018": 634,
+        "2019": 593,
+        "2020": 645,
+        "2021": 472,
+        "2022": null,
+        "2023": null,
+        "2024": 157,
+        "2025": 312
+      },
+      "ID": "nordlandssykehuset-vesteralen-stokmarknes"
+    },
+    "helgelandssykehuset-sandnessjoen": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 66.0217,
+      "Lengdegrad": 12.6317,
+      "Beredskapsnotat": "STØRST FRAFALL I NORGE: -90,9% fall i nyrekruttering fra 121 til 11 givere.",
+      "Forsyningslinje": "Nordlandssykehuset Bodø / St. Olavs hospital",
+      "Navn": "Helgelandssykehuset Sandnessjøen",
+      "Helseforetak": "Helgelandssykehuset HF",
+      "Helseforetak-ID": "helgelandssykehuset-hf",
+      "Statistikk-ID": "Helgelandssykehuset Sandnessjøen",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 533,
+        "2016": 519,
+        "2017": 511,
+        "2018": 474,
+        "2019": 430,
+        "2020": 425,
+        "2021": 437,
+        "2022": 407,
+        "2023": 376,
+        "2024": 331,
+        "2025": 340
+      },
+      "Nyrekruttering": {
+        "2015": 121,
+        "2016": 81,
+        "2017": 58,
+        "2018": 61,
+        "2019": 11,
+        "2020": 35,
+        "2021": 36,
+        "2022": 30,
+        "2023": 16,
+        "2024": 17,
+        "2025": 11
+      },
+      "Tappingsvolum": {
+        "2015": 1001,
+        "2016": 914,
+        "2017": 904,
+        "2018": 762,
+        "2019": 786,
+        "2020": 755,
+        "2021": 773,
+        "2022": 739,
+        "2023": 673,
+        "2024": 599,
+        "2025": 702
+      },
+      "ID": "helgelandssykehuset-sandnessjoen"
+    },
+    "helgelandssykehuset-mo-i-rana": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 66.313,
+      "Lengdegrad": 14.135,
+      "Beredskapsnotat": "Industribyberedskap. Moderat giverkorps",
+      "Forsyningslinje": "Nordlandssykehuset Bodø / St. Olavs hospital",
+      "Navn": "Helgelandssykehuset Mo i Rana",
+      "Helseforetak": "Helgelandssykehuset HF",
+      "Helseforetak-ID": "helgelandssykehuset-hf",
+      "Statistikk-ID": "Helgelandssykehuset Mo i Rana",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 735,
+        "2016": 756,
+        "2017": 727,
+        "2018": 828,
+        "2019": 796,
+        "2020": 775,
+        "2021": 779,
+        "2022": 721,
+        "2023": 705,
+        "2024": 725,
+        "2025": 742
+      },
+      "Nyrekruttering": {
+        "2015": 110,
+        "2016": 82,
+        "2017": 64,
+        "2018": 95,
+        "2019": 68,
+        "2020": 40,
+        "2021": 45,
+        "2022": 53,
+        "2023": 53,
+        "2024": 43,
+        "2025": 47
+      },
+      "Tappingsvolum": {
+        "2015": 1144,
+        "2016": 1157,
+        "2017": 1088,
+        "2018": 1325,
+        "2019": 1190,
+        "2020": 1178,
+        "2021": 1160,
+        "2022": 1114,
+        "2023": 1111,
+        "2024": 1150,
+        "2025": 1193
+      },
+      "ID": "helgelandssykehuset-mo-i-rana"
+    },
+    "finnmarkssykehuset-hammerfest": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 70.67304,
+      "Lengdegrad": 23.67151,
+      "Beredskapsnotat": "Nytt sykehusbygg 2024/2025. Lang reisevei, avhengig av nødblodgivere i Alta/Nordkapp",
+      "Forsyningslinje": "UNN Tromsø (Traumesenter) / Finnmarkssykehuset",
+      "Navn": "Finnmarkssykehuset Hammerfest",
+      "Helseforetak": "Finnmarkssykehuset HF",
+      "Helseforetak-ID": "finnmarkssykehuset-hf",
+      "Statistikk-ID": "Finnmarkssykehuset Hammerfest",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 541,
+        "2016": 551,
+        "2017": 573,
+        "2018": 604,
+        "2019": 655,
+        "2020": 607,
+        "2021": 585,
+        "2022": 746,
+        "2023": 711,
+        "2024": 585,
+        "2025": 585
+      },
+      "Nyrekruttering": {
+        "2015": 99,
+        "2016": 85,
+        "2017": 97,
+        "2018": 131,
+        "2019": 102,
+        "2020": 53,
+        "2021": 41,
+        "2022": 99,
+        "2023": 91,
+        "2024": 174,
+        "2025": 41
+      },
+      "Tappingsvolum": {
+        "2015": 951,
+        "2016": 1007,
+        "2017": 1112,
+        "2018": 1056,
+        "2019": 1012,
+        "2020": 1030,
+        "2021": 961,
+        "2022": 959,
+        "2023": 815,
+        "2024": 836,
+        "2025": 785
+      },
+      "ID": "finnmarkssykehuset-hammerfest"
+    },
+    "finnmarkssykehuset-kirkenes": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": 69.727,
+      "Lengdegrad": 30.0458,
+      "Beredskapsnotat": "Ekstrem østlig grenseberedskap. Høy sårbarhet ved forsyningsbrudd",
+      "Forsyningslinje": "UNN Tromsø (Traumesenter) / Finnmarkssykehuset",
+      "Navn": "Finnmarkssykehuset Kirkenes",
+      "Helseforetak": "Finnmarkssykehuset HF",
+      "Helseforetak-ID": "finnmarkssykehuset-hf",
+      "Statistikk-ID": "Finnmarkssykehuset Kirkenes",
+      "Rapporterer selv": true,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 409,
+        "2016": 403,
+        "2017": 425,
+        "2018": 411,
+        "2019": 438,
+        "2020": 418,
+        "2021": 406,
+        "2022": 438,
+        "2023": 393,
+        "2024": 396,
+        "2025": 396
+      },
+      "Nyrekruttering": {
+        "2015": 66,
+        "2016": 66,
+        "2017": 55,
+        "2018": 57,
+        "2019": 65,
+        "2020": 35,
+        "2021": 39,
+        "2022": 40,
+        "2023": 54,
+        "2024": 43,
+        "2025": 26
+      },
+      "Tappingsvolum": {
+        "2015": 681,
+        "2016": 718,
+        "2017": 779,
+        "2018": 692,
+        "2019": 639,
+        "2020": 660,
+        "2021": 648,
+        "2022": 703,
+        "2023": 617,
+        "2024": 640,
+        "2025": 613
+      },
+      "ID": "finnmarkssykehuset-kirkenes"
+    },
+    "st-olavs-hospital-hf-trondheim": {
+      "Beredskapsfunksjon": "Regionalt traumesenter (TC)",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Breddegrad": 63.4208,
+      "Lengdegrad": 10.3875,
+      "Beredskapsnotat": "Regionalt traumesenter for Midt-Norge. Egen lagring av kaldtlagrede trombocytter",
+      "Forsyningslinje": "Egen Blodbank / Hovedsentral (TC Midt)",
+      "Navn": "St. Olavs Hospital HF (Trondheim)",
+      "Helseforetak": "St. Olavs hospital HF",
+      "Helseforetak-ID": "st-olavs-hospital-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "st-olavs-hospital-hf-trondheim"
+    },
+    "sykehuset-levanger-helse-nord-trondelag": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Breddegrad": 63.7467,
+      "Lengdegrad": 11.3014,
+      "Beredskapsnotat": "Hovedsykehus i Helse Nord-Trøndelag. Rapport-tall sammen med Namsos",
+      "Forsyningslinje": "St. Olavs hospital (Traumesenter)",
+      "Navn": "Sykehuset Levanger (Helse Nord-Trøndelag)",
+      "Helseforetak": "Helse Nord-Trøndelag HF",
+      "Helseforetak-ID": "helse-nord-trondelag-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-levanger-helse-nord-trondelag"
+    },
+    "sykehuset-namsos-helse-nord-trondelag": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Breddegrad": 64.4662,
+      "Lengdegrad": 11.4953,
+      "Beredskapsnotat": "Nord-Trøndelag nord. Distriktsdekning for Namdalen",
+      "Forsyningslinje": "St. Olavs hospital (Traumesenter)",
+      "Navn": "Sykehuset Namsos (Helse Nord-Trøndelag)",
+      "Helseforetak": "Helse Nord-Trøndelag HF",
+      "Helseforetak-ID": "helse-nord-trondelag-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-namsos-helse-nord-trondelag"
+    },
+    "sjukehuset-nordmore-og-romsdal-hjelset": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Breddegrad": 62.7815,
+      "Lengdegrad": 7.494,
+      "Beredskapsnotat": "Nytt felles sykehus 2025 (SNR Hjelset). Sammenslått givermasse fra Molde og Kristiansund",
+      "Forsyningslinje": "St. Olavs hospital (Traumesenter)",
+      "Navn": "Sjukehuset Nordmøre og Romsdal Hjelset",
+      "Helseforetak": "Helse Møre og Romsdal HF",
+      "Helseforetak-ID": "helse-more-og-romsdal-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sjukehuset-nordmore-og-romsdal-hjelset"
+    },
+    "alesund-sjukehus-helse-more-og-romsdal": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Breddegrad": 62.4722,
+      "Lengdegrad": 6.1496,
+      "Beredskapsnotat": "Største sykehus på Sunnmøre. God lokal forsyning",
+      "Forsyningslinje": "St. Olavs hospital (Traumesenter)",
+      "Navn": "Ålesund sjukehus (Helse Møre og Romsdal)",
+      "Helseforetak": "Helse Møre og Romsdal HF",
+      "Helseforetak-ID": "helse-more-og-romsdal-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "alesund-sjukehus-helse-more-og-romsdal"
+    },
+    "volda-sjukehus-helse-more-og-romsdal": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Breddegrad": 62.1476,
+      "Lengdegrad": 6.0741,
+      "Beredskapsnotat": "Søre Sunnmøre. Mindre lokalsykehus med stabil givermasse",
+      "Forsyningslinje": "Ålesund sjukehus / St. Olavs hospital",
+      "Navn": "Volda sjukehus (Helse Møre og Romsdal)",
+      "Helseforetak": "Helse Møre og Romsdal HF",
+      "Helseforetak-ID": "helse-more-og-romsdal-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "volda-sjukehus-helse-more-og-romsdal"
+    },
+    "haukeland-universitetssjukehus-helse-bergen": {
+      "Beredskapsfunksjon": "Regionalt traumesenter (TC)",
+      "Helseregion": "Helse Vest RHF",
+      "Breddegrad": 60.373,
+      "Lengdegrad": 5.3597,
+      "Beredskapsnotat": "Regionalt traumesenter for Vestlandet. Står for 69 % av all fullblodstransfusjon i Norge",
+      "Forsyningslinje": "Egen Blodbank / Hovedsentral (TC Vest)",
+      "Navn": "Haukeland universitetssjukehus (Helse Bergen)",
+      "Helseforetak": "Helse Bergen HF",
+      "Helseforetak-ID": "helse-bergen-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "haukeland-universitetssjukehus-helse-bergen"
+    },
+    "forde-sentralsjukehus-helse-forde": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Vest RHF",
+      "Breddegrad": 61.456771,
+      "Lengdegrad": 5.888345,
+      "Beredskapsnotat": "Hovedsykehus i Sogn og Fjordane. -70,2% fall i nyrekruttering",
+      "Forsyningslinje": "Haukeland universitetssjukehus (Traumesenter)",
+      "Navn": "Førde sentralsjukehus (Helse Førde)",
+      "Helseforetak": "Helse Førde HF",
+      "Helseforetak-ID": "helse-forde-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "forde-sentralsjukehus-helse-forde"
+    },
+    "voss-sjukehus-helse-bergen": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Vest RHF",
+      "Breddegrad": 60.6288,
+      "Lengdegrad": 6.4223,
+      "Beredskapsnotat": "Indre Hordaland / E16-traumeakse. Tett integrert med Haukeland",
+      "Forsyningslinje": "Haukeland universitetssjukehus (Traumesenter)",
+      "Navn": "Voss sjukehus (Helse Bergen)",
+      "Helseforetak": "Helse Bergen HF",
+      "Helseforetak-ID": "helse-bergen-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "voss-sjukehus-helse-bergen"
+    },
+    "haugesund-sjukehus-helse-fonna": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Vest RHF",
+      "Breddegrad": 59.408983,
+      "Lengdegrad": 5.279225,
+      "Beredskapsnotat": "Hovedsykehus i Helse Fonna. Dekker Nord-Rogaland og Sunnhordland",
+      "Forsyningslinje": "Haukeland universitetssjukehus / Helse Stavanger",
+      "Navn": "Haugesund sjukehus (Helse Fonna)",
+      "Helseforetak": "Helse Fonna HF",
+      "Helseforetak-ID": "helse-fonna-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "haugesund-sjukehus-helse-fonna"
+    },
+    "stord-sjukehus-helse-fonna": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Vest RHF",
+      "Breddegrad": 59.7791,
+      "Lengdegrad": 5.5006,
+      "Beredskapsnotat": "Øysykehus i Sunnhordland. Avhengig av ferje/tunnel-logistikk",
+      "Forsyningslinje": "Haugesund sjukehus / Haukeland",
+      "Navn": "Stord sjukehus (Helse Fonna)",
+      "Helseforetak": "Helse Fonna HF",
+      "Helseforetak-ID": "helse-fonna-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "stord-sjukehus-helse-fonna"
+    },
+    "odda-sjukehus-helse-fonna": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Vest RHF",
+      "Breddegrad": 60.0694,
+      "Lengdegrad": 6.546,
+      "Beredskapsnotat": "Hardanger. Svært sårbart lokalsykehus ved ras og stengte veier",
+      "Forsyningslinje": "Haugesund sjukehus / Haukeland",
+      "Navn": "Odda sjukehus (Helse Fonna)",
+      "Helseforetak": "Helse Fonna HF",
+      "Helseforetak-ID": "helse-fonna-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "odda-sjukehus-helse-fonna"
+    },
+    "stavanger-universitetssjukehus-helse-stavanger": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Vest RHF",
+      "Breddegrad": 58.9526,
+      "Lengdegrad": 5.7303,
+      "Beredskapsnotat": "Største akuttsykehus i Sør-Rogaland. Inkluderer mobil tappeenhet (blodbuss)",
+      "Forsyningslinje": "Haukeland universitetssjukehus (Traumesenter)",
+      "Navn": "Stavanger universitetssjukehus (Helse Stavanger)",
+      "Helseforetak": "Helse Stavanger HF",
+      "Helseforetak-ID": "helse-stavanger-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "stavanger-universitetssjukehus-helse-stavanger"
+    },
+    "ulleval-sykehus-oslo-universitetssykehus": {
+      "Beredskapsfunksjon": "Regionalt traumesenter (TC)",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 59.9391,
+      "Lengdegrad": 10.73915,
+      "Beredskapsnotat": "Norges største traumesenter og blodbank. Hovedforsyningsknutepunkt for Østlandet",
+      "Forsyningslinje": "Egen Blodbank / Hovedsentral (TC Sør-Øst)",
+      "Navn": "Ullevål sykehus (Oslo universitetssykehus)",
+      "Helseforetak": "Oslo universitetssykehus HF",
+      "Helseforetak-ID": "oslo-universitetssykehus-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "ulleval-sykehus-oslo-universitetssykehus"
+    },
+    "sykehuset-innlandet-lillehammer": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 61.1134,
+      "Lengdegrad": 10.4673,
+      "Beredskapsnotat": "Gudbrandsdalen og E6-traumeakse. Del av felles blodbank i Innlandet",
+      "Forsyningslinje": "Ullevål sykehus (Traumesenter)",
+      "Navn": "Sykehuset Innlandet Lillehammer",
+      "Helseforetak": "Sykehuset Innlandet HF",
+      "Helseforetak-ID": "sykehuset-innlandet-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-innlandet-lillehammer"
+    },
+    "sykehuset-innlandet-gjovik": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 60.80314,
+      "Lengdegrad": 10.67965,
+      "Beredskapsnotat": "Vest-Oppland. Integrert i Innlandets transfusjonsnettverk",
+      "Forsyningslinje": "Ullevål sykehus (Traumesenter)",
+      "Navn": "Sykehuset Innlandet Gjøvik",
+      "Helseforetak": "Sykehuset Innlandet HF",
+      "Helseforetak-ID": "sykehuset-innlandet-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-innlandet-gjovik"
+    },
+    "sykehuset-innlandet-hamar": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 60.794,
+      "Lengdegrad": 11.068,
+      "Beredskapsnotat": "Hedmark sentral. Tett koblet til Elverum og Lillehammer",
+      "Forsyningslinje": "Ullevål sykehus (Traumesenter)",
+      "Navn": "Sykehuset Innlandet Hamar",
+      "Helseforetak": "Sykehuset Innlandet HF",
+      "Helseforetak-ID": "sykehuset-innlandet-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-innlandet-hamar"
+    },
+    "sykehuset-innlandet-tynset": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 62.27025,
+      "Lengdegrad": 10.77601,
+      "Beredskapsnotat": "Fjellregionen / Nord-Østerdal. Lang veilengde til Elverum/St. Olavs",
+      "Forsyningslinje": "Sykehuset Innlandet Elverum / St. Olavs",
+      "Navn": "Sykehuset Innlandet Tynset",
+      "Helseforetak": "Sykehuset Innlandet HF",
+      "Helseforetak-ID": "sykehuset-innlandet-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-innlandet-tynset"
+    },
+    "drammen-sykehus-vestre-viken": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 59.7439,
+      "Lengdegrad": 10.2296,
+      "Beredskapsnotat": "Hovedsykehus i Vestre Viken HF (nytt sykehusbygg på Brakerøya 2025/2026)",
+      "Forsyningslinje": "Ullevål sykehus (Traumesenter)",
+      "Navn": "Drammen sykehus (Vestre Viken)",
+      "Helseforetak": "Vestre Viken HF",
+      "Helseforetak-ID": "vestre-viken-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "drammen-sykehus-vestre-viken"
+    },
+    "baerum-sykehus-vestre-viken": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 59.898865,
+      "Lengdegrad": 10.510127,
+      "Beredskapsnotat": "Vestre Viken. Tidligere sentral for nasjonal transfusjonsstatistikk. Høy givertetthet",
+      "Forsyningslinje": "Vestre Viken Drammen / Ullevål",
+      "Navn": "Bærum sykehus (Vestre Viken)",
+      "Helseforetak": "Vestre Viken HF",
+      "Helseforetak-ID": "vestre-viken-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "baerum-sykehus-vestre-viken"
+    },
+    "ringerike-sykehus-vestre-viken": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 60.1597,
+      "Lengdegrad": 10.2561,
+      "Beredskapsnotat": "Hønefoss. Viktig traumeakse mot Hallingdal (E16/Rv7). Stabil rekruttering",
+      "Forsyningslinje": "Vestre Viken Drammen / Ullevål",
+      "Navn": "Ringerike sykehus (Vestre Viken)",
+      "Helseforetak": "Vestre Viken HF",
+      "Helseforetak-ID": "vestre-viken-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "ringerike-sykehus-vestre-viken"
+    },
+    "sykehuset-i-vestfold-hf-tonsberg": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 59.272328,
+      "Lengdegrad": 10.417905,
+      "Beredskapsnotat": "Tønsberg. Stor regional blodbank, -58,1% fall i nyrekruttering",
+      "Forsyningslinje": "Ullevål sykehus (Traumesenter)",
+      "Navn": "Sykehuset i Vestfold HF (Tønsberg)",
+      "Helseforetak": "Sykehuset i Vestfold HF",
+      "Helseforetak-ID": "sykehuset-i-vestfold-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-i-vestfold-hf-tonsberg"
+    },
+    "sykehuset-telemark-hf-skien": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 59.192018,
+      "Lengdegrad": 9.593818,
+      "Beredskapsnotat": "Grenland. Dekker også Notodden og Telemarksinnlandet",
+      "Forsyningslinje": "Ullevål sykehus / Sykehuset i Vestfold",
+      "Navn": "Sykehuset Telemark HF (Skien)",
+      "Helseforetak": "Sykehuset Telemark HF",
+      "Helseforetak-ID": "sykehuset-telemark-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 2123,
+        "2016": 2256,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": 408,
+        "2016": 427,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": 4470,
+        "2016": 4574,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-telemark-hf-skien"
+    },
+    "akershus-universitetssykehus-ahus": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 59.933,
+      "Lengdegrad": 10.987,
+      "Beredskapsnotat": "Ahus Lørenskog. Norges nest største lokalopptaksområde. Svært sterk rekruttering",
+      "Forsyningslinje": "Ullevål sykehus (Traumesenter)",
+      "Navn": "Akershus universitetssykehus (Ahus)",
+      "Helseforetak": "Akershus universitetssykehus HF",
+      "Helseforetak-ID": "akershus-universitetssykehus-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "akershus-universitetssykehus-ahus"
+    },
+    "kongsvinger-sykehus-ahus-hf": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 60.1877,
+      "Lengdegrad": 12.0045,
+      "Beredskapsnotat": "Glåmdalsregionen / Grense mot Sverige. Driftes under Ahus HF",
+      "Forsyningslinje": "Ahus Lørenskog / Ullevål",
+      "Navn": "Kongsvinger sykehus (Ahus HF)",
+      "Helseforetak": "Akershus universitetssykehus HF",
+      "Helseforetak-ID": "akershus-universitetssykehus-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "kongsvinger-sykehus-ahus-hf"
+    },
+    "sykehuset-ostfold-hf-kalnes": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 59.318332,
+      "Lengdegrad": 11.026939,
+      "Beredskapsnotat": "Norges absolutt største plasmaferesesenter (5 586 prosedyrer i 2025). Svært sterk beredskap",
+      "Forsyningslinje": "Ullevål sykehus (Traumesenter)",
+      "Navn": "Sykehuset Østfold HF (Kalnes)",
+      "Helseforetak": "Sykehuset Østfold HF",
+      "Helseforetak-ID": "sykehuset-ostfold-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-ostfold-hf-kalnes"
+    },
+    "sorlandet-sykehus-kristiansand": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 58.16392,
+      "Lengdegrad": 7.98198,
+      "Beredskapsnotat": "Hovedsykehus i Agder. Inkluderer kombinert fullblod- og plasmaferesetapping",
+      "Forsyningslinje": "Ullevål sykehus (Traumesenter)",
+      "Navn": "Sørlandet sykehus Kristiansand",
+      "Helseforetak": "Sørlandet sykehus HF",
+      "Helseforetak-ID": "sorlandet-sykehus-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 2301,
+        "2016": 2587,
+        "2017": 2064,
+        "2018": 2052,
+        "2019": 2028,
+        "2020": 2130,
+        "2021": 2059,
+        "2022": 2345,
+        "2023": 2164,
+        "2024": 1845,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": 640,
+        "2016": 501,
+        "2017": 563,
+        "2018": 568,
+        "2019": 475,
+        "2020": 520,
+        "2021": 343,
+        "2022": 552,
+        "2023": 378,
+        "2024": 309,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": 2310,
+        "2016": 2801,
+        "2017": 2747,
+        "2018": 2594,
+        "2019": 2605,
+        "2020": 2543,
+        "2021": 2591,
+        "2022": 2673,
+        "2023": 2404,
+        "2024": 2451,
+        "2025": null
+      },
+      "ID": "sorlandet-sykehus-kristiansand"
+    },
+    "sorlandet-sykehus-arendal": {
+      "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": 58.46697,
+      "Lengdegrad": 8.75535,
+      "Beredskapsnotat": "Aust-Agder. Integrert i Sørlandet sykehus HF sin felles blodbanktjeneste",
+      "Forsyningslinje": "Kristiansand / Ullevål sykehus",
+      "Navn": "Sørlandet sykehus Arendal",
+      "Helseforetak": "Sørlandet sykehus HF",
+      "Helseforetak-ID": "sorlandet-sykehus-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": true,
+      "Aktive blodgivere": {
+        "2015": 2021,
+        "2016": 2043,
+        "2017": 1751,
+        "2018": 1708,
+        "2019": 1663,
+        "2020": 1485,
+        "2021": 1662,
+        "2022": 1503,
+        "2023": 1548,
+        "2024": 1394,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": 308,
+        "2016": 299,
+        "2017": 269,
+        "2018": 239,
+        "2019": 275,
+        "2020": 204,
+        "2021": 196,
+        "2022": 219,
+        "2023": 195,
+        "2024": 148,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": 3538,
+        "2016": 2888,
+        "2017": 2881,
+        "2018": 2178,
+        "2019": 2026,
+        "2020": 1701,
+        "2021": 2181,
+        "2022": 2159,
+        "2023": 1888,
+        "2024": 2104,
+        "2025": null
+      },
+      "ID": "sorlandet-sykehus-arendal"
+    },
+    "helgelandssykehuset-mosjoen": {
+      "Navn": "Helgelandssykehuset Mosjøen",
+      "Beredskapsfunksjon": "Ikke med i kartoversikten",
+      "Helseregion": "Helse Nord RHF",
+      "Breddegrad": null,
+      "Lengdegrad": null,
+      "Beredskapsnotat": null,
+      "Forsyningslinje": null,
+      "Helseforetak": "Helgelandssykehuset HF",
+      "Helseforetak-ID": "helgelandssykehuset-hf",
+      "Statistikk-ID": "Helgelandssykehuset Mosjøen",
+      "Rapporterer selv": true,
+      "Kartvisning": false,
+      "Aktive blodgivere": {
+        "2015": 226,
+        "2016": 251,
+        "2017": 263,
+        "2018": 285,
+        "2019": 252,
+        "2020": 240,
+        "2021": 242,
+        "2022": 275,
+        "2023": 305,
+        "2024": 231,
+        "2025": 223
+      },
+      "Nyrekruttering": {
+        "2015": 3,
+        "2016": 37,
+        "2017": 80,
+        "2018": 115,
+        "2019": 41,
+        "2020": 13,
+        "2021": 21,
+        "2022": 16,
+        "2023": 77,
+        "2024": 26,
+        "2025": 13
+      },
+      "Tappingsvolum": {
+        "2015": 291,
+        "2016": 377,
+        "2017": 386,
+        "2018": 418,
+        "2019": 366,
+        "2020": 384,
+        "2021": 415,
+        "2022": 442,
+        "2023": 431,
+        "2024": 365,
+        "2025": 346
+      },
+      "ID": "helgelandssykehuset-mosjoen"
+    },
+    "sorlandet-sykehus-flekkefjord": {
+      "Navn": "Sørlandet sykehus Flekkefjord",
+      "Beredskapsfunksjon": "Ikke med i kartoversikten",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": null,
+      "Lengdegrad": null,
+      "Beredskapsnotat": null,
+      "Forsyningslinje": null,
+      "Helseforetak": "Sørlandet sykehus HF",
+      "Helseforetak-ID": "sorlandet-sykehus-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": false,
+      "Aktive blodgivere": {
+        "2015": 307,
+        "2016": 281,
+        "2017": 275,
+        "2018": 247,
+        "2019": 225,
+        "2020": 228,
+        "2021": null,
+        "2022": 221,
+        "2023": 278,
+        "2024": 204,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": 49,
+        "2016": 45,
+        "2017": 72,
+        "2018": 54,
+        "2019": 89,
+        "2020": 65,
+        "2021": 19,
+        "2022": 42,
+        "2023": 47,
+        "2024": 35,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": null,
+        "2016": null,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": 254,
+        "2025": null
+      },
+      "ID": "sorlandet-sykehus-flekkefjord"
+    },
+    "sykehuset-telemark-notodden": {
+      "Navn": "Sykehuset Telemark Notodden",
+      "Beredskapsfunksjon": "Ikke med i kartoversikten",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Breddegrad": null,
+      "Lengdegrad": null,
+      "Beredskapsnotat": null,
+      "Forsyningslinje": null,
+      "Helseforetak": "Sykehuset Telemark HF",
+      "Helseforetak-ID": "sykehuset-telemark-hf",
+      "Statistikk-ID": null,
+      "Rapporterer selv": false,
+      "Kartvisning": false,
+      "Aktive blodgivere": {
+        "2015": 533,
+        "2016": 525,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Nyrekruttering": {
+        "2015": 52,
+        "2016": 35,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "Tappingsvolum": {
+        "2015": 1048,
+        "2016": 1084,
+        "2017": null,
+        "2018": null,
+        "2019": null,
+        "2020": null,
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "ID": "sykehuset-telemark-notodden"
+    }
   },
-  "UNN Narvik": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 68.4385,
-    "Lengdegrad": 17.4273,
-    "Aktive blodgivere": {
-      "2015": 474,
-      "2016": 509,
-      "2017": 473,
-      "2018": 464,
-      "2019": 454,
-      "2021": 383,
-      "2022": 514,
-      "2023": 479,
-      "2024": 428,
-      "2025": 392
-    },
-    "Nyrekruttering": {
-      "2015": 196,
-      "2016": 162,
-      "2017": 168,
-      "2018": 158,
-      "2019": 78,
-      "2021": 51,
-      "2022": 116,
-      "2023": 75,
-      "2024": 48,
-      "2025": 35
-    },
-    "Tappingsvolum": {
-      "2015": 907,
-      "2016": 962,
-      "2017": 876,
-      "2018": 818,
-      "2019": 761,
-      "2021": 451,
-      "2022": 590,
-      "2023": 783,
-      "2024": 696,
-      "2025": 642
-    },
-    "Pasientforbruk": {
-      "2015": 531,
-      "2016": 599,
-      "2017": 538,
-      "2018": 482,
-      "2019": 470,
-      "2021": 727,
-      "2022": 681,
-      "2023": 559,
-      "2024": 522,
-      "2025": 522
-    },
-    "Beredskapsnotat": "Lokal selvforsyning urolig. Forventet underskudd innen 3-6 år.",
-    "Forsyningslinje": "UNN Tromsø (Traumesenter)"
-  },
-  "UNN Harstad": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 68.7986,
-    "Lengdegrad": 16.5415,
-    "Aktive blodgivere": {
-      "2015": 950,
-      "2025": 802
-    },
-    "Nyrekruttering": {
-      "2015": 196,
-      "2025": 94
-    },
-    "Tappingsvolum": {
-      "2015": 1150,
-      "2025": 1060
-    },
-    "Pasientforbruk": {
-      "2015": 910,
-      "2025": 890
-    },
-    "Beredskapsnotat": "Stabil drift, men fallende rekrutteringstilstrømning",
-    "Forsyningslinje": "UNN Tromsø (Traumesenter)"
-  },
-  "Nordlandssykehuset Bodø": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 67.2828,
-    "Lengdegrad": 14.3832,
-    "Aktive blodgivere": {
-      "2015": 2450,
-      "2025": 2069
-    },
-    "Nyrekruttering": {
-      "2015": 622,
-      "2025": 206
-    },
-    "Tappingsvolum": {
-      "2015": 4120,
-      "2025": 3559
-    },
-    "Pasientforbruk": {
-      "2015": 3100,
-      "2025": 2980
-    },
-    "Beredskapsnotat": "Sentralblodbank for Nordland. Støtteakse for Lofoten og Vesterålen",
-    "Forsyningslinje": "Egen Blodbank / UNN Tromsø"
-  },
-  "Nordlandssykehuset Lofoten (Gravdal)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 68.1209,
-    "Lengdegrad": 13.5032,
-    "Aktive blodgivere": {
-      "2015": 420,
-      "2025": 341
-    },
-    "Nyrekruttering": {
-      "2015": 79,
-      "2025": 21
-    },
-    "Tappingsvolum": {
-      "2015": 680,
-      "2025": 542
-    },
-    "Pasientforbruk": {
-      "2015": 410,
-      "2025": 390
-    },
-    "Beredskapsnotat": "Gravdal. Kystnær øysårbarhet ved dårlig vær og flyforbud",
-    "Forsyningslinje": "Nordlandssykehuset Bodø / UNN Tromsø"
-  },
-  "Nordlandssykehuset Vesterålen (Stokmarknes)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 68.5646,
-    "Lengdegrad": 14.9108,
-    "Aktive blodgivere": {
-      "2015": 260,
-      "2025": 197
-    },
-    "Nyrekruttering": {
-      "2015": 30,
-      "2025": 10
-    },
-    "Tappingsvolum": {
-      "2015": 390,
-      "2025": 312
-    },
-    "Pasientforbruk": {
-      "2015": 310,
-      "2025": 280
-    },
-    "Beredskapsnotat": "Stokmarknes. Svært lite giverkorps, avhengig av ekstern forsyning fra Bodø",
-    "Forsyningslinje": "Nordlandssykehuset Bodø / UNN Tromsø"
-  },
-  "Helgelandssykehuset Sandnessjøen": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 66.0217,
-    "Lengdegrad": 12.6317,
-    "Aktive blodgivere": {
-      "2015": 480,
-      "2016": 450,
-      "2017": 420,
-      "2018": 410,
-      "2019": 390,
-      "2020": 380,
-      "2021": 370,
-      "2022": 360,
-      "2023": 350,
-      "2024": 345,
-      "2025": 340
-    },
-    "Nyrekruttering": {
-      "2015": 121,
-      "2016": 81,
-      "2017": 58,
-      "2018": 61,
-      "2019": 11,
-      "2020": 35,
-      "2021": 36,
-      "2022": 30,
-      "2023": 16,
-      "2024": 17,
-      "2025": 11
-    },
-    "Tappingsvolum": {
-      "2015": 820,
-      "2016": 790,
-      "2017": 760,
-      "2018": 750,
-      "2019": 730,
-      "2020": 720,
-      "2021": 710,
-      "2022": 700,
-      "2023": 690,
-      "2024": 695,
-      "2025": 702
-    },
-    "Pasientforbruk": {
-      "2015": 540,
-      "2016": 520,
-      "2017": 510,
-      "2018": 500,
-      "2019": 490,
-      "2020": 480,
-      "2021": 490,
-      "2022": 500,
-      "2023": 510,
-      "2024": 505,
-      "2025": 510
-    },
-    "Beredskapsnotat": "STØRST FRAFALL I NORGE: -90,9% fall i nyrekruttering fra 121 til 11 givere.",
-    "Forsyningslinje": "Nordlandssykehuset Bodø / St. Olavs hospital"
-  },
-  "Helgelandssykehuset Mo i Rana": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 66.313,
-    "Lengdegrad": 14.135,
-    "Aktive blodgivere": {
-      "2015": 890,
-      "2025": 742
-    },
-    "Nyrekruttering": {
-      "2015": 110,
-      "2025": 47
-    },
-    "Tappingsvolum": {
-      "2015": 1350,
-      "2025": 1193
-    },
-    "Pasientforbruk": {
-      "2015": 980,
-      "2025": 950
-    },
-    "Beredskapsnotat": "Industribyberedskap. Moderat giverkorps",
-    "Forsyningslinje": "Nordlandssykehuset Bodø / St. Olavs hospital"
-  },
-  "Finnmarkssykehuset Hammerfest": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 70.67304,
-    "Lengdegrad": 23.67151,
-    "Aktive blodgivere": {
-      "2015": 710,
-      "2025": 585
-    },
-    "Nyrekruttering": {
-      "2015": 99,
-      "2025": 41
-    },
-    "Tappingsvolum": {
-      "2015": 920,
-      "2025": 785
-    },
-    "Pasientforbruk": {
-      "2015": 720,
-      "2025": 690
-    },
-    "Beredskapsnotat": "Nytt sykehusbygg 2024/2025. Lang reisevei, avhengig av nødblodgivere i Alta/Nordkapp",
-    "Forsyningslinje": "UNN Tromsø (Traumesenter) / Finnmarkssykehuset"
-  },
-  "Finnmarkssykehuset Kirkenes": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Nord RHF",
-    "Breddegrad": 69.727,
-    "Lengdegrad": 30.0458,
-    "Aktive blodgivere": {
-      "2015": 480,
-      "2025": 396
-    },
-    "Nyrekruttering": {
-      "2015": 66,
-      "2025": 26
-    },
-    "Tappingsvolum": {
-      "2015": 710,
-      "2025": 613
-    },
-    "Pasientforbruk": {
-      "2015": 530,
-      "2025": 510
-    },
-    "Beredskapsnotat": "Ekstrem østlig grenseberedskap. Høy sårbarhet ved forsyningsbrudd",
-    "Forsyningslinje": "UNN Tromsø (Traumesenter) / Finnmarkssykehuset"
-  },
-  "St. Olavs Hospital HF (Trondheim)": {
-    "Beredskapsfunksjon": "Regionalt traumesenter (TC)",
-    "Helseregion": "Helse Midt-Norge RHF",
-    "Breddegrad": 63.4208,
-    "Lengdegrad": 10.3875,
-    "Aktive blodgivere": {
-      "2015": 7800,
-      "2025": 6407
-    },
-    "Nyrekruttering": {
-      "2015": 2446,
-      "2025": 1102
-    },
-    "Tappingsvolum": {
-      "2015": 16358,
-      "2025": 15081
-    },
-    "Pasientforbruk": {
-      "2015": 13100,
-      "2025": 12400
-    },
-    "Beredskapsnotat": "Regionalt traumesenter for Midt-Norge. Egen lagring av kaldtlagrede trombocytter",
-    "Forsyningslinje": "Egen Blodbank / Hovedsentral (TC Midt)"
-  },
-  "Sykehuset Levanger (Helse Nord-Trøndelag)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Midt-Norge RHF",
-    "Breddegrad": 63.7467,
-    "Lengdegrad": 11.3014,
-    "Aktive blodgivere": {
-      "2015": 1450,
-      "2025": 1310
-    },
-    "Nyrekruttering": {
-      "2015": 190,
-      "2025": 165
-    },
-    "Tappingsvolum": {
-      "2015": 2470,
-      "2025": 2210
-    },
-    "Pasientforbruk": {
-      "2015": 1920,
-      "2025": 1850
-    },
-    "Beredskapsnotat": "Hovedsykehus i Helse Nord-Trøndelag. Rapport-tall sammen med Namsos",
-    "Forsyningslinje": "St. Olavs hospital (Traumesenter)"
-  },
-  "Sykehuset Namsos (Helse Nord-Trøndelag)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Midt-Norge RHF",
-    "Breddegrad": 64.4662,
-    "Lengdegrad": 11.4953,
-    "Aktive blodgivere": {
-      "2015": 820,
-      "2025": 708
-    },
-    "Nyrekruttering": {
-      "2015": 105,
-      "2025": 89
-    },
-    "Tappingsvolum": {
-      "2015": 1336,
-      "2025": 1195
-    },
-    "Pasientforbruk": {
-      "2015": 1010,
-      "2025": 980
-    },
-    "Beredskapsnotat": "Nord-Trøndelag nord. Distriktsdekning for Namdalen",
-    "Forsyningslinje": "St. Olavs hospital (Traumesenter)"
-  },
-  "Sjukehuset Nordmøre og Romsdal Hjelset": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Midt-Norge RHF",
-    "Breddegrad": 62.7815,
-    "Lengdegrad": 7.494,
-    "Aktive blodgivere": {
-      "2015": 1650,
-      "2025": 1450
-    },
-    "Nyrekruttering": {
-      "2015": 320,
-      "2025": 107
-    },
-    "Tappingsvolum": {
-      "2015": 2630,
-      "2025": 2460
-    },
-    "Pasientforbruk": {
-      "2015": 2100,
-      "2025": 2050
-    },
-    "Beredskapsnotat": "Nytt felles sykehus 2025 (SNR Hjelset). Sammenslått givermasse fra Molde og Kristiansund",
-    "Forsyningslinje": "St. Olavs hospital (Traumesenter)"
-  },
-  "Ålesund sjukehus (Helse Møre og Romsdal)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Midt-Norge RHF",
-    "Breddegrad": 62.4722,
-    "Lengdegrad": 6.1496,
-    "Aktive blodgivere": {
-      "2015": 2250,
-      "2025": 1950
-    },
-    "Nyrekruttering": {
-      "2015": 480,
-      "2025": 144
-    },
-    "Tappingsvolum": {
-      "2015": 3720,
-      "2025": 3350
-    },
-    "Pasientforbruk": {
-      "2015": 2900,
-      "2025": 2800
-    },
-    "Beredskapsnotat": "Største sykehus på Sunnmøre. God lokal forsyning",
-    "Forsyningslinje": "St. Olavs hospital (Traumesenter)"
-  },
-  "Volda sjukehus (Helse Møre og Romsdal)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Midt-Norge RHF",
-    "Breddegrad": 62.1476,
-    "Lengdegrad": 6.0741,
-    "Aktive blodgivere": {
-      "2015": 710,
-      "2025": 592
-    },
-    "Nyrekruttering": {
-      "2015": 123,
-      "2025": 43
-    },
-    "Tappingsvolum": {
-      "2015": 1168,
-      "2025": 956
-    },
-    "Pasientforbruk": {
-      "2015": 820,
-      "2025": 790
-    },
-    "Beredskapsnotat": "Søre Sunnmøre. Mindre lokalsykehus med stabil givermasse",
-    "Forsyningslinje": "Ålesund sjukehus / St. Olavs hospital"
-  },
-  "Haukeland universitetssjukehus (Helse Bergen)": {
-    "Beredskapsfunksjon": "Regionalt traumesenter (TC)",
-    "Helseregion": "Helse Vest RHF",
-    "Breddegrad": 60.373,
-    "Lengdegrad": 5.3597,
-    "Aktive blodgivere": {
-      "2015": 10500,
-      "2025": 9167
-    },
-    "Nyrekruttering": {
-      "2015": 1920,
-      "2025": 1220
-    },
-    "Tappingsvolum": {
-      "2015": 21379,
-      "2025": 17039
-    },
-    "Pasientforbruk": {
-      "2015": 15200,
-      "2025": 14120
-    },
-    "Beredskapsnotat": "Regionalt traumesenter for Vestlandet. Står for 69 % av all fullblodstransfusjon i Norge",
-    "Forsyningslinje": "Egen Blodbank / Hovedsentral (TC Vest)"
-  },
-  "Førde sentralsjukehus (Helse Førde)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Vest RHF",
-    "Breddegrad": 61.456771,
-    "Lengdegrad": 5.888345,
-    "Aktive blodgivere": {
-      "2015": 1620,
-      "2025": 1406
-    },
-    "Nyrekruttering": {
-      "2015": 285,
-      "2025": 85
-    },
-    "Tappingsvolum": {
-      "2015": 2502,
-      "2025": 2297
-    },
-    "Pasientforbruk": {
-      "2015": 2050,
-      "2025": 1920
-    },
-    "Beredskapsnotat": "Hovedsykehus i Sogn og Fjordane. -70,2% fall i nyrekruttering",
-    "Forsyningslinje": "Haukeland universitetssjukehus (Traumesenter)"
-  },
-  "Voss sjukehus (Helse Bergen)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Vest RHF",
-    "Breddegrad": 60.6288,
-    "Lengdegrad": 6.4223,
-    "Aktive blodgivere": {
-      "2015": 630,
-      "2025": 520
-    },
-    "Nyrekruttering": {
-      "2015": 117,
-      "2025": 69
-    },
-    "Tappingsvolum": {
-      "2015": 950,
-      "2025": 850
-    },
-    "Pasientforbruk": {
-      "2015": 730,
-      "2025": 690
-    },
-    "Beredskapsnotat": "Indre Hordaland / E16-traumeakse. Tett integrert med Haukeland",
-    "Forsyningslinje": "Haukeland universitetssjukehus (Traumesenter)"
-  },
-  "Haugesund sjukehus (Helse Fonna)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Vest RHF",
-    "Breddegrad": 59.408983,
-    "Lengdegrad": 5.279225,
-    "Aktive blodgivere": {
-      "2015": 1420,
-      "2025": 1530
-    },
-    "Nyrekruttering": {
-      "2015": 210,
-      "2025": 305
-    },
-    "Tappingsvolum": {
-      "2015": 2900,
-      "2025": 2750
-    },
-    "Pasientforbruk": {
-      "2015": 2350,
-      "2025": 2250
-    },
-    "Beredskapsnotat": "Hovedsykehus i Helse Fonna. Dekker Nord-Rogaland og Sunnhordland",
-    "Forsyningslinje": "Haukeland universitetssjukehus / Helse Stavanger"
-  },
-  "Stord sjukehus (Helse Fonna)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Vest RHF",
-    "Breddegrad": 59.7791,
-    "Lengdegrad": 5.5006,
-    "Aktive blodgivere": {
-      "2015": 510,
-      "2025": 560
-    },
-    "Nyrekruttering": {
-      "2015": 75,
-      "2025": 112
-    },
-    "Tappingsvolum": {
-      "2015": 1110,
-      "2025": 1020
-    },
-    "Pasientforbruk": {
-      "2015": 890,
-      "2025": 840
-    },
-    "Beredskapsnotat": "Øysykehus i Sunnhordland. Avhengig av ferje/tunnel-logistikk",
-    "Forsyningslinje": "Haugesund sjukehus / Haukeland"
-  },
-  "Odda sjukehus (Helse Fonna)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Vest RHF",
-    "Breddegrad": 60.0694,
-    "Lengdegrad": 6.546,
-    "Aktive blodgivere": {
-      "2015": 240,
-      "2025": 267
-    },
-    "Nyrekruttering": {
-      "2015": 27,
-      "2025": 53
-    },
-    "Tappingsvolum": {
-      "2015": 684,
-      "2025": 462
-    },
-    "Pasientforbruk": {
-      "2015": 410,
-      "2025": 390
-    },
-    "Beredskapsnotat": "Hardanger. Svært sårbart lokalsykehus ved ras og stengte veier",
-    "Forsyningslinje": "Haugesund sjukehus / Haukeland"
-  },
-  "Stavanger universitetssjukehus (Helse Stavanger)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Vest RHF",
-    "Breddegrad": 58.9526,
-    "Lengdegrad": 5.7303,
-    "Aktive blodgivere": {
-      "2015": 5100,
-      "2025": 4412
-    },
-    "Nyrekruttering": {
-      "2015": 1492,
-      "2025": 733
-    },
-    "Tappingsvolum": {
-      "2015": 11046,
-      "2025": 7510
-    },
-    "Pasientforbruk": {
-      "2015": 6800,
-      "2025": 6250
-    },
-    "Beredskapsnotat": "Største akuttsykehus i Sør-Rogaland. Inkluderer mobil tappeenhet (blodbuss)",
-    "Forsyningslinje": "Haukeland universitetssjukehus (Traumesenter)"
-  },
-  "Ullevål sykehus (Oslo universitetssykehus)": {
-    "Beredskapsfunksjon": "Regionalt traumesenter (TC)",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 59.9391,
-    "Lengdegrad": 10.73915,
-    "Aktive blodgivere": {
-      "2015": 18200,
-      "2025": 16893
-    },
-    "Nyrekruttering": {
-      "2015": 3733,
-      "2025": 3035
-    },
-    "Tappingsvolum": {
-      "2015": 36528,
-      "2025": 35005
-    },
-    "Pasientforbruk": {
-      "2015": 31200,
-      "2025": 29450
-    },
-    "Beredskapsnotat": "Norges største traumesenter og blodbank. Hovedforsyningsknutepunkt for Østlandet",
-    "Forsyningslinje": "Egen Blodbank / Hovedsentral (TC Sør-Øst)"
-  },
-  "Sykehuset Innlandet Lillehammer": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 61.1134,
-    "Lengdegrad": 10.4673,
-    "Aktive blodgivere": {
-      "2015": 1450,
-      "2025": 1250
-    },
-    "Nyrekruttering": {
-      "2015": 269,
-      "2025": 140
-    },
-    "Tappingsvolum": {
-      "2015": 3100,
-      "2025": 2350
-    },
-    "Pasientforbruk": {
-      "2015": 2100,
-      "2025": 1950
-    },
-    "Beredskapsnotat": "Gudbrandsdalen og E6-traumeakse. Del av felles blodbank i Innlandet",
-    "Forsyningslinje": "Ullevål sykehus (Traumesenter)"
-  },
-  "Sykehuset Innlandet Gjøvik": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 60.80314,
-    "Lengdegrad": 10.67965,
-    "Aktive blodgivere": {
-      "2015": 1380,
-      "2025": 1180
-    },
-    "Nyrekruttering": {
-      "2015": 254,
-      "2025": 132
-    },
-    "Tappingsvolum": {
-      "2015": 2900,
-      "2025": 2210
-    },
-    "Pasientforbruk": {
-      "2015": 1980,
-      "2025": 1820
-    },
-    "Beredskapsnotat": "Vest-Oppland. Integrert i Innlandets transfusjonsnettverk",
-    "Forsyningslinje": "Ullevål sykehus (Traumesenter)"
-  },
-  "Sykehuset Innlandet Hamar": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 60.794,
-    "Lengdegrad": 11.068,
-    "Aktive blodgivere": {
-      "2015": 1410,
-      "2025": 1210
-    },
-    "Nyrekruttering": {
-      "2015": 261,
-      "2025": 136
-    },
-    "Tappingsvolum": {
-      "2015": 3000,
-      "2025": 2280
-    },
-    "Pasientforbruk": {
-      "2015": 2050,
-      "2025": 1890
-    },
-    "Beredskapsnotat": "Hedmark sentral. Tett koblet til Elverum og Lillehammer",
-    "Forsyningslinje": "Ullevål sykehus (Traumesenter)"
-  },
-  "Sykehuset Innlandet Tynset": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 62.27025,
-    "Lengdegrad": 10.77601,
-    "Aktive blodgivere": {
-      "2015": 620,
-      "2025": 538
-    },
-    "Nyrekruttering": {
-      "2015": 116,
-      "2025": 60
-    },
-    "Tappingsvolum": {
-      "2015": 1195,
-      "2025": 882
-    },
-    "Pasientforbruk": {
-      "2015": 780,
-      "2025": 710
-    },
-    "Beredskapsnotat": "Fjellregionen / Nord-Østerdal. Lang veilengde til Elverum/St. Olavs",
-    "Forsyningslinje": "Sykehuset Innlandet Elverum / St. Olavs"
-  },
-  "Drammen sykehus (Vestre Viken)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 59.7439,
-    "Lengdegrad": 10.2296,
-    "Aktive blodgivere": {
-      "2015": 2600,
-      "2025": 2344
-    },
-    "Nyrekruttering": {
-      "2015": 612,
-      "2025": 437
-    },
-    "Tappingsvolum": {
-      "2015": 6300,
-      "2025": 5588
-    },
-    "Pasientforbruk": {
-      "2015": 4900,
-      "2025": 4650
-    },
-    "Beredskapsnotat": "Hovedsykehus i Vestre Viken HF (nytt sykehusbygg på Brakerøya 2025/2026)",
-    "Forsyningslinje": "Ullevål sykehus (Traumesenter)"
-  },
-  "Bærum sykehus (Vestre Viken)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 59.898865,
-    "Lengdegrad": 10.510127,
-    "Aktive blodgivere": {
-      "2015": 1850,
-      "2025": 1650
-    },
-    "Nyrekruttering": {
-      "2015": 431,
-      "2025": 308
-    },
-    "Tappingsvolum": {
-      "2015": 4400,
-      "2025": 3650
-    },
-    "Pasientforbruk": {
-      "2015": 3200,
-      "2025": 3050
-    },
-    "Beredskapsnotat": "Vestre Viken. Tidligere sentral for nasjonal transfusjonsstatistikk. Høy givertetthet",
-    "Forsyningslinje": "Vestre Viken Drammen / Ullevål"
-  },
-  "Ringerike sykehus (Vestre Viken)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 60.1597,
-    "Lengdegrad": 10.2561,
-    "Aktive blodgivere": {
-      "2015": 1100,
-      "2025": 980
-    },
-    "Nyrekruttering": {
-      "2015": 256,
-      "2025": 183
-    },
-    "Tappingsvolum": {
-      "2015": 2469,
-      "2025": 1950
-    },
-    "Pasientforbruk": {
-      "2015": 1650,
-      "2025": 1580
-    },
-    "Beredskapsnotat": "Hønefoss. Viktig traumeakse mot Hallingdal (E16/Rv7). Stabil rekruttering",
-    "Forsyningslinje": "Vestre Viken Drammen / Ullevål"
-  },
-  "Sykehuset i Vestfold HF (Tønsberg)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 59.272328,
-    "Lengdegrad": 10.417905,
-    "Aktive blodgivere": {
-      "2015": 3400,
-      "2025": 2387
-    },
-    "Nyrekruttering": {
-      "2015": 887,
-      "2025": 372
-    },
-    "Tappingsvolum": {
-      "2015": 9133,
-      "2025": 6161
-    },
-    "Pasientforbruk": {
-      "2015": 5900,
-      "2025": 5120
-    },
-    "Beredskapsnotat": "Tønsberg. Stor regional blodbank, -58,1% fall i nyrekruttering",
-    "Forsyningslinje": "Ullevål sykehus (Traumesenter)"
-  },
-  "Sykehuset Telemark HF (Skien)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 59.192018,
-    "Lengdegrad": 9.593818,
-    "Aktive blodgivere": {
-      "2015": 2650,
-      "2025": 2276
-    },
-    "Nyrekruttering": {
-      "2015": 408,
-      "2025": 282
-    },
-    "Tappingsvolum": {
-      "2015": 5518,
-      "2025": 4976
-    },
-    "Pasientforbruk": {
-      "2015": 4350,
-      "2025": 4120
-    },
-    "Beredskapsnotat": "Grenland. Dekker også Notodden og Telemarksinnlandet",
-    "Forsyningslinje": "Ullevål sykehus / Sykehuset i Vestfold"
-  },
-  "Akershus universitetssykehus (Ahus)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 59.933,
-    "Lengdegrad": 10.987,
-    "Aktive blodgivere": {
-      "2015": 5600,
-      "2025": 5100
-    },
-    "Nyrekruttering": {
-      "2015": 1452,
-      "2025": 980
-    },
-    "Tappingsvolum": {
-      "2015": 12500,
-      "2025": 11978
-    },
-    "Pasientforbruk": {
-      "2015": 10500,
-      "2025": 10200
-    },
-    "Beredskapsnotat": "Ahus Lørenskog. Norges nest største lokalopptaksområde. Svært sterk rekruttering",
-    "Forsyningslinje": "Ullevål sykehus (Traumesenter)"
-  },
-  "Kongsvinger sykehus (Ahus HF)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 60.1877,
-    "Lengdegrad": 12.0045,
-    "Aktive blodgivere": {
-      "2015": 850,
-      "2025": 730
-    },
-    "Nyrekruttering": {
-      "2015": 164,
-      "2025": 112
-    },
-    "Tappingsvolum": {
-      "2015": 1817,
-      "2025": 1598
-    },
-    "Pasientforbruk": {
-      "2015": 1250,
-      "2025": 1200
-    },
-    "Beredskapsnotat": "Glåmdalsregionen / Grense mot Sverige. Driftes under Ahus HF",
-    "Forsyningslinje": "Ahus Lørenskog / Ullevål"
-  },
-  "Sykehuset Østfold HF (Kalnes)": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 59.318332,
-    "Lengdegrad": 11.026939,
-    "Aktive blodgivere": {
-      "2015": 6800,
-      "2025": 6366
-    },
-    "Nyrekruttering": {
-      "2015": 825,
-      "2025": 763
-    },
-    "Tappingsvolum": {
-      "2015": 17191,
-      "2025": 15788
-    },
-    "Pasientforbruk": {
-      "2015": 10200,
-      "2025": 9850
-    },
-    "Beredskapsnotat": "Norges absolutt største plasmaferesesenter (5 586 prosedyrer i 2025). Svært sterk beredskap",
-    "Forsyningslinje": "Ullevål sykehus (Traumesenter)"
-  },
-  "Sørlandet sykehus Kristiansand": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 58.16392,
-    "Lengdegrad": 7.98198,
-    "Aktive blodgivere": {
-      "2015": 2500,
-      "2025": 2150
-    },
-    "Nyrekruttering": {
-      "2015": 416,
-      "2025": 322
-    },
-    "Tappingsvolum": {
-      "2015": 4781,
-      "2025": 4150
-    },
-    "Pasientforbruk": {
-      "2015": 3600,
-      "2025": 3450
-    },
-    "Beredskapsnotat": "Hovedsykehus i Agder. Inkluderer kombinert fullblod- og plasmaferesetapping",
-    "Forsyningslinje": "Ullevål sykehus (Traumesenter)"
-  },
-  "Sørlandet sykehus Arendal": {
-    "Beredskapsfunksjon": "Akuttsykehus med traumefunksjon",
-    "Helseregion": "Helse Sør-Øst RHF",
-    "Breddegrad": 58.46697,
-    "Lengdegrad": 8.75535,
-    "Aktive blodgivere": {
-      "2015": 1420,
-      "2025": 1246
-    },
-    "Nyrekruttering": {
-      "2015": 224,
-      "2025": 186
-    },
-    "Tappingsvolum": {
-      "2015": 2575,
-      "2025": 2427
-    },
-    "Pasientforbruk": {
-      "2015": 2100,
-      "2025": 2010
-    },
-    "Beredskapsnotat": "Aust-Agder. Integrert i Sørlandet sykehus HF sin felles blodbanktjeneste",
-    "Forsyningslinje": "Kristiansand / Ullevål sykehus"
+  "helseforetak": {
+    "universitetssykehuset-nord-norge-hf": {
+      "Navn": "Universitetssykehuset Nord-Norge HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Nord RHF",
+      "Rapporteringsnivå": "Summert fra sykehusrapporter",
+      "Statistikk-ID": null,
+      "Sykehus-ID": [
+        "unn-tromso",
+        "unn-narvik",
+        "unn-harstad"
+      ],
+      "Sykehusnavn": [
+        "UNN Tromsø",
+        "UNN Narvik",
+        "UNN Harstad"
+      ],
+      "Soketermer": "Universitetssykehuset Nord-Norge HF Helse Nord RHF",
+      "Aktive blodgivere": {
+        "2015": 4615,
+        "2016": 4991,
+        "2017": 4608,
+        "2018": 4520,
+        "2019": 4626,
+        "2020": 4273,
+        "2021": 4473,
+        "2022": 4955,
+        "2023": 4604,
+        "2024": 4446,
+        "2025": 4357
+      },
+      "Nyrekruttering": {
+        "2015": 1192,
+        "2016": 1221,
+        "2017": 1239,
+        "2018": 1461,
+        "2019": 701,
+        "2020": 770,
+        "2021": 533,
+        "2022": 803,
+        "2023": 549,
+        "2024": 661,
+        "2025": 471
+      },
+      "Tappingsvolum": {
+        "2015": 9265,
+        "2016": 9160,
+        "2017": 8754,
+        "2018": 8587,
+        "2019": 8414,
+        "2020": 7779,
+        "2021": 8025,
+        "2022": 8433,
+        "2023": 8142,
+        "2024": 7804,
+        "2025": 7995
+      }
+    },
+    "nordlandssykehuset-hf": {
+      "Navn": "Nordlandssykehuset HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Nord RHF",
+      "Rapporteringsnivå": "Summert fra sykehusrapporter",
+      "Statistikk-ID": null,
+      "Sykehus-ID": [
+        "nordlandssykehuset-bodo",
+        "nordlandssykehuset-lofoten-gravdal",
+        "nordlandssykehuset-vesteralen-stokmarknes"
+      ],
+      "Sykehusnavn": [
+        "Nordlandssykehuset Bodø",
+        "Nordlandssykehuset Lofoten (Gravdal)",
+        "Nordlandssykehuset Vesterålen (Stokmarknes)"
+      ],
+      "Soketermer": "Nordlandssykehuset HF Helse Nord RHF",
+      "Aktive blodgivere": {
+        "2015": 3323,
+        "2016": 2817,
+        "2017": 2823,
+        "2018": 2554,
+        "2019": 2902,
+        "2020": 2719,
+        "2021": 2614,
+        "2022": 2764,
+        "2023": 2623,
+        "2024": 2717,
+        "2025": 2607
+      },
+      "Nyrekruttering": {
+        "2015": 731,
+        "2016": 619,
+        "2017": 685,
+        "2018": 735,
+        "2019": 698,
+        "2020": 135,
+        "2021": 252,
+        "2022": 445,
+        "2023": 414,
+        "2024": 338,
+        "2025": 237
+      },
+      "Tappingsvolum": {
+        "2015": 6053,
+        "2016": 5699,
+        "2017": 5260,
+        "2018": 4894,
+        "2019": 5212,
+        "2020": 5312,
+        "2021": 4832,
+        "2022": 5085,
+        "2023": 4969,
+        "2024": 4602,
+        "2025": 4242
+      }
+    },
+    "helgelandssykehuset-hf": {
+      "Navn": "Helgelandssykehuset HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Nord RHF",
+      "Rapporteringsnivå": "Summert fra sykehusrapporter",
+      "Statistikk-ID": null,
+      "Sykehus-ID": [
+        "helgelandssykehuset-mo-i-rana",
+        "helgelandssykehuset-mosjoen",
+        "helgelandssykehuset-sandnessjoen"
+      ],
+      "Sykehusnavn": [
+        "Helgelandssykehuset Mo i Rana",
+        "Helgelandssykehuset Mosjøen",
+        "Helgelandssykehuset Sandnessjøen"
+      ],
+      "Soketermer": "Helgelandssykehuset HF Helse Nord RHF",
+      "Aktive blodgivere": {
+        "2015": 1494,
+        "2016": 1526,
+        "2017": 1501,
+        "2018": 1587,
+        "2019": 1478,
+        "2020": 1440,
+        "2021": 1458,
+        "2022": 1403,
+        "2023": 1386,
+        "2024": 1287,
+        "2025": 1305
+      },
+      "Nyrekruttering": {
+        "2015": 234,
+        "2016": 200,
+        "2017": 202,
+        "2018": 271,
+        "2019": 120,
+        "2020": 88,
+        "2021": 102,
+        "2022": 99,
+        "2023": 146,
+        "2024": 86,
+        "2025": 71
+      },
+      "Tappingsvolum": {
+        "2015": 2436,
+        "2016": 2448,
+        "2017": 2378,
+        "2018": 2505,
+        "2019": 2342,
+        "2020": 2317,
+        "2021": 2348,
+        "2022": 2295,
+        "2023": 2215,
+        "2024": 2114,
+        "2025": 2241
+      }
+    },
+    "finnmarkssykehuset-hf": {
+      "Navn": "Finnmarkssykehuset HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Nord RHF",
+      "Rapporteringsnivå": "Summert fra sykehusrapporter",
+      "Statistikk-ID": null,
+      "Sykehus-ID": [
+        "finnmarkssykehuset-hammerfest",
+        "finnmarkssykehuset-kirkenes"
+      ],
+      "Sykehusnavn": [
+        "Finnmarkssykehuset Hammerfest",
+        "Finnmarkssykehuset Kirkenes"
+      ],
+      "Soketermer": "Finnmarkssykehuset HF Helse Nord RHF",
+      "Aktive blodgivere": {
+        "2015": 950,
+        "2016": 954,
+        "2017": 998,
+        "2018": 1015,
+        "2019": 1093,
+        "2020": 1025,
+        "2021": 991,
+        "2022": 1184,
+        "2023": 1104,
+        "2024": 981,
+        "2025": 981
+      },
+      "Nyrekruttering": {
+        "2015": 165,
+        "2016": 151,
+        "2017": 152,
+        "2018": 188,
+        "2019": 167,
+        "2020": 88,
+        "2021": 80,
+        "2022": 139,
+        "2023": 145,
+        "2024": 217,
+        "2025": 67
+      },
+      "Tappingsvolum": {
+        "2015": 1632,
+        "2016": 1725,
+        "2017": 1891,
+        "2018": 1748,
+        "2019": 1651,
+        "2020": 1690,
+        "2021": 1609,
+        "2022": 1662,
+        "2023": 1432,
+        "2024": 1476,
+        "2025": 1398
+      }
+    },
+    "st-olavs-hospital-hf": {
+      "Navn": "St. Olavs hospital HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "St. Olavs hospital",
+      "Sykehus-ID": [
+        "st-olavs-hospital-hf-trondheim"
+      ],
+      "Sykehusnavn": [
+        "St. Olavs Hospital HF (Trondheim)"
+      ],
+      "Soketermer": "St. Olavs hospital HF Helse Midt-Norge RHF",
+      "Aktive blodgivere": {
+        "2015": 7305,
+        "2016": 7846,
+        "2017": 8297,
+        "2018": 7718,
+        "2019": 8504,
+        "2020": 8335,
+        "2021": 7566,
+        "2022": 7771,
+        "2023": 8446,
+        "2024": 7211,
+        "2025": 6407
+      },
+      "Nyrekruttering": {
+        "2015": 2446,
+        "2016": 2062,
+        "2017": 1534,
+        "2018": 2374,
+        "2019": 1733,
+        "2020": 1605,
+        "2021": 1451,
+        "2022": 1890,
+        "2023": 1694,
+        "2024": 1760,
+        "2025": 1102
+      },
+      "Tappingsvolum": {
+        "2015": 15554,
+        "2016": 16261,
+        "2017": 15784,
+        "2018": 15847,
+        "2019": 15672,
+        "2020": 13850,
+        "2021": 13869,
+        "2022": 14046,
+        "2023": 13712,
+        "2024": 13854,
+        "2025": 13407
+      }
+    },
+    "helse-nord-trondelag-hf": {
+      "Navn": "Helse Nord-Trøndelag HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Helse Nord-Trøndelag",
+      "Sykehus-ID": [
+        "sykehuset-levanger-helse-nord-trondelag",
+        "sykehuset-namsos-helse-nord-trondelag"
+      ],
+      "Sykehusnavn": [
+        "Sykehuset Levanger (Helse Nord-Trøndelag)",
+        "Sykehuset Namsos (Helse Nord-Trøndelag)"
+      ],
+      "Soketermer": "Helse Nord-Trøndelag HF Helse Midt-Norge RHF",
+      "Aktive blodgivere": {
+        "2015": 1778,
+        "2016": 2124,
+        "2017": 2108,
+        "2018": 1988,
+        "2019": 1954,
+        "2020": 1706,
+        "2021": 2014,
+        "2022": 1854,
+        "2023": 1784,
+        "2024": 2077,
+        "2025": 2018
+      },
+      "Nyrekruttering": {
+        "2015": 295,
+        "2016": 368,
+        "2017": 352,
+        "2018": 288,
+        "2019": 353,
+        "2020": 237,
+        "2021": 214,
+        "2022": 258,
+        "2023": 323,
+        "2024": 320,
+        "2025": 254
+      },
+      "Tappingsvolum": {
+        "2015": 3207,
+        "2016": 3174,
+        "2017": 2790,
+        "2018": 3236,
+        "2019": 3091,
+        "2020": 2939,
+        "2021": 2858,
+        "2022": 2864,
+        "2023": 2797,
+        "2024": 2777,
+        "2025": 2941
+      }
+    },
+    "helse-more-og-romsdal-hf": {
+      "Navn": "Helse Møre og Romsdal HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Helse Møre og Romsdal",
+      "Sykehus-ID": [
+        "sjukehuset-nordmore-og-romsdal-hjelset",
+        "alesund-sjukehus-helse-more-og-romsdal",
+        "volda-sjukehus-helse-more-og-romsdal"
+      ],
+      "Sykehusnavn": [
+        "Sjukehuset Nordmøre og Romsdal Hjelset",
+        "Ålesund sjukehus (Helse Møre og Romsdal)",
+        "Volda sjukehus (Helse Møre og Romsdal)"
+      ],
+      "Soketermer": "Helse Møre og Romsdal HF Helse Midt-Norge RHF",
+      "Aktive blodgivere": {
+        "2015": 4675,
+        "2016": 4747,
+        "2017": 4669,
+        "2018": 5074,
+        "2019": 4994,
+        "2020": 5132,
+        "2021": 5045,
+        "2022": 5278,
+        "2023": 4646,
+        "2024": 4652,
+        "2025": 3992
+      },
+      "Nyrekruttering": {
+        "2015": 923,
+        "2016": 853,
+        "2017": 868,
+        "2018": 972,
+        "2019": 926,
+        "2020": 908,
+        "2021": 687,
+        "2022": 694,
+        "2023": 708,
+        "2024": 503,
+        "2025": 294
+      },
+      "Tappingsvolum": {
+        "2015": 6363,
+        "2016": 6807,
+        "2017": 6655,
+        "2018": 6581,
+        "2019": 6705,
+        "2020": 7248,
+        "2021": 7459,
+        "2022": 7442,
+        "2023": 7363,
+        "2024": 6603,
+        "2025": 6176
+      }
+    },
+    "helse-stavanger-hf": {
+      "Navn": "Helse Stavanger HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Vest RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Stavanger universitetssjukehus",
+      "Sykehus-ID": [
+        "stavanger-universitetssjukehus-helse-stavanger"
+      ],
+      "Sykehusnavn": [
+        "Stavanger universitetssjukehus (Helse Stavanger)"
+      ],
+      "Soketermer": "Helse Stavanger HF Helse Vest RHF",
+      "Aktive blodgivere": {
+        "2015": 4943,
+        "2016": 4762,
+        "2017": 4484,
+        "2018": 4484,
+        "2019": 4542,
+        "2020": 4226,
+        "2021": 4213,
+        "2022": 2612,
+        "2023": 4140,
+        "2024": 4276,
+        "2025": 4412
+      },
+      "Nyrekruttering": {
+        "2015": 1492,
+        "2016": 1127,
+        "2017": 1002,
+        "2018": 891,
+        "2019": 1096,
+        "2020": 859,
+        "2021": 966,
+        "2022": 244,
+        "2023": 824,
+        "2024": 980,
+        "2025": 733
+      },
+      "Tappingsvolum": {
+        "2015": 10830,
+        "2016": 10807,
+        "2017": 10085,
+        "2018": 9716,
+        "2019": 9716,
+        "2020": 9045,
+        "2021": 8581,
+        "2022": 7247,
+        "2023": 8245,
+        "2024": 8095,
+        "2025": 7308
+      }
+    },
+    "helse-fonna-hf": {
+      "Navn": "Helse Fonna HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Vest RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Helse Fonna",
+      "Sykehus-ID": [
+        "haugesund-sjukehus-helse-fonna",
+        "stord-sjukehus-helse-fonna",
+        "odda-sjukehus-helse-fonna"
+      ],
+      "Sykehusnavn": [
+        "Haugesund sjukehus (Helse Fonna)",
+        "Stord sjukehus (Helse Fonna)",
+        "Odda sjukehus (Helse Fonna)"
+      ],
+      "Soketermer": "Helse Fonna HF Helse Vest RHF",
+      "Aktive blodgivere": {
+        "2015": 2609,
+        "2016": 2709,
+        "2017": 2741,
+        "2018": 2873,
+        "2019": 3052,
+        "2020": 3232,
+        "2021": 2961,
+        "2022": 2612,
+        "2023": 2492,
+        "2024": 2264,
+        "2025": 2357
+      },
+      "Nyrekruttering": {
+        "2015": 312,
+        "2016": 393,
+        "2017": 365,
+        "2018": 733,
+        "2019": 662,
+        "2020": 494,
+        "2021": 363,
+        "2022": 244,
+        "2023": 270,
+        "2024": 286,
+        "2025": 470
+      },
+      "Tappingsvolum": {
+        "2015": 4366,
+        "2016": 4768,
+        "2017": 4300,
+        "2018": 4069,
+        "2019": 4467,
+        "2020": 4511,
+        "2021": 4577,
+        "2022": 4096,
+        "2023": 4061,
+        "2024": 3714,
+        "2025": 4099
+      }
+    },
+    "helse-bergen-hf": {
+      "Navn": "Helse Bergen HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Vest RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Helse Bergen",
+      "Sykehus-ID": [
+        "haukeland-universitetssjukehus-helse-bergen",
+        "voss-sjukehus-helse-bergen"
+      ],
+      "Sykehusnavn": [
+        "Haukeland universitetssjukehus (Helse Bergen)",
+        "Voss sjukehus (Helse Bergen)"
+      ],
+      "Soketermer": "Helse Bergen HF Helse Vest RHF",
+      "Aktive blodgivere": {
+        "2015": 10243,
+        "2016": 10411,
+        "2017": 10010,
+        "2018": 9982,
+        "2019": 10497,
+        "2020": 10391,
+        "2021": 10295,
+        "2022": 10390,
+        "2023": 9714,
+        "2024": 9414,
+        "2025": 9167
+      },
+      "Nyrekruttering": {
+        "2015": 1920,
+        "2016": 1452,
+        "2017": 1617,
+        "2018": 2067,
+        "2019": 2147,
+        "2020": 1636,
+        "2021": 1420,
+        "2022": 1736,
+        "2023": 1378,
+        "2024": 1385,
+        "2025": 1220
+      },
+      "Tappingsvolum": {
+        "2015": 20818,
+        "2016": 18249,
+        "2017": 17021,
+        "2018": 18602,
+        "2019": 18930,
+        "2020": 17902,
+        "2021": 19243,
+        "2022": 16688,
+        "2023": 19072,
+        "2024": 17012,
+        "2025": 16742
+      }
+    },
+    "helse-forde-hf": {
+      "Navn": "Helse Førde HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Vest RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Helse Førde",
+      "Sykehus-ID": [
+        "forde-sentralsjukehus-helse-forde"
+      ],
+      "Sykehusnavn": [
+        "Førde sentralsjukehus (Helse Førde)"
+      ],
+      "Soketermer": "Helse Førde HF Helse Vest RHF",
+      "Aktive blodgivere": {
+        "2015": 1614,
+        "2016": 1724,
+        "2017": 1774,
+        "2018": 1528,
+        "2019": 1567,
+        "2020": 1596,
+        "2021": 1617,
+        "2022": 1511,
+        "2023": 1390,
+        "2024": 1418,
+        "2025": 1406
+      },
+      "Nyrekruttering": {
+        "2015": 285,
+        "2016": 248,
+        "2017": 206,
+        "2018": 261,
+        "2019": 244,
+        "2020": 147,
+        "2021": 179,
+        "2022": 220,
+        "2023": 188,
+        "2024": 151,
+        "2025": 85
+      },
+      "Tappingsvolum": {
+        "2015": 2264,
+        "2016": 2315,
+        "2017": 2328,
+        "2018": 2011,
+        "2019": 2140,
+        "2020": 2241,
+        "2021": 2359,
+        "2022": 2099,
+        "2023": 2092,
+        "2024": 1382,
+        "2025": 2225
+      }
+    },
+    "oslo-universitetssykehus-hf": {
+      "Navn": "Oslo universitetssykehus HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Oslo universitetssykehus",
+      "Sykehus-ID": [
+        "ulleval-sykehus-oslo-universitetssykehus"
+      ],
+      "Sykehusnavn": [
+        "Ullevål sykehus (Oslo universitetssykehus)"
+      ],
+      "Soketermer": "Oslo universitetssykehus HF Helse Sør-Øst RHF",
+      "Aktive blodgivere": {
+        "2015": 18000,
+        "2016": 16550,
+        "2017": 16872,
+        "2018": 16744,
+        "2019": 17089,
+        "2020": 16119,
+        "2021": 15320,
+        "2022": 15851,
+        "2023": 16338,
+        "2024": 16041,
+        "2025": 16893
+      },
+      "Nyrekruttering": {
+        "2015": 3733,
+        "2016": 3838,
+        "2017": 3154,
+        "2018": 4078,
+        "2019": 3963,
+        "2020": 2040,
+        "2021": 2162,
+        "2022": 3602,
+        "2023": 3164,
+        "2024": 3245,
+        "2025": 3035
+      },
+      "Tappingsvolum": {
+        "2015": 34976,
+        "2016": 34864,
+        "2017": 32786,
+        "2018": 32094,
+        "2019": 31507,
+        "2020": 31075,
+        "2021": 31872,
+        "2022": 32246,
+        "2023": 32341,
+        "2024": 30855,
+        "2025": 29905
+      }
+    },
+    "akershus-universitetssykehus-hf": {
+      "Navn": "Akershus universitetssykehus HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Akershus universitetssykehus",
+      "Sykehus-ID": [
+        "akershus-universitetssykehus-ahus",
+        "kongsvinger-sykehus-ahus-hf"
+      ],
+      "Sykehusnavn": [
+        "Akershus universitetssykehus (Ahus)",
+        "Kongsvinger sykehus (Ahus HF)"
+      ],
+      "Soketermer": "Akershus universitetssykehus HF Helse Sør-Øst RHF",
+      "Aktive blodgivere": {
+        "2015": 6753,
+        "2016": 6673,
+        "2017": 6968,
+        "2018": 6362,
+        "2019": 6538,
+        "2020": 6051,
+        "2021": 6333,
+        "2022": 6429,
+        "2023": 6218,
+        "2024": 6069,
+        "2025": 5830
+      },
+      "Nyrekruttering": {
+        "2015": 1616,
+        "2016": 1353,
+        "2017": 2582,
+        "2018": 1377,
+        "2019": 1237,
+        "2020": 922,
+        "2021": 1695,
+        "2022": 1466,
+        "2023": 1150,
+        "2024": 969,
+        "2025": 1092
+      },
+      "Tappingsvolum": {
+        "2015": 13319,
+        "2016": 12582,
+        "2017": 12704,
+        "2018": 10958,
+        "2019": 12049,
+        "2020": 11645,
+        "2021": 12568,
+        "2022": 12872,
+        "2023": 12304,
+        "2024": 12499,
+        "2025": 11978
+      }
+    },
+    "sykehuset-ostfold-hf": {
+      "Navn": "Sykehuset Østfold HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Sykehuset Østfold",
+      "Sykehus-ID": [
+        "sykehuset-ostfold-hf-kalnes"
+      ],
+      "Sykehusnavn": [
+        "Sykehuset Østfold HF (Kalnes)"
+      ],
+      "Soketermer": "Sykehuset Østfold HF Helse Sør-Øst RHF",
+      "Aktive blodgivere": {
+        "2015": 7838,
+        "2016": 8230,
+        "2017": 8330,
+        "2018": 7570,
+        "2019": 7834,
+        "2020": 6931,
+        "2021": 6951,
+        "2022": 6782,
+        "2023": 7937,
+        "2024": 6574,
+        "2025": 6366
+      },
+      "Nyrekruttering": {
+        "2015": 825,
+        "2016": 942,
+        "2017": 1184,
+        "2018": 1087,
+        "2019": 938,
+        "2020": 640,
+        "2021": 510,
+        "2022": 890,
+        "2023": 689,
+        "2024": 746,
+        "2025": 763
+      },
+      "Tappingsvolum": {
+        "2015": 12072,
+        "2016": 12123,
+        "2017": 12125,
+        "2018": 12494,
+        "2019": 11219,
+        "2020": 10429,
+        "2021": 10200,
+        "2022": 9820,
+        "2023": 10457,
+        "2024": 10106,
+        "2025": 9880
+      }
+    },
+    "sykehuset-innlandet-hf": {
+      "Navn": "Sykehuset Innlandet HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Sykehuset Innlandet",
+      "Sykehus-ID": [
+        "sykehuset-innlandet-lillehammer",
+        "sykehuset-innlandet-gjovik",
+        "sykehuset-innlandet-hamar",
+        "sykehuset-innlandet-tynset"
+      ],
+      "Sykehusnavn": [
+        "Sykehuset Innlandet Lillehammer",
+        "Sykehuset Innlandet Gjøvik",
+        "Sykehuset Innlandet Hamar",
+        "Sykehuset Innlandet Tynset"
+      ],
+      "Soketermer": "Sykehuset Innlandet HF Helse Sør-Øst RHF",
+      "Aktive blodgivere": {
+        "2015": 5281,
+        "2016": 5195,
+        "2017": 5376,
+        "2018": 5578,
+        "2019": 4780,
+        "2020": 4466,
+        "2021": 4331,
+        "2022": 4405,
+        "2023": 4370,
+        "2024": 4251,
+        "2025": 4178
+      },
+      "Nyrekruttering": {
+        "2015": 1055,
+        "2016": 938,
+        "2017": 819,
+        "2018": 887,
+        "2019": 801,
+        "2020": 510,
+        "2021": 472,
+        "2022": 630,
+        "2023": 522,
+        "2024": null,
+        "2025": 468
+      },
+      "Tappingsvolum": {
+        "2015": 11581,
+        "2016": 11484,
+        "2017": 10932,
+        "2018": 10922,
+        "2019": 9079,
+        "2020": 8841,
+        "2021": 8382,
+        "2022": 7991,
+        "2023": 8593,
+        "2024": 8462,
+        "2025": 7826
+      }
+    },
+    "vestre-viken-hf": {
+      "Navn": "Vestre Viken HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Vestre Viken",
+      "Sykehus-ID": [
+        "drammen-sykehus-vestre-viken",
+        "baerum-sykehus-vestre-viken",
+        "ringerike-sykehus-vestre-viken"
+      ],
+      "Sykehusnavn": [
+        "Drammen sykehus (Vestre Viken)",
+        "Bærum sykehus (Vestre Viken)",
+        "Ringerike sykehus (Vestre Viken)"
+      ],
+      "Soketermer": "Vestre Viken HF Helse Sør-Øst RHF",
+      "Aktive blodgivere": {
+        "2015": 6089,
+        "2016": 5994,
+        "2017": 6002,
+        "2018": 5310,
+        "2019": 5344,
+        "2020": 5222,
+        "2021": 4929,
+        "2022": 5086,
+        "2023": 5310,
+        "2024": 5085,
+        "2025": 4974
+      },
+      "Nyrekruttering": {
+        "2015": 1277,
+        "2016": 1277,
+        "2017": 1049,
+        "2018": 1074,
+        "2019": 1022,
+        "2020": 1370,
+        "2021": 1021,
+        "2022": 1491,
+        "2023": 1653,
+        "2024": 946,
+        "2025": 928
+      },
+      "Tappingsvolum": {
+        "2015": 13100,
+        "2016": 13120,
+        "2017": 12763,
+        "2018": 11995,
+        "2019": 11887,
+        "2020": 12140,
+        "2021": 11263,
+        "2022": 11031,
+        "2023": 10970,
+        "2024": 10816,
+        "2025": 10572
+      }
+    },
+    "sykehuset-i-vestfold-hf": {
+      "Navn": "Sykehuset i Vestfold HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Sykehuset i Vestfold",
+      "Sykehus-ID": [
+        "sykehuset-i-vestfold-hf-tonsberg"
+      ],
+      "Sykehusnavn": [
+        "Sykehuset i Vestfold HF (Tønsberg)"
+      ],
+      "Soketermer": "Sykehuset i Vestfold HF Helse Sør-Øst RHF",
+      "Aktive blodgivere": {
+        "2015": 4468,
+        "2016": 4221,
+        "2017": 3944,
+        "2018": 3338,
+        "2019": 3174,
+        "2020": 2785,
+        "2021": 2881,
+        "2022": 2874,
+        "2023": 2741,
+        "2024": 2371,
+        "2025": 2387
+      },
+      "Nyrekruttering": {
+        "2015": 887,
+        "2016": 682,
+        "2017": 675,
+        "2018": 576,
+        "2019": 543,
+        "2020": 316,
+        "2021": 427,
+        "2022": 477,
+        "2023": 559,
+        "2024": 372,
+        "2025": 372
+      },
+      "Tappingsvolum": {
+        "2015": 9133,
+        "2016": 8579,
+        "2017": 8055,
+        "2018": 7960,
+        "2019": 7680,
+        "2020": 6963,
+        "2021": 7174,
+        "2022": 6996,
+        "2023": 6604,
+        "2024": 6042,
+        "2025": 6161
+      }
+    },
+    "sykehuset-telemark-hf": {
+      "Navn": "Sykehuset Telemark HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Sykehuset Telemark",
+      "Sykehus-ID": [
+        "sykehuset-telemark-hf-skien",
+        "sykehuset-telemark-notodden"
+      ],
+      "Sykehusnavn": [
+        "Sykehuset Telemark HF (Skien)",
+        "Sykehuset Telemark Notodden"
+      ],
+      "Soketermer": "Sykehuset Telemark HF Helse Sør-Øst RHF",
+      "Aktive blodgivere": {
+        "2015": 2656,
+        "2016": 2781,
+        "2017": 2660,
+        "2018": 2637,
+        "2019": 2719,
+        "2020": 2622,
+        "2021": 2423,
+        "2022": 2528,
+        "2023": 2439,
+        "2024": 2308,
+        "2025": 2276
+      },
+      "Nyrekruttering": {
+        "2015": 460,
+        "2016": 462,
+        "2017": 443,
+        "2018": 412,
+        "2019": 435,
+        "2020": 268,
+        "2021": 231,
+        "2022": 240,
+        "2023": 235,
+        "2024": 248,
+        "2025": 282
+      },
+      "Tappingsvolum": {
+        "2015": 5518,
+        "2016": 5658,
+        "2017": 5480,
+        "2018": 5463,
+        "2019": 5445,
+        "2020": 5594,
+        "2021": 5121,
+        "2022": 5355,
+        "2023": 5241,
+        "2024": 5028,
+        "2025": 4976
+      }
+    },
+    "sorlandet-sykehus-hf": {
+      "Navn": "Sørlandet sykehus HF",
+      "Kategori": "Helseforetak",
+      "Type": "Helseforetak",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Rapporteringsnivå": "Helseforetak",
+      "Statistikk-ID": "Sørlandet sykehus",
+      "Sykehus-ID": [
+        "sorlandet-sykehus-kristiansand",
+        "sorlandet-sykehus-arendal",
+        "sorlandet-sykehus-flekkefjord"
+      ],
+      "Sykehusnavn": [
+        "Sørlandet sykehus Kristiansand",
+        "Sørlandet sykehus Arendal",
+        "Sørlandet sykehus Flekkefjord"
+      ],
+      "Soketermer": "Sørlandet sykehus HF Helse Sør-Øst RHF",
+      "Aktive blodgivere": {
+        "2015": 4629,
+        "2016": 4911,
+        "2017": 4090,
+        "2018": 4007,
+        "2019": 3916,
+        "2020": 3843,
+        "2021": 3721,
+        "2022": 4069,
+        "2023": 3990,
+        "2024": 3443,
+        "2025": 3396
+      },
+      "Nyrekruttering": {
+        "2015": 997,
+        "2016": 845,
+        "2017": 904,
+        "2018": 861,
+        "2019": 839,
+        "2020": 789,
+        "2021": 558,
+        "2022": 813,
+        "2023": 620,
+        "2024": 492,
+        "2025": 508
+      },
+      "Tappingsvolum": {
+        "2015": 5848,
+        "2016": 5689,
+        "2017": 5628,
+        "2018": 4772,
+        "2019": 4631,
+        "2020": 4244,
+        "2021": 4772,
+        "2022": 4832,
+        "2023": 4292,
+        "2024": 4809,
+        "2025": 4867
+      }
+    },
+    "region-sor-ost": {
+      "Navn": "Region Sør-Øst",
+      "Kategori": "Helseforetak",
+      "Type": "Region",
+      "Helseregion": "Helse Sør-Øst RHF",
+      "Helseforetak-ID": [
+        "oslo-universitetssykehus-hf",
+        "akershus-universitetssykehus-hf",
+        "sykehuset-ostfold-hf",
+        "sykehuset-innlandet-hf",
+        "vestre-viken-hf",
+        "sykehuset-i-vestfold-hf",
+        "sykehuset-telemark-hf",
+        "sorlandet-sykehus-hf"
+      ],
+      "Sykehus-ID": [
+        "ulleval-sykehus-oslo-universitetssykehus",
+        "sykehuset-innlandet-lillehammer",
+        "sykehuset-innlandet-gjovik",
+        "sykehuset-innlandet-hamar",
+        "sykehuset-innlandet-tynset",
+        "drammen-sykehus-vestre-viken",
+        "baerum-sykehus-vestre-viken",
+        "ringerike-sykehus-vestre-viken",
+        "sykehuset-i-vestfold-hf-tonsberg",
+        "sykehuset-telemark-hf-skien",
+        "akershus-universitetssykehus-ahus",
+        "kongsvinger-sykehus-ahus-hf",
+        "sykehuset-ostfold-hf-kalnes",
+        "sorlandet-sykehus-kristiansand",
+        "sorlandet-sykehus-arendal",
+        "sorlandet-sykehus-flekkefjord",
+        "sykehuset-telemark-notodden"
+      ],
+      "Sykehusnavn": [
+        "Ullevål sykehus (Oslo universitetssykehus)",
+        "Sykehuset Innlandet Lillehammer",
+        "Sykehuset Innlandet Gjøvik",
+        "Sykehuset Innlandet Hamar",
+        "Sykehuset Innlandet Tynset",
+        "Drammen sykehus (Vestre Viken)",
+        "Bærum sykehus (Vestre Viken)",
+        "Ringerike sykehus (Vestre Viken)",
+        "Sykehuset i Vestfold HF (Tønsberg)",
+        "Sykehuset Telemark HF (Skien)",
+        "Akershus universitetssykehus (Ahus)",
+        "Kongsvinger sykehus (Ahus HF)",
+        "Sykehuset Østfold HF (Kalnes)",
+        "Sørlandet sykehus Kristiansand",
+        "Sørlandet sykehus Arendal",
+        "Sørlandet sykehus Flekkefjord",
+        "Sykehuset Telemark Notodden"
+      ],
+      "Soketermer": "Region Sør-Øst Helse Sør-Øst RHF Helse Sør-Øst",
+      "Aktive blodgivere": {
+        "2015": 55714,
+        "2016": 54555,
+        "2017": 54242,
+        "2018": 51546,
+        "2019": 51394,
+        "2020": 48039,
+        "2021": 46889,
+        "2022": 48024,
+        "2023": 49343,
+        "2024": 46142,
+        "2025": 46300
+      },
+      "Nyrekruttering": {
+        "2015": 10850,
+        "2016": 10337,
+        "2017": 10810,
+        "2018": 10352,
+        "2019": 9778,
+        "2020": 6855,
+        "2021": 7076,
+        "2022": 9609,
+        "2023": 8592,
+        "2024": 7018,
+        "2025": 7448
+      },
+      "Tappingsvolum": {
+        "2015": 105547,
+        "2016": 104099,
+        "2017": 100473,
+        "2018": 96658,
+        "2019": 93497,
+        "2020": 90931,
+        "2021": 91352,
+        "2022": 91143,
+        "2023": 90802,
+        "2024": 88617,
+        "2025": 86165
+      }
+    },
+    "region-vest": {
+      "Navn": "Region Vest",
+      "Kategori": "Helseforetak",
+      "Type": "Region",
+      "Helseregion": "Helse Vest RHF",
+      "Helseforetak-ID": [
+        "helse-stavanger-hf",
+        "helse-fonna-hf",
+        "helse-bergen-hf",
+        "helse-forde-hf"
+      ],
+      "Sykehus-ID": [
+        "haukeland-universitetssjukehus-helse-bergen",
+        "forde-sentralsjukehus-helse-forde",
+        "voss-sjukehus-helse-bergen",
+        "haugesund-sjukehus-helse-fonna",
+        "stord-sjukehus-helse-fonna",
+        "odda-sjukehus-helse-fonna",
+        "stavanger-universitetssjukehus-helse-stavanger"
+      ],
+      "Sykehusnavn": [
+        "Haukeland universitetssjukehus (Helse Bergen)",
+        "Førde sentralsjukehus (Helse Førde)",
+        "Voss sjukehus (Helse Bergen)",
+        "Haugesund sjukehus (Helse Fonna)",
+        "Stord sjukehus (Helse Fonna)",
+        "Odda sjukehus (Helse Fonna)",
+        "Stavanger universitetssjukehus (Helse Stavanger)"
+      ],
+      "Soketermer": "Region Vest Helse Vest RHF Helse Vest",
+      "Aktive blodgivere": {
+        "2015": 19409,
+        "2016": 19606,
+        "2017": 19009,
+        "2018": 18867,
+        "2019": 19658,
+        "2020": 19445,
+        "2021": 19086,
+        "2022": 17125,
+        "2023": 17736,
+        "2024": 17372,
+        "2025": 17342
+      },
+      "Nyrekruttering": {
+        "2015": 4009,
+        "2016": 3220,
+        "2017": 3190,
+        "2018": 3952,
+        "2019": 4149,
+        "2020": 3136,
+        "2021": 2928,
+        "2022": 2444,
+        "2023": 2660,
+        "2024": 2802,
+        "2025": 2508
+      },
+      "Tappingsvolum": {
+        "2015": 38278,
+        "2016": 36139,
+        "2017": 33734,
+        "2018": 34398,
+        "2019": 35253,
+        "2020": 33699,
+        "2021": 34760,
+        "2022": 30130,
+        "2023": 33470,
+        "2024": 30203,
+        "2025": 30374
+      }
+    },
+    "region-midt-norge": {
+      "Navn": "Region Midt-Norge",
+      "Kategori": "Helseforetak",
+      "Type": "Region",
+      "Helseregion": "Helse Midt-Norge RHF",
+      "Helseforetak-ID": [
+        "st-olavs-hospital-hf",
+        "helse-nord-trondelag-hf",
+        "helse-more-og-romsdal-hf"
+      ],
+      "Sykehus-ID": [
+        "st-olavs-hospital-hf-trondheim",
+        "sykehuset-levanger-helse-nord-trondelag",
+        "sykehuset-namsos-helse-nord-trondelag",
+        "sjukehuset-nordmore-og-romsdal-hjelset",
+        "alesund-sjukehus-helse-more-og-romsdal",
+        "volda-sjukehus-helse-more-og-romsdal"
+      ],
+      "Sykehusnavn": [
+        "St. Olavs Hospital HF (Trondheim)",
+        "Sykehuset Levanger (Helse Nord-Trøndelag)",
+        "Sykehuset Namsos (Helse Nord-Trøndelag)",
+        "Sjukehuset Nordmøre og Romsdal Hjelset",
+        "Ålesund sjukehus (Helse Møre og Romsdal)",
+        "Volda sjukehus (Helse Møre og Romsdal)"
+      ],
+      "Soketermer": "Region Midt-Norge Helse Midt-Norge RHF Helse Midt-Norge",
+      "Aktive blodgivere": {
+        "2015": 13758,
+        "2016": 14717,
+        "2017": 15074,
+        "2018": 14780,
+        "2019": 15452,
+        "2020": 15173,
+        "2021": 14625,
+        "2022": 14903,
+        "2023": 14876,
+        "2024": 13940,
+        "2025": 12417
+      },
+      "Nyrekruttering": {
+        "2015": 3664,
+        "2016": 3283,
+        "2017": 2754,
+        "2018": 3634,
+        "2019": 3012,
+        "2020": 2750,
+        "2021": 2352,
+        "2022": 2842,
+        "2023": 2725,
+        "2024": 2583,
+        "2025": 1650
+      },
+      "Tappingsvolum": {
+        "2015": 25124,
+        "2016": 26242,
+        "2017": 25229,
+        "2018": 25664,
+        "2019": 25468,
+        "2020": 24037,
+        "2021": 24186,
+        "2022": 24352,
+        "2023": 23872,
+        "2024": 23234,
+        "2025": 22524
+      }
+    },
+    "region-nord": {
+      "Navn": "Region Nord",
+      "Kategori": "Helseforetak",
+      "Type": "Region",
+      "Helseregion": "Helse Nord RHF",
+      "Helseforetak-ID": [
+        "universitetssykehuset-nord-norge-hf",
+        "nordlandssykehuset-hf",
+        "helgelandssykehuset-hf",
+        "finnmarkssykehuset-hf"
+      ],
+      "Sykehus-ID": [
+        "unn-tromso",
+        "unn-narvik",
+        "unn-harstad",
+        "nordlandssykehuset-bodo",
+        "nordlandssykehuset-lofoten-gravdal",
+        "nordlandssykehuset-vesteralen-stokmarknes",
+        "helgelandssykehuset-sandnessjoen",
+        "helgelandssykehuset-mo-i-rana",
+        "finnmarkssykehuset-hammerfest",
+        "finnmarkssykehuset-kirkenes",
+        "helgelandssykehuset-mosjoen"
+      ],
+      "Sykehusnavn": [
+        "UNN Tromsø",
+        "UNN Narvik",
+        "UNN Harstad",
+        "Nordlandssykehuset Bodø",
+        "Nordlandssykehuset Lofoten (Gravdal)",
+        "Nordlandssykehuset Vesterålen (Stokmarknes)",
+        "Helgelandssykehuset Sandnessjøen",
+        "Helgelandssykehuset Mo i Rana",
+        "Finnmarkssykehuset Hammerfest",
+        "Finnmarkssykehuset Kirkenes",
+        "Helgelandssykehuset Mosjøen"
+      ],
+      "Soketermer": "Region Nord Helse Nord RHF Helse Nord",
+      "Aktive blodgivere": {
+        "2015": 10382,
+        "2016": 10288,
+        "2017": 9930,
+        "2018": 9676,
+        "2019": 10099,
+        "2020": 9457,
+        "2021": 9536,
+        "2022": 10306,
+        "2023": 9717,
+        "2024": 9431,
+        "2025": 9250
+      },
+      "Nyrekruttering": {
+        "2015": 2291,
+        "2016": 2191,
+        "2017": 2278,
+        "2018": 2655,
+        "2019": 1686,
+        "2020": 1081,
+        "2021": 967,
+        "2022": 1486,
+        "2023": 1254,
+        "2024": 1302,
+        "2025": 846
+      },
+      "Tappingsvolum": {
+        "2015": 19386,
+        "2016": 19032,
+        "2017": 18283,
+        "2018": 17734,
+        "2019": 17619,
+        "2020": 17098,
+        "2021": 16814,
+        "2022": 17475,
+        "2023": 16758,
+        "2024": 15996,
+        "2025": 15876
+      }
+    }
   }
 }

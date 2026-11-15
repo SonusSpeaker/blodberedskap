@@ -5,174 +5,152 @@
   const utilities = window.APP_UTILS;
   const getElement = elementId => document.getElementById(elementId);
   const profileId = new URLSearchParams(window.location.search).get('id') || 'unn-narvik';
-
   await window.EXTERNAL_DEPENDENCIES_READY;
 
   try {
-    const datasetResponse = await fetch(configuration.data.statisticsDatasetUrl, { cache: 'no-store' });
-    if (!datasetResponse.ok) throw new Error(`Statistikkgrunnlaget kunne ikke hentes (${datasetResponse.status}).`);
-    const sourceStatistics = await datasetResponse.json();
+    const response = await fetch(configuration.data.statisticsDatasetUrl, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Statistikkfilen kunne ikke hentes (${response.status}).`);
+    const sourceStatistics = await response.json();
     const nationalStatistics = sourceStatistics[configuration.data.nationalRecordName];
-    const averageStatistics = utilities.createAverageStatistics(
-      nationalStatistics,
-      configuration.hospitalProfiles.expectedHospitalCount
-    );
-    const hospitalEntries = Object.entries(sourceStatistics)
-      .filter(([recordName]) => recordName !== configuration.data.nationalRecordName);
-    const hospitalRecords = hospitalEntries.map(([hospitalName, hospitalStatistics]) => ({
-      id: utilities.createSlug(hospitalName),
-      name: hospitalName,
-      region: hospitalStatistics['Helseregion'],
-      role: hospitalStatistics['Beredskapsfunksjon'],
-      statistics: hospitalStatistics,
-      type: 'hospital'
+    const rawHealthFacilities = sourceStatistics.helseforetak || {};
+    const healthFacilities = Object.entries(rawHealthFacilities).map(([id, item]) => ({
+      id, name: item.Navn, region: item.Helseregion, type: item.Type,
+      searchTerms: item.Soketermer || '', statistics: item
     }));
+    const hospitalRecords = Object.entries(sourceStatistics.sykehus || {}).map(([id, item]) => {
+      const facility = rawHealthFacilities[item['Helseforetak-ID']];
+      const usesFacilityStatistics = !item['Rapporterer selv'] && Boolean(facility);
+      return {
+        id, name: item.Navn, region: item.Helseregion, role: item.Beredskapsfunksjon,
+        healthFacilityId: item['Helseforetak-ID'], healthFacilityName: item.Helseforetak,
+        healthFacilityMemberCount: facility?.['Sykehus-ID']?.length || 0,
+        usesHealthFacilityStatistics: usesFacilityStatistics,
+        statistics: usesFacilityStatistics ? facility : item,
+        type: 'hospital'
+      };
+    });
+    const averageStatistics = utilities.createAverageStatistics(
+      Object.values(sourceStatistics.sykehus || {}), rawHealthFacilities
+    );
+    const searchProfiles = [
+      { id: configuration.hospitalProfiles.nationalProfileId, name: configuration.hospitalProfiles.nationalProfileName, region: 'Norge', subtitle: configuration.hospitalProfiles.nationalProfileSubtitle, searchTerms: configuration.hospitalProfiles.nationalSearchTerms },
+      { id: configuration.hospitalProfiles.averageProfileId, name: configuration.hospitalProfiles.averageProfileName, region: 'Norge', subtitle: configuration.hospitalProfiles.averageProfileSubtitle, searchTerms: configuration.hospitalProfiles.averageSearchTerms }
+    ];
+    window.APP_DATA = { national: nationalStatistics, hospitals: hospitalRecords, healthFacilities, searchProfiles, raw: sourceStatistics };
 
     let selectedProfile;
     if (profileId === configuration.hospitalProfiles.nationalProfileId) {
       selectedProfile = {
-        id: profileId,
-        name: configuration.hospitalProfiles.nationalProfileName,
-        region: 'Norge',
-        role: 'Nasjonal transfusjonsstatistikk',
-        statistics: nationalStatistics,
-        type: 'national'
+        id: profileId, name: configuration.hospitalProfiles.nationalProfileName,
+        region: 'Norge', role: 'Nasjonal transfusjonsstatistikk',
+        statistics: nationalStatistics, type: 'national'
       };
     } else if (profileId === configuration.hospitalProfiles.averageProfileId) {
       selectedProfile = {
-        id: profileId,
-        name: configuration.hospitalProfiles.averageProfileName,
-        region: 'Norge',
-        role: configuration.hospitalProfiles.averageProfileSubtitle,
-        statistics: averageStatistics,
-        type: 'average'
+        id: profileId, name: configuration.hospitalProfiles.averageProfileName,
+        region: 'Norge', role: configuration.hospitalProfiles.averageProfileSubtitle,
+        statistics: averageStatistics, type: 'average'
       };
     } else {
       selectedProfile = hospitalRecords.find(hospital => hospital.id === profileId);
     }
+    if (!selectedProfile) throw new Error('Fant ikke profilen i statistikkfilen.');
 
-    if (!selectedProfile) throw new Error('Fant ikke profilen i statistikkgrunnlaget.');
-
-    const profileName = selectedProfile.name;
     const profileStatistics = selectedProfile.statistics;
-    const isAggregateProfile = selectedProfile.type !== 'hospital';
-    window.APP_DATA = {
-      national: nationalStatistics,
-      hospitals: hospitalRecords,
-      searchProfiles: [
-        {
-          id: configuration.hospitalProfiles.nationalProfileId,
-          name: configuration.hospitalProfiles.nationalProfileName,
-          region: 'Norge',
-          subtitle: configuration.hospitalProfiles.nationalProfileSubtitle,
-          searchTerms: configuration.hospitalProfiles.nationalSearchTerms
-        },
-        {
-          id: configuration.hospitalProfiles.averageProfileId,
-          name: configuration.hospitalProfiles.averageProfileName,
-          region: 'Norge',
-          subtitle: configuration.hospitalProfiles.averageProfileSubtitle,
-          searchTerms: configuration.hospitalProfiles.averageSearchTerms
-        }
-      ],
-      raw: sourceStatistics
-    };
+    const isAggregateProfile = ['national', 'average'].includes(selectedProfile.type);
+    getElement('hospital-title').textContent = selectedProfile.name;
+    getElement('hospital-subtitle').textContent = selectedProfile.type === 'hospital'
+      ? `${selectedProfile.role} · ${selectedProfile.region}`
+      : selectedProfile.role;
+    getElement('hospital-breadcrumb').textContent = selectedProfile.name;
 
-    getElement('hospital-title').textContent = profileName;
-    getElement('hospital-breadcrumb').textContent = profileName;
-    getElement('hospital-subtitle').textContent = `${selectedProfile.role} · ${selectedProfile.region}`;
-    document.title = `${profileName} – Blodberedskap Norge`;
+    if (selectedProfile.type === 'hospital' && selectedProfile.usesHealthFacilityStatistics) {
+      getElement('profile-type-label').textContent = selectedProfile.healthFacilityMemberCount > 1
+        ? `Statistikk rapporteres samlet for ${selectedProfile.healthFacilityName} – tallene gjelder hele helseforetaket.`
+        : `Statistikk rapporteres for ${selectedProfile.healthFacilityName}, som har ett traumesykehus i oversikten.`;
+    } else {
+      getElement('profile-type-label').textContent = selectedProfile.type === 'national'
+        ? 'Nasjonale tall'
+        : selectedProfile.type === 'average'
+          ? 'Gjennomsnitt basert på unike rapporterende enheter'
+          : 'Sykehustall';
+    }
 
     const recruitmentChange = utilities.calculateRecruitmentChange(profileStatistics);
-    const recruitmentRisk = utilities.getRecruitmentRisk(recruitmentChange);
     const recruitmentLoss = utilities.calculateRecruitmentLoss(profileStatistics);
-    const recruitmentIn2025 = utilities.getYearValue(profileStatistics, 'Nyrekruttering', configuration.comparisonYears.baselineYear);
-    const recruitmentIn2015 = utilities.getYearValue(profileStatistics, 'Nyrekruttering', configuration.comparisonYears.comparisonYear);
     const donorLoss = utilities.calculateDonorLoss(profileStatistics);
-
-    const riskBadge = getElement('hospital-risk');
-    riskBadge.className = `risk-pill risk-${recruitmentRisk.key}`;
-    riskBadge.innerHTML = `<span>${recruitmentRisk.icon}</span><span>${recruitmentRisk.label}</span>`;
+    const recruitmentRisk = utilities.getRecruitmentRisk(recruitmentChange);
+    const riskElement = getElement('hospital-risk');
+    riskElement.className = `risk-pill risk-${recruitmentRisk.key}`;
+    riskElement.innerHTML = `<span>${recruitmentRisk.icon}</span><span>${recruitmentRisk.label}</span>`;
     getElement('beredskap-value').textContent = `${recruitmentRisk.icon} ${recruitmentRisk.label}`;
     getElement('beredskap-rule').textContent = utilities.createRecruitmentThresholdDescription(profileStatistics);
     getElement('recruitment-summary').textContent = recruitmentChange === null ? 'Kan ikke beregnes' : utilities.formatPercentage(recruitmentChange);
-    getElement('recruitment-detail').textContent = recruitmentIn2015 !== null && recruitmentIn2025 !== null && recruitmentLoss !== null
-      ? `${utilities.formatNumber(recruitmentIn2015)} i ${configuration.comparisonYears.baselineYear} → ${utilities.formatNumber(recruitmentIn2025)} i ${configuration.comparisonYears.comparisonYear} · Nedgang i nyrekruttering: ${utilities.formatNumber(recruitmentLoss)}`
-      : 'Mangler sammenlignbare 2015- og 2025-tall.';
-    getElement('beredskapsnotat-value').textContent = profileStatistics['Beredskapsnotat'] || 'Ikke oppgitt';
-    getElement('supply-line').textContent = profileStatistics['Forsyningslinje'] || 'Ikke oppgitt';
+    const recruitmentChangeLabel = utilities.getChangeLabel(recruitmentLoss, 'nyrekruttering');
+    getElement('recruitment-detail').textContent = recruitmentLoss === null
+      ? `Mangler sammenlignbare tall for ${configuration.comparisonYears.comparisonYear} og ${configuration.comparisonYears.baselineYear}.`
+      : `${recruitmentChangeLabel}: ${utilities.formatNumber(Math.abs(recruitmentLoss))} personer · ${configuration.comparisonYears.baselineYear} sammenliknet med ${configuration.comparisonYears.comparisonYear}.`;
+    getElement('beredskapsnotat-value').textContent = profileStatistics.Beredskapsnotat || selectedProfile.role || 'Ikke oppgitt';
+    getElement('supply-line').textContent = profileStatistics.Forsyningslinje || 'Ikke oppgitt';
     getElement('supply-detail').textContent = 'Oppgitt forsyningslinje';
 
     const activeDonors = utilities.getLatestValue(profileStatistics, 'Aktive blodgivere');
     const newDonors = utilities.getLatestValue(profileStatistics, 'Nyrekruttering');
     const collectedBlood = utilities.getLatestValue(profileStatistics, 'Tappingsvolum');
-    const patientConsumption = utilities.getLatestValue(profileStatistics, 'Pasientforbruk');
-
     getElement('h-kpi-active').textContent = activeDonors ? utilities.formatNumber(activeDonors.value) : '–';
     getElement('h-kpi-active-note').textContent = activeDonors ? `År ${activeDonors.year} · personer` : 'Ingen data';
     getElement('h-kpi-new').textContent = newDonors ? utilities.formatNumber(newDonors.value) : '–';
     getElement('h-kpi-new-note').textContent = newDonors ? `År ${newDonors.year} · personer` : 'Ingen data';
-    getElement('h-kpi-recruitment-loss-label').textContent = recruitmentLoss > 0 ? 'Nedgang i nyrekruttering' : 'Oppgang i nyrekruttering';
+    getElement('h-kpi-recruitment-loss-label').textContent = utilities.getChangeLabel(recruitmentLoss, 'nyrekruttering');
     getElement('h-kpi-recruitment-loss').textContent = recruitmentLoss === null ? '–' : utilities.formatNumber(Math.abs(recruitmentLoss));
-    getElement('h-kpi-recruitment-loss-note').textContent = '2025 sammenliknet med 2015';
-    getElement('h-kpi-donor-loss-label').textContent = donorLoss > 0 ? 'Nedgang i aktive blodgivere' : 'Oppgang i aktive blodgivere';
+    getElement('h-kpi-recruitment-loss-note').textContent = `${configuration.comparisonYears.baselineYear} sammenliknet med ${configuration.comparisonYears.comparisonYear}`;
+    getElement('h-kpi-donor-loss-label').textContent = utilities.getChangeLabel(donorLoss, 'aktive blodgivere');
     getElement('h-kpi-donor-loss').textContent = donorLoss === null ? '–' : utilities.formatNumber(Math.abs(donorLoss));
-    getElement('h-kpi-donor-loss-note').textContent = '2025 sammenliknet med 2015';
+    getElement('h-kpi-donor-loss-note').textContent = `${configuration.comparisonYears.baselineYear} sammenliknet med ${configuration.comparisonYears.comparisonYear}`;
     getElement('h-kpi-units').textContent = collectedBlood ? utilities.formatBloodVolume(collectedBlood.value) : '–';
     getElement('h-kpi-units').classList.add('kpi-blood-value');
-    getElement('h-kpi-litres').textContent = collectedBlood ? `Tapping · ${collectedBlood.year}` : 'Ingen data';
-    getElement('h-kpi-consumption').textContent = patientConsumption ? utilities.formatBloodVolume(patientConsumption.value) : '–';
-    getElement('h-kpi-consumption').classList.add('kpi-blood-value');
-    getElement('h-kpi-consumption-note').textContent = patientConsumption ? `Pasientforbruk · ${patientConsumption.year}` : 'Ingen data';
+    getElement('h-kpi-litres').textContent = collectedBlood ? `Fullblodstappinger · ${collectedBlood.year}` : 'Ingen data';
 
     function createLineChart(canvasId, metricName, metricLabel, lineColor) {
       const canvas = getElement(canvasId);
       const emptyMessage = document.querySelector(`[data-empty="${canvasId}"]`);
-      const dataPoints = utilities.getSeries(profileStatistics, metricName);
-      if (!canvas || !window.Chart || !dataPoints.length) {
+      const points = utilities.getSeries(profileStatistics, metricName);
+      if (!canvas || !window.Chart || !points.length) {
         emptyMessage?.classList.add('visible');
         return;
       }
       emptyMessage?.classList.remove('visible');
-
-      const isBloodMetric = ['Tappingsvolum', 'Pasientforbruk'].includes(metricName);
       new Chart(canvas, {
         type: 'line',
         data: {
-          labels: dataPoints.map(point => String(point.year)),
+          labels: points.map(point => String(point.year)),
           datasets: [{
-            label: metricLabel,
-            data: dataPoints.map(point => point.value),
-            borderColor: lineColor,
-            backgroundColor: `${lineColor}1b`,
+            label: metricLabel, data: points.map(point => point.value),
+            borderColor: lineColor, backgroundColor: `${lineColor}1b`,
             borderWidth: configuration.chartAppearance.lineBorderWidth,
             pointRadius: configuration.chartAppearance.linePointRadius,
             pointHoverRadius: configuration.chartAppearance.lineHoverRadius,
-            tension: configuration.chartAppearance.lineTension,
-            fill: true
+            tension: configuration.chartAppearance.lineTension, fill: true
           }]
         },
         options: {
-          responsive: true,
-          maintainAspectRatio: false,
+          responsive: true, maintainAspectRatio: false,
           interaction: { intersect: false, mode: 'index' },
           plugins: {
             legend: { display: false },
             tooltip: {
               backgroundColor: configuration.chartAppearance.tooltipBackground,
               callbacks: {
-                title: tooltipItems => utilities.formatMeasurement(tooltipItems[0]?.raw ?? 0, isBloodMetric ? 'blood' : 'people'),
-                label: tooltipContext => `År ${tooltipContext.label} · ${metricLabel}`
+                title: items => utilities.formatMeasurement(items[0]?.raw ?? 0, metricName === 'Tappingsvolum' ? 'blood' : 'people'),
+                label: context => `År ${context.label} · ${metricLabel}`
               }
             }
           },
           scales: {
             x: { grid: { display: false }, ticks: { color: configuration.chartAppearance.axisText, font: { size: configuration.chartAppearance.axisFontSize }, maxRotation: 0, autoSkip: true } },
             y: {
-              beginAtZero: true,
-              grid: { color: configuration.chartAppearance.grid },
-              border: { display: false },
-              title: { display: true, text: isBloodMetric ? 'Blodenheter' : 'Personer', color: configuration.chartAppearance.axisText, font: { size: configuration.chartAppearance.axisFontSize, weight: '600' } },
+              beginAtZero: true, grid: { color: configuration.chartAppearance.grid }, border: { display: false },
+              title: { display: true, text: metricName === 'Tappingsvolum' ? 'Blodenheter' : 'Personer', color: configuration.chartAppearance.axisText, font: { size: configuration.chartAppearance.axisFontSize, weight: '600' } },
               ticks: { color: configuration.chartAppearance.axisText, font: { size: configuration.chartAppearance.axisFontSize } }
             }
           }
@@ -180,93 +158,16 @@
       });
     }
 
-    function createNetBalanceSeries() {
-      const consumptionByYear = new Map(
-        utilities.getSeries(profileStatistics, 'Pasientforbruk').map(point => [point.year, point.value])
-      );
-      return utilities.getSeries(profileStatistics, 'Tappingsvolum')
-        .filter(point => consumptionByYear.has(point.year))
-        .map(point => ({ year: point.year, value: point.value - consumptionByYear.get(point.year) }));
-    }
-
-    function createNetBalanceChart() {
-      const canvas = getElement('hNetBalanceChart');
-      const emptyMessage = document.querySelector('[data-empty="hNetBalanceChart"]');
-      const balancePoints = createNetBalanceSeries();
-      if (!canvas || !window.Chart || !balancePoints.length) {
-        emptyMessage?.classList.add('visible');
-        return;
-      }
-      emptyMessage?.classList.remove('visible');
-
-      new Chart(canvas, {
-        type: 'line',
-        data: {
-          labels: balancePoints.map(point => String(point.year)),
-          datasets: [{
-            label: 'Nettbalanse',
-            data: balancePoints.map(point => point.value),
-            borderColor: configuration.chartColors.netBalance,
-            backgroundColor: `${configuration.chartColors.netBalance}20`,
-            borderWidth: configuration.chartAppearance.lineBorderWidth,
-            pointRadius: configuration.chartAppearance.linePointRadius,
-            pointHoverRadius: configuration.chartAppearance.lineHoverRadius,
-            tension: 0.25,
-            fill: true
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          interaction: { intersect: false, mode: 'index' },
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              backgroundColor: configuration.chartAppearance.tooltipBackground,
-              callbacks: {
-                title: tooltipItems => utilities.formatBloodVolume(tooltipItems[0]?.raw ?? 0),
-                label: tooltipContext => `År ${tooltipContext.label} · Nettbalanse`
-              }
-            }
-          },
-          scales: {
-            x: { grid: { display: false }, ticks: { color: configuration.chartAppearance.axisText, font: { size: configuration.chartAppearance.axisFontSize }, maxRotation: 0, autoSkip: true } },
-            y: {
-              beginAtZero: true,
-              grid: { color: configuration.chartAppearance.softGrid },
-              border: { display: false },
-              title: { display: true, text: 'Nettbalanse (blodenheter)', color: configuration.chartAppearance.balanceAxisTitle, font: { size: configuration.chartAppearance.axisFontSize, weight: '600' } },
-              ticks: { color: configuration.chartAppearance.axisText, font: { size: configuration.chartAppearance.axisFontSize } }
-            }
-          }
-        }
-      });
-    }
-
-    const profileMetrics = [
+    [
       { canvasId: 'hActiveChart', metricName: 'Aktive blodgivere', label: 'Aktive blodgivere', color: configuration.chartColors.activeDonors },
       { canvasId: 'hNewChart', metricName: 'Nyrekruttering', label: 'Nyrekruttering', color: configuration.chartColors.newDonors },
-      { canvasId: 'hCollectionChart', metricName: 'Tappingsvolum', label: 'Tappingsvolum', color: configuration.chartColors.collections },
-      { canvasId: 'hConsumptionChart', metricName: 'Pasientforbruk', label: 'Pasientforbruk', color: configuration.chartColors.patientConsumption }
-    ];
-    profileMetrics.forEach(metric => createLineChart(metric.canvasId, metric.metricName, metric.label, metric.color));
-    createNetBalanceChart();
+      { canvasId: 'hCollectionChart', metricName: 'Tappingsvolum', label: 'Fullblodstappinger', color: configuration.chartColors.collections }
+    ].forEach(metric => createLineChart(metric.canvasId, metric.metricName, metric.label, metric.color));
 
-    const availableYears = Object.values(profileStatistics)
-      .filter(value => value && typeof value === 'object')
-      .flatMap(value => Object.keys(value).map(Number))
+    const availableYears = ['Aktive blodgivere', 'Nyrekruttering', 'Tappingsvolum']
+      .flatMap(metric => Object.keys(profileStatistics[metric] || {}).map(Number))
       .filter(Number.isFinite);
-    if (availableYears.length) {
-      getElement('data-period').textContent = `Dataperiode i denne profilen: ${Math.min(...availableYears)}–${Math.max(...availableYears)}.`;
-    }
-
-    if (isAggregateProfile) {
-      getElement('profile-type-label').textContent = selectedProfile.type === 'national'
-        ? 'Nasjonale tall'
-        : `Nasjonale tall delt på ${configuration.hospitalProfiles.expectedHospitalCount}`;
-    } else {
-      getElement('profile-type-label').textContent = 'Sykehustall';
-    }
+    if (availableYears.length) getElement('data-period').textContent = `Dataperiode i denne profilen: ${Math.min(...availableYears)}–${Math.max(...availableYears)}.`;
   } catch (error) {
     console.error(error);
     getElement('hospital-title').textContent = 'Kunne ikke åpne statistikkprofilen';

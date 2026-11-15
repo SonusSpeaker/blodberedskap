@@ -31,7 +31,6 @@
       axisMutedText: '#718078',
       grid: '#edf1ed',
       softGrid: '#f0e7e9',
-      balanceAxisTitle: '#9b6570',
       yellowRecruitment: '#d49c2d',
       lineBorderWidth: 2.4,
       linePointRadius: 2.8,
@@ -48,13 +47,12 @@
       bloodDropCleanupGraceMilliseconds: 150
     }),
     hospitalProfiles: Object.freeze({
-      expectedHospitalCount: 38,
       nationalProfileId: 'hele-landet-norge',
       nationalProfileName: 'Hele landet (Norge)',
       nationalProfileSubtitle: 'Nasjonal statistikk',
       averageProfileId: 'gjennomsnitt',
-      averageProfileName: 'Gjennomsnitt per sykehus (38)',
-      averageProfileSubtitle: 'Nasjonalt gjennomsnitt fordelt på 38 sykehus',
+      averageProfileName: 'Gjennomsnitt per rapporterende enhet',
+      averageProfileSubtitle: 'Nasjonalt gjennomsnitt basert på unike rapporterende enheter',
       nationalSearchTerms: 'hele landet norge nasjonalt nasjonal oversikt',
       averageSearchTerms: 'gjennomsnitt gjennomsnitt per sykehus average'
     }),
@@ -107,8 +105,6 @@
       activeDonors: '#287b5b',
       newDonors: '#b98b36',
       collections: '#4d8a70',
-      patientConsumption: '#5f7f9c',
-      netBalance: '#a81731',
       positiveRecruitment: '#27805c',
       negativeRecruitment: '#b51f38',
       neutralRecruitment: '#9aa6a0'

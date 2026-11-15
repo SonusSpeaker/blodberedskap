@@ -6,11 +6,8 @@
   const statisticsNavigationItems = [
     { id: 'active-donors', title: 'Aktive blodgivere', keywords: 'aktive givere blodgiver antall donor blodbank' },
     { id: 'new-donors', title: 'Nyrekruttering', keywords: 'nye givere rekruttering nyrekruttering førstegangsgiver' },
-    { id: 'collections', title: 'Tappingsvolum', keywords: 'tapping blod tappet volum blodposer blodenheter liter produksjon' },
-    { id: 'consumption', title: 'Pasientforbruk', keywords: 'forbruk transfusjon pasient blodkomponenter blodenheter liter blodposer' },
-    { id: 'net-balance', title: 'Nettbalanse blod per år', keywords: 'nettobalanse årsbalanse overskudd tapping forbruk blodenheter liter' },
-    { id: 'recruitment', title: 'Endringer i nyrekruttering', keywords: 'rekrutteringsfall prosent beredskap risiko utvikling status' },
-    { id: 'recruitment-loss', title: 'Nedgang i nyrekruttering', keywords: 'frafall tap færre nye givere personer rekruttering' }
+    { id: 'collections', title: 'Tappingsvolum', keywords: 'tapping fullblodstappinger blod tappet volum blodposer blodenheter liter produksjon' },
+    { id: 'recruitment', title: 'Endringer i nyrekruttering', keywords: 'rekrutteringsfall oppgang nedgang prosent personer færre flere givere utvikling status' }
   ];
 
   function escapeHtml(value) {
@@ -19,13 +16,9 @@
     }[character]));
   }
 
-  function getHospitalSearchItems() {
-    return window.APP_DATA?.hospitals || [];
-  }
-
-  function getProfileSearchItems() {
-    return window.APP_DATA?.searchProfiles || [];
-  }
+  function getHospitalSearchItems() { return window.APP_DATA?.hospitals || []; }
+  function getProfileSearchItems() { return window.APP_DATA?.searchProfiles || []; }
+  function getHealthFacilitySearchItems() { return window.APP_DATA?.healthFacilities || []; }
 
   function renderGlobalSearchResults(query, resultsElement, navigateToResult) {
     const normalizedQuery = query.trim().toLocaleLowerCase('no');
@@ -43,8 +36,18 @@
         destination: `./hospital.html?id=${encodeURIComponent(profile.id)}`
       }));
 
+    const healthFacilityResults = getHealthFacilitySearchItems()
+      .filter(item => `${item.name} ${item.region} ${item.searchTerms || ''}`.toLocaleLowerCase('no').includes(normalizedQuery))
+      .slice(0, searchLimits.hospitalSuggestionLimit)
+      .map(item => ({
+        title: item.name,
+        subtitle: `${item.type === 'Region' ? 'Helseregion' : 'Helseforetak'} · ${item.region}`,
+        icon: '⌖',
+        destination: `./helseforetak.html?id=${encodeURIComponent(item.id)}`
+      }));
+
     const hospitalResults = getHospitalSearchItems()
-      .filter(hospital => `${hospital.name} ${hospital.region}`.toLocaleLowerCase('no').includes(normalizedQuery))
+      .filter(hospital => `${hospital.name} ${hospital.region} ${hospital.healthFacilityName || ''}`.toLocaleLowerCase('no').includes(normalizedQuery))
       .slice(0, searchLimits.hospitalSuggestionLimit)
       .map(hospital => ({
         title: hospital.name,
@@ -59,13 +62,14 @@
         title: statistic.title,
         subtitle: 'Statistikk',
         icon: '↗',
-        destination: pageName === 'about' ? `/#${statistic.id}` : `#${statistic.id}`
+        destination: pageName === 'about' ? `./#${statistic.id}` : `#${statistic.id}`
       }));
 
     const aboutResults = 'om oss'.includes(normalizedQuery)
       ? [{ title: 'Om oss', subtitle: 'Informasjonsside', icon: 'i', destination: './about.html' }]
       : [];
-    const allResults = [...profileResults, ...hospitalResults, ...statisticResults, ...aboutResults].slice(0, searchLimits.globalSuggestionLimit);
+    const allResults = [...profileResults, ...healthFacilityResults, ...hospitalResults, ...statisticResults, ...aboutResults]
+      .slice(0, searchLimits.globalSuggestionLimit);
 
     resultsElement.innerHTML = allResults.length
       ? allResults.map((result, index) => `
@@ -76,7 +80,7 @@
               <span class="suggestion-sub">${escapeHtml(result.subtitle)}</span>
             </span>
           </button>`).join('')
-      : '<div class="suggestion-item"><span class="suggestion-copy"><span class="suggestion-title">Ingen treff</span><span class="suggestion-sub">Prøv et sykehusnavn eller en statistikk.</span></span></div>';
+      : '<div class="suggestion-item"><span class="suggestion-copy"><span class="suggestion-title">Ingen treff</span><span class="suggestion-sub">Prøv et sykehus, helseforetak eller en statistikk.</span></span></div>';
 
     resultsElement.hidden = false;
     resultsElement.querySelectorAll('button[data-index]').forEach(button => {
@@ -100,14 +104,14 @@
           <a class="nav-link ${pageName === 'home' ? 'active' : ''}" href="./">Hjem</a>
           <div class="nav-dropdown">
             <button class="nav-button" id="stats-menu-button" type="button" aria-expanded="false">Statistikker <span aria-hidden="true">⌄</span></button>
-            <div class="nav-menu" id="stats-menu" hidden>${statisticsNavigationItems.map(statistic => `<a href="${pageName === 'about' ? `/#${statistic.id}` : `#${statistic.id}`}">${statistic.title}</a>`).join('')}</div>
+            <div class="nav-menu" id="stats-menu" hidden>${statisticsNavigationItems.map(statistic => `<a href="${pageName === 'about' ? `./#${statistic.id}` : `#${statistic.id}`}" data-statistic-id="${statistic.id}">${statistic.title}</a>`).join('')}</div>
           </div>
           <a class="nav-link ${pageName === 'about' ? 'active' : ''}" href="./about.html">Om oss</a>
         </nav>
         <div class="nav-search-wrap">
           <span class="nav-search-icon" aria-hidden="true">⌕</span>
           <label class="sr-only" for="global-search">Søk på hele nettstedet</label>
-          <input class="nav-search" type="search" id="global-search" placeholder="Søk etter sykehus eller statistikk …" autocomplete="off">
+          <input class="nav-search" type="search" id="global-search" placeholder="Søk etter sykehus, helseforetak eller region …" autocomplete="off">
           <kbd>/</kbd><div class="suggestions" id="global-search-results" hidden></div>
         </div>
       </div>`;
@@ -129,10 +133,7 @@
     const searchInput = document.getElementById('global-search');
     const searchResults = document.getElementById('global-search-results');
     let currentResults = [];
-
-    function navigateToResult(result) {
-      if (result) window.location.href = result.destination;
-    }
+    const navigateToResult = result => { if (result) window.location.href = result.destination; };
 
     searchInput.addEventListener('input', () => {
       currentResults = renderGlobalSearchResults(searchInput.value, searchResults, navigateToResult);
@@ -154,53 +155,34 @@
         searchInput.focus();
       }
     });
-
-    if (pageName !== 'about') {
-      window.addEventListener('hashchange', () => {
-        const destination = document.querySelector(location.hash);
-        if (destination) destination.scrollIntoView({ behavior: 'smooth' });
-      });
-    }
   }
 
   renderHeader();
 
-  // The informational page has no dashboard controller, but its global search still
-  // receives the same hospital and aggregate-profile suggestions.
   if (pageName === 'about') {
     fetch(window.APP_CONFIG.data.statisticsDatasetUrl, { cache: 'no-store' })
       .then(response => {
-        if (!response.ok) throw new Error(`Statistikkgrunnlaget kunne ikke hentes (${response.status}).`);
+        if (!response.ok) throw new Error(`Statistikkfilen kunne ikke hentes (${response.status}).`);
         return response.json();
       })
       .then(sourceStatistics => {
-        const nationalStatistics = sourceStatistics[window.APP_CONFIG.data.nationalRecordName];
         const profileConfiguration = window.APP_CONFIG.hospitalProfiles;
+        const hospitals = Object.entries(sourceStatistics.sykehus || {}).map(([id, hospital]) => ({
+          id, name: hospital.Navn, region: hospital.Helseregion,
+          healthFacilityName: hospital.Helseforetak
+        }));
+        const healthFacilities = Object.entries(sourceStatistics.helseforetak || {}).map(([id, item]) => ({
+          id, name: item.Navn, region: item.Helseregion, type: item.Type,
+          searchTerms: item.Soketermer || ''
+        }));
         window.APP_DATA = {
-          hospitals: Object.entries(sourceStatistics)
-            .filter(([recordName]) => recordName !== window.APP_CONFIG.data.nationalRecordName)
-            .map(([hospitalName, hospitalStatistics]) => ({
-              id: window.APP_UTILS.createSlug(hospitalName),
-              name: hospitalName,
-              region: hospitalStatistics['Helseregion']
-            })),
+          hospitals,
+          healthFacilities,
           searchProfiles: [
-            {
-              id: profileConfiguration.nationalProfileId,
-              name: profileConfiguration.nationalProfileName,
-              region: 'Norge',
-              subtitle: profileConfiguration.nationalProfileSubtitle,
-              searchTerms: profileConfiguration.nationalSearchTerms
-            },
-            {
-              id: profileConfiguration.averageProfileId,
-              name: profileConfiguration.averageProfileName,
-              region: 'Norge',
-              subtitle: profileConfiguration.averageProfileSubtitle,
-              searchTerms: profileConfiguration.averageSearchTerms
-            }
+            { id: profileConfiguration.nationalProfileId, name: profileConfiguration.nationalProfileName, region: 'Norge', subtitle: profileConfiguration.nationalProfileSubtitle, searchTerms: profileConfiguration.nationalSearchTerms },
+            { id: profileConfiguration.averageProfileId, name: profileConfiguration.averageProfileName, region: 'Norge', subtitle: profileConfiguration.averageProfileSubtitle, searchTerms: profileConfiguration.averageSearchTerms }
           ],
-          national: nationalStatistics
+          national: sourceStatistics[window.APP_CONFIG.data.nationalRecordName]
         };
       })
       .catch(error => console.warn('Søkeforslag kunne ikke lastes.', error));

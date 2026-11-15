@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-"""Static website server for Blodberedskap Norge.
+"""Local development server for Blodberedskap Norge.
 
-The browser reads statistics from the bundled dataset; no external statistics API is used.
 Optional local HTTPS is enabled by supplying both TLS_CERT_FILE and TLS_KEY_FILE.
 """
 
