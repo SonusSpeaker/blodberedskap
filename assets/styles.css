@@ -80,6 +80,10 @@ a {
 button {
   cursor:pointer
 }
+.about-title {
+  font-size: 52px;
+  text-align: center;
+}
 .page-shell {
   max-width:1500px;
   margin:0 auto;
