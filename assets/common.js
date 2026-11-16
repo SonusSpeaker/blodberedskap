@@ -65,8 +65,8 @@
         destination: pageName === 'about' ? `./#${statistic.id}` : `#${statistic.id}`
       }));
 
-    const aboutResults = 'om oss'.includes(normalizedQuery)
-      ? [{ title: 'Om oss', subtitle: 'Informasjonsside', icon: 'i', destination: './about.html' }]
+    const aboutResults = 'om prosjektet'.includes(normalizedQuery)
+      ? [{ title: 'Om prosjektet', subtitle: 'Informasjonsside', icon: 'i', destination: './about.html' }]
       : [];
     const allResults = [...profileResults, ...healthFacilityResults, ...hospitalResults, ...statisticResults, ...aboutResults]
       .slice(0, searchLimits.globalSuggestionLimit);
@@ -106,7 +106,7 @@
             <button class="nav-button" id="stats-menu-button" type="button" aria-expanded="false">Statistikker <span aria-hidden="true">⌄</span></button>
             <div class="nav-menu" id="stats-menu" hidden>${statisticsNavigationItems.map(statistic => `<a href="${pageName === 'about' ? `./#${statistic.id}` : `#${statistic.id}`}" data-statistic-id="${statistic.id}">${statistic.title}</a>`).join('')}</div>
           </div>
-          <a class="nav-link ${pageName === 'about' ? 'active' : ''}" href="./about.html">Om oss</a>
+          <a class="nav-link ${pageName === 'about' ? 'active' : ''}" href="./about.html">Om prosjektet</a>
         </nav>
         <div class="nav-search-wrap">
           <span class="nav-search-icon" aria-hidden="true">⌕</span>
