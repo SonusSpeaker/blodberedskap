@@ -80,10 +80,6 @@ a {
 button {
   cursor:pointer
 }
-.about-title {
-  font-size: 52px;
-  text-align: center;
-}
 .page-shell {
   max-width:1500px;
   margin:0 auto;
@@ -878,6 +874,11 @@ button {
 .about-shell {
   min-height:calc(100vh - 150px);
   color: #ffffff
+}
+.about-title {
+  font-size: 52px;
+  text-align: center;
+  color: #ff0000
 }
 .about-body {
   min-height:65vh;
