@@ -97,17 +97,17 @@
     const activeDonors = utilities.getLatestValue(profileStatistics, 'Aktive blodgivere');
     const newDonors = utilities.getLatestValue(profileStatistics, 'Nyrekruttering');
     const collectedBlood = utilities.getLatestValue(profileStatistics, 'Tappingsvolum');
-    getElement('h-kpi-active').textContent = activeDonors ? utilities.formatNumber(Math.round(activeDonors.value)) : '–';
+    getElement('h-kpi-active').textContent = activeDonors ? utilities.formatNumber(activeDonors.value) : '–';
     getElement('h-kpi-active-note').textContent = activeDonors ? `År ${activeDonors.year} · personer` : 'Ingen data';
-    getElement('h-kpi-new').textContent = newDonors ? utilities.formatNumber(Math.round(newDonors.value)) : '–';
+    getElement('h-kpi-new').textContent = newDonors ? utilities.formatNumber(newDonors.value) : '–';
     getElement('h-kpi-new-note').textContent = newDonors ? `År ${newDonors.year} · personer` : 'Ingen data';
     getElement('h-kpi-recruitment-loss-label').textContent = utilities.getChangeLabel(recruitmentLoss, 'nyrekruttering');
-    getElement('h-kpi-recruitment-loss').textContent = recruitmentLoss === null ? '–' : utilities.formatNumber(Math.round(Math.abs(recruitmentLoss)));
+    getElement('h-kpi-recruitment-loss').textContent = recruitmentLoss === null ? '–' : utilities.formatNumber(Math.abs(recruitmentLoss));
     getElement('h-kpi-recruitment-loss-note').textContent = `${configuration.comparisonYears.baselineYear} sammenliknet med ${configuration.comparisonYears.comparisonYear}`;
     getElement('h-kpi-donor-loss-label').textContent = utilities.getChangeLabel(donorLoss, 'aktive blodgivere');
     getElement('h-kpi-donor-loss').textContent = donorLoss === null ? '–' : utilities.formatNumber(Math.abs(donorLoss));
     getElement('h-kpi-donor-loss-note').textContent = `${configuration.comparisonYears.baselineYear} sammenliknet med ${configuration.comparisonYears.comparisonYear}`;
-    getElement('h-kpi-units').textContent = collectedBlood ? utilities.formatBloodVolume(Math.round(collectedBlood.value)) : '–';
+    getElement('h-kpi-units').textContent = collectedBlood ? utilities.formatBloodVolume(collectedBlood.value) : '–';
     getElement('h-kpi-units').classList.add('kpi-blood-value');
     getElement('h-kpi-litres').textContent = collectedBlood ? `Fullblodstappinger · ${collectedBlood.year}` : 'Ingen data';
 
